@@ -7,14 +7,11 @@ export default styled.div`
     grid-column-end: 2;
     grid-row-start: 2;
     padding: 20px;
+    color: ${props => props.theme.color};
 
-    background-color: ${props => {
-        if (props.mode === 'light') return '#FFFFFF';
-      }
+    background-color: ${props => props.theme.bodyMain
     };
-    box-shadow: ${props => {
-    if (props.mode === 'light') return '5px 5px 0px #45050C;';
-        }
+    box-shadow: ${props => `5px 5px 0px ${props.theme.accent};`
     };
 
 `

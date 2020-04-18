@@ -2,29 +2,50 @@ import styled from 'styled-components';
 
 export default styled.button`
     background-color: ${props => {
-        if (props.mode == 'light' && props.clicked == false) return '#8093F1';
-        else if (props.mode == 'light' && props.clicked == true) return '#45050C';
+        if (props.clicked == false) return props.theme.btnMain;
+        else if (props.clicked == true) return props.theme.accent;
       }
     };
     margin: 10px;
-    min-height:40px;
-    height: 50px;
-    min-width:100px;
-    padding: 20px;
+    min-height: ${props => {
+        if (props.type === 'small') return '30px';
+        else return '40px';
+      }
+    };
+    
+    height: ${props => {
+        if (props.type === 'small') return '10px';
+        else return '50px';
+      }
+    };
+    min-width: ${props => {
+        if (props.type === 'small') return '20px';
+        else return '100px';
+      }
+    };
+    padding: ${props => {
+        if (props.type === 'small') return '0px';
+        else return '20px';
+      }
+    };
+    font-size: ${props => {
+        if (props.type === 'small') return '0.70rem';
+        else return '1rem';
+      }
+    };
     border: none;
-    font-size: 1em;
     font-family: 'Aldrich';
     color: ${props => {
-        if (props.mode == 'light' && props.clicked == false) return '#45050C';
-        else if (props.mode == 'light' && props.clicked == true) return '#DFE4FB';
+        if (props.clicked == false) return props.theme.accent;
+        else if (props.clicked == true) return props.theme.background;
       }
     };
 
     /* font-weight: bold; */
 
     box-shadow: ${props => {
-        if (props.mode == 'light' && props.clicked == false) return '5px 5px 0px #45050C;';
-        else if (props.mode == 'light' && props.clicked == true) return '3px 3px 0px #45050C;';
+        if (props.clicked == false) return `5px 5px 0px ${props.theme.accent};`
+        else if (props.clicked == true) return `3px 3px 0px ${props.theme.btnMain}`;
       }
     };
     /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */

@@ -1,0 +1,19 @@
+.outer-div {
+    height: 70px;
+    width: 500px;
+    /* background-color: pink; */
+    position: relative;
+}
+
+/* .bubble::after {
+    content:'';
+    display: block;
+    position: absolute;
+
+    width:0;
+    height:0;
+    border-right:15px solid transparent;
+    border-left: 0.5px solid blue;
+    border-top: 15px solid blue;
+    bottom:-15px;
+} */
