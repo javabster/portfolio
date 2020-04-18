@@ -1,12 +1,16 @@
-import React from 'react';
-import SkillBar from './SkillBar';
+import styled from 'styled-components';
 
-export default function(props) {
-    const { skill } = props
-    return(
-        <div>
-            <div></div>
-            <SkillBar></SkillBar>
-        </div>
-    )
+export default styled.div`
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    padding-top:0;
+    margin-bottom: 15px;
+    justify-content: space-evenly;
+
+.skill-name {
+    padding-top: 50px;
+    width: 80px;
+    text-align:center;
 }
+`

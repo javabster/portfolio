@@ -18,6 +18,22 @@ export const getAboutMe = async () => {
     }
 }
 
+export const getSkills = async () => {
+    try {
+        const response = await axios({
+            method: 'get',
+            url: `${baseURL}api/skills`,
+        });
+        if (response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}
+
 export function getEducation() {};
 // function getSkills() {};
 // function getExperience() {};

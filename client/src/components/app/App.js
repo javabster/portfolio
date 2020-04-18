@@ -7,7 +7,7 @@ import ButtonColumn from '../nav-bar/ButtonColumn';
 import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
 
-import { getAboutMe } from '../../utils/backendApi';
+import { getAboutMe, getSkills } from '../../utils/backendApi';
 
 import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
@@ -29,6 +29,7 @@ function App() {
 
   const [bodyType, setBodyType ] = useState('about')
   const [bodyContent, setBodyContent] = useState(about.body)
+  const [skills, setSkills ] = useState({0:{}, 1:{}});
   let disco;
 
 
@@ -37,6 +38,8 @@ function App() {
       const res = await getAboutMe();
       setAbout(res)
       setBodyContent(res.body)
+      const skillsRes = await getSkills();
+      setSkills(skillsRes)
     }
     fetchData();
   }, [])
@@ -89,7 +92,8 @@ function App() {
       case 'education':
         return <div>{bodyContent}</div>
       case 'skills':
-      return <SkillsBody></SkillsBody>
+      console.log(skills);
+        return <SkillsBody skills={skills}></SkillsBody>
     }
   }
 
@@ -151,7 +155,6 @@ function App() {
         </Button>
       </ButtonRow>
       <Body mode='light'>{setBody(bodyType)}
-      {/* <SkillBar></SkillBar> */}
       </Body>
     </Wrapper>
     </ThemeProvider>

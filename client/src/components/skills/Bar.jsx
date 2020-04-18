@@ -9,7 +9,7 @@ export default styled.div`
 
 .inner-bar {
     height: 30px;
-    width: 50%;
+    width: ${props => `${props.score}0%`};
     background-color: ${props => props.theme.innerBar};
 }
 
