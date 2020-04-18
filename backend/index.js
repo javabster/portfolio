@@ -40,7 +40,7 @@ app.get('/api/skills', (req, res) => {
             score: 9
         }
     ]
-    return res.send(skills).then(() => {console.log('Sent skills list')})
+    return res.send(skills);
 })
 
 // Handles any requests that don't match the ones above

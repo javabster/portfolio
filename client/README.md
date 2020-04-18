@@ -1,3 +1,12 @@
+## To run locally:
+
+1. `cd backend`
+2. `npm run start`
+3. new window, `cd client`
+4. `npm run start`
+
+## Create React App Info:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
