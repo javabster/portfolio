@@ -6,7 +6,8 @@ export default styled.div`
     margin-top: 0;
     padding: 20px;
     display: grid;
-    grid-template-columns: auto 50rem auto;
+    grid-template-columns: 10rem auto 10rem;
     grid-template-rows: 100px auto 100px;
-    width: 100%;
+    width: 100vw;
+    box-sizing: border-box;
 `;
