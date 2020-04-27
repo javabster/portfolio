@@ -2,37 +2,20 @@ import styled from 'styled-components';
 
 export default styled.button`
     background-color: ${props => {
-        if (props.clicked == false) return props.theme.btnMain;
-        else if (props.clicked == true) return props.theme.accent;
+        if (props.clicked == false) return '#FF2E33';
+        else if (props.clicked == true) return '#45050C';
       }
     };
+
+    /* background-image: url("../../images/uk-light.png"); */
+    /* box-sizing: border-box; */
     margin: 10px;
-    min-height: ${props => {
-        if (props.type === 'small') return '30px';
-        else return '40px';
-      }
-    };
-    
-    height: ${props => {
-        if (props.type === 'small') return '10px';
-        else return '50px';
-      }
-    };
-    min-width: ${props => {
-        if (props.type === 'small') return '20px';
-        else return '100px';
-      }
-    };
-    padding: ${props => {
-        if (props.type === 'small') return '0 0 0 0';
-        else return '0 20px 0 20px';
-      }
-    };
-    font-size: ${props => {
-        if (props.type === 'small') return '0.70rem';
-        else return '1rem';
-      }
-    };
+    margin-left: 90px;
+    min-height:30px;
+    height: 10px;
+    min-width: 20px;
+    width: 60px;
+    padding: 0px;
     border: none;
     font-family: 'Aldrich';
     color: ${props => {
@@ -40,7 +23,6 @@ export default styled.button`
         else if (props.clicked == true) return props.theme.background;
       }
     };
-    text-align: center;
 
     /* font-weight: bold; */
 

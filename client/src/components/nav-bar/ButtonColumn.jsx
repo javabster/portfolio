@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export default styled.div`
-    grid-column-start: 1;
+    grid-column-start: ${props => props.right ? 3 : 1};
+    grid-row-start: 1;
     display: flex;
     flex-direction: column;
     height: 50%;

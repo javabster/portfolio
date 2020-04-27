@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Wrapper from './Wrapper';
 import Button from '../shared/Button';
+import LangButton from '../shared/LangButton';
 import ButtonTest from '../shared/ButtonTest';
 import ButtonRow from '../nav-bar/ButtonRow';
 import ButtonColumn from '../nav-bar/ButtonColumn';
 import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
 
-import { getAboutMe, getSkills } from '../../utils/backendApi';
+import { getAboutMe, getSkills, getTitles, getEducation } from '../../utils/backendApi';
 
 import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
 import { lightTheme, darkTheme } from '../../styles/themes';
 import { ThemeProvider } from 'styled-components';
 import { clearInterval } from 'timers';
-
+import ukFlagLight from '../../images/uk-light.svg'
+import ukFlagDark from '../../images/uk-dark.svg'
+import cnFlagLight from '../../images/cn-light.png'
+import cnFlagDark from '../../images/cn-dark.svg'
 
 function App() {
   const [isLightTheme, setTheme] = useState(true);
@@ -22,34 +26,51 @@ function App() {
   const [isDarkClicked, setIsDarkClicked ] = useState(false);
   const [isDiscoClicked, setIsDiscoClicked ] = useState(false);
 
-  const [about, setAbout] = useState({title: '', body: ''})
-  const [isAboutClicked, setIsAboutClicked ] = useState(true)
-  const [isEdClicked, setIsEdClicked ] = useState(false)
-  const [isSkillsClicked, setIsSkillsClicked ] = useState(false)
+  const [isEngClicked, setIsEngClicked ] = useState(true);
+  const [isCnClicked, setIsCnClicked ] = useState(false);
+  const [lang, setLang] = useState('english');
+  const [ukFlag, setUkFlag] = useState(ukFlagDark);
+  const [cnFlag, setCnFlag] = useState(cnFlagLight);
 
-  const [bodyType, setBodyType ] = useState('about')
-  const [bodyContent, setBodyContent] = useState(about.body)
+  const [about, setAbout] = useState({title: '', body: ''});
+  const [ed, setEd] = useState({title: '', body: ''});
+  const [isAboutClicked, setIsAboutClicked ] = useState(true);
+  const [isEdClicked, setIsEdClicked ] = useState(false);
+  const [isSkillsClicked, setIsSkillsClicked ] = useState(false);
+
+  const [bodyType, setBodyType ] = useState('about');
+  const [bodyContent, setBodyContent] = useState(about.body);
   const [skills, setSkills ] = useState({0:{}, 1:{}});
   let disco;
+
+  const [titles, setTitles] = useState({
+    lightMode: 'Light Mode',
+    darkMode: 'Dark Mode',
+    skillLegend: 'legend (hover for details）'
+  })
 
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getAboutMe();
-      setAbout(res)
-      setBodyContent(res.body)
+      const res = await getAboutMe(lang);
+      setAbout(res);
+      setBodyContent(res.body);
+      const edRes = await getEducation(lang);
+      setEd(edRes);
       const skillsRes = await getSkills();
-      setSkills(skillsRes)
+      setSkills(skillsRes);
+      const titlesRes = await getTitles(lang);
+      setTitles(titlesRes);
     }
     fetchData();
-  }, [])
+  }, [lang])
 
   function handleEdClick() {
     setIsAboutClicked(false)
     setIsEdClicked(true)
     setIsSkillsClicked(false)
     setBodyType('education')
-    setBodyContent('education stuff')
+    setBodyContent(ed.body)
   }
 
   function handleAboutClick() {
@@ -82,7 +103,22 @@ function App() {
     setIsLightClicked(false);
     // setIsDiscoClicked(false);
     // clearInterval()
-    
+  }
+
+  function handleEngClick() {
+    setLang('english');
+    setIsCnClicked(false);
+    setIsEngClicked(true);
+    setUkFlag(ukFlagDark);
+    setCnFlag(cnFlagLight);
+  }
+
+  function handleCnClick() {
+    setLang('chinese');
+    setIsCnClicked(true);
+    setIsEngClicked(false);
+    setUkFlag(ukFlagLight);
+    setCnFlag(cnFlagDark);
   }
 
   function setBody(type) {
@@ -92,8 +128,7 @@ function App() {
       case 'education':
         return <div>{bodyContent}</div>
       case 'skills':
-      console.log(skills);
-        return <SkillsBody skills={skills}></SkillsBody>
+        return <SkillsBody titles={titles} skills={skills}></SkillsBody>
     }
   }
 
@@ -114,18 +149,18 @@ function App() {
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
     <Wrapper>
-      <ButtonColumn>
+      <ButtonColumn >
         <Button 
           type='small'
           clicked={isLightClicked} 
           onClick={() => handleLightClick()}>
-            Light Mode
+            {titles.lightMode}
         </Button>
         <Button 
           type='small' 
           clicked={isDarkClicked} 
           onClick={() => handleDarkClick()}>
-            Dark Mode
+            {titles.darkMode}
         </Button>
         {/* <Button 
           type='small' 
@@ -133,6 +168,18 @@ function App() {
           onClick={() => handleDiscoClick()}>
             Disco Mode
         </Button> */}
+      </ButtonColumn>
+      <ButtonColumn right>
+        <LangButton 
+            clicked={isEngClicked} 
+            onClick={() => handleEngClick()}>
+              <img style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={ukFlag}></img>
+          </LangButton>
+          <LangButton 
+            clicked={isCnClicked} 
+            onClick={() => handleCnClick()}>
+              <img style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={cnFlag}></img>
+          </LangButton>
       </ButtonColumn>
       <ButtonRow>
         <Button 
@@ -145,13 +192,13 @@ function App() {
           type='nav-bar' 
           clicked={isEdClicked} 
           onClick={() => handleEdClick()}>
-            Education
+            {ed.title}
         </Button>
         <Button 
           type='nav-bar' 
           clicked={isSkillsClicked} 
           onClick={() => handleSkillsClick()}>
-            Skills
+            {titles.skills}
         </Button>
       </ButtonRow>
       <Body mode='light'>{setBody(bodyType)}

@@ -18,6 +18,15 @@ export default function SkillLegendBar(props) {
         {id: 10, colour: 'transparent', showBubble:false, bubbleText: "10: basically Tim Berners-Lee"},
     ])
 
+    useEffect(() => {
+        let newArray = [...bars];
+        props.bubbleText.map((bubble, index) => {
+            newArray[index].bubbleText = props.bubbleText[index]
+        })
+        setBars(newArray);
+        
+    }, [props.bubbleText])
+
     const setColour = index => {
        let newArray = [...bars];
        newArray[index].showBubble = true;
@@ -40,7 +49,6 @@ export default function SkillLegendBar(props) {
 
     return(
         <div className='outer-div'>
-        {/* <Bubble score={score}>{score}</Bubble> */}
         {bars.map((bar, index) => {
          if (bar.showBubble) {
              return <Bubble score={bar.id}>{bar.bubbleText}</Bubble>
@@ -50,7 +58,6 @@ export default function SkillLegendBar(props) {
                 {bars.map((bar, index) => 
                     <LegendInnerBar id={bar.id}
                             barColour={bar.colour}
-                            // style={{backgroundColor: `${bar.colour}`}} 
                             onMouseEnter={() => setColour(index)}
                             onMouseLeave={() => setTransparent(index)}
                             >
