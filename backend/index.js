@@ -13,13 +13,18 @@ app.get('/api/aboutMe/:lang', (req,res) => {
     var lang = req.params.lang;
     var eng = {
         title: 'About Me',
-        body: 'short bio about me'
+        body: {
+            title: "Hi, I'm Abby",
+            content: "short bio about me"
+        }
     };
 
     var cn = {
         title: '关于我',
-        body: '段的信息关于我'
-    }
+        body: {
+            title: '你好！我叫Abby',
+            content: '段的信息关于我'
+    }}
     lang == 'chinese' ? res.send(cn) : res.send(eng)
 });
 

@@ -7,6 +7,8 @@ import ButtonRow from '../nav-bar/ButtonRow';
 import ButtonColumn from '../nav-bar/ButtonColumn';
 import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
+import AboutBody from '../body/AboutBody'
+import EducationBody from '../body/EducationBody';
 
 import { getAboutMe, getSkills, getTitles, getEducation } from '../../utils/backendApi';
 
@@ -19,7 +21,6 @@ import ukFlagLight from '../../images/uk-light.svg'
 import ukFlagDark from '../../images/uk-dark.svg'
 import cnFlagLight from '../../images/cn-light.png'
 import cnFlagDark from '../../images/cn-dark.svg'
-import EducationBody from '../body/EducationBody';
 
 function App() {
   const [isLightTheme, setTheme] = useState(true);
@@ -33,14 +34,14 @@ function App() {
   const [ukFlag, setUkFlag] = useState(ukFlagDark);
   const [cnFlag, setCnFlag] = useState(cnFlagLight);
 
-  const [about, setAbout] = useState({title: '', body: ''});
+  const [about, setAbout] = useState({title: '', body: []});
   const [ed, setEd] = useState({title: '', body: ''});
   const [isAboutClicked, setIsAboutClicked ] = useState(true);
   const [isEdClicked, setIsEdClicked ] = useState(false);
   const [isSkillsClicked, setIsSkillsClicked ] = useState(false);
 
   const [bodyType, setBodyType ] = useState('about');
-  const [bodyContent, setBodyContent] = useState(about.body);
+  const [bodyContent, setBodyContent] = useState([]);
   const [skills, setSkills ] = useState({0:{}, 1:{}});
   let disco;
 
@@ -55,6 +56,7 @@ function App() {
     const fetchData = async () => {
       const res = await getAboutMe(lang);
       setAbout(res);
+      console.log(res.body)
       setBodyContent(res.body);
       const edRes = await getEducation(lang);
       setEd(edRes);
@@ -125,7 +127,7 @@ function App() {
   function setBody(type) {
     switch (type) {
       case 'about':
-        return <div>{bodyContent}</div>
+        return <AboutBody isLightTheme={isLightTheme} aboutTitle={bodyContent.title} aboutContent={bodyContent.content}></AboutBody>
       case 'education':
         return <EducationBody isLightTheme={isLightTheme} content={ed.body}></EducationBody>
       case 'skills':

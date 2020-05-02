@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-    min-height: 200px;
+    min-height: 100px;
     height: auto;
     grid-column-start: 2;
     grid-column-end: 2;

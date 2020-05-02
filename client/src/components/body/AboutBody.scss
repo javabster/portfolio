@@ -1,0 +1,17 @@
+.about-column {
+    height: 100%;
+    width: 100%;
+    padding: 20px 10px 0px 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-row {
+    width: 20%;
+    padding: 10px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
