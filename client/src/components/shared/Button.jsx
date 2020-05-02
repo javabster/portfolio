@@ -72,8 +72,4 @@ export default styled.button`
     outline: none;
     }
 
-    /* &:active {
-      background-color: #45050C;
-    } */
-
 `

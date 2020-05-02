@@ -19,6 +19,7 @@ import ukFlagLight from '../../images/uk-light.svg'
 import ukFlagDark from '../../images/uk-dark.svg'
 import cnFlagLight from '../../images/cn-light.png'
 import cnFlagDark from '../../images/cn-dark.svg'
+import EducationBody from '../body/EducationBody';
 
 function App() {
   const [isLightTheme, setTheme] = useState(true);
@@ -126,25 +127,11 @@ function App() {
       case 'about':
         return <div>{bodyContent}</div>
       case 'education':
-        return <div>{bodyContent}</div>
+        return <EducationBody isLightTheme={isLightTheme} content={ed.body}></EducationBody>
       case 'skills':
         return <SkillsBody titles={titles} skills={skills}></SkillsBody>
     }
   }
-
-  // function handleDiscoClick() {
-  //   setIsDiscoClicked(true)
-  //   setIsDarkClicked(false);
-  //   setIsLightClicked(false);
-  //   // setInterval(switchTheme, 700);
-  //   console.log('HERE 1')
-  // }
-
-  // function switchTheme() {
-  //       if (isLightTheme) setTheme(false)
-  //       else setTheme(true)
-  //       console.log('HERE')
-  // }
 
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
@@ -162,12 +149,6 @@ function App() {
           onClick={() => handleDarkClick()}>
             {titles.darkMode}
         </Button>
-        {/* <Button 
-          type='small' 
-          clicked={isDiscoClicked} 
-          onClick={() => handleDiscoClick()}>
-            Disco Mode
-        </Button> */}
       </ButtonColumn>
       <ButtonColumn right>
         <LangButton 
@@ -194,12 +175,30 @@ function App() {
           onClick={() => handleEdClick()}>
             {ed.title}
         </Button>
+        {/* <Button 
+          type='nav-bar' 
+          clicked={isSkillsClicked} 
+          // onClick={() => handleSkillsClick()}
+          >Work Experience
+        </Button> */}
         <Button 
           type='nav-bar' 
           clicked={isSkillsClicked} 
           onClick={() => handleSkillsClick()}>
             {titles.skills}
         </Button>
+        {/* <Button 
+          type='nav-bar' 
+          clicked={isSkillsClicked} 
+          // onClick={() => handleSkillsClick()}
+          >Other Qualifications/Achievements
+        </Button> */}
+        {/* <Button 
+          type='nav-bar' 
+          clicked={isSkillsClicked} 
+          // onClick={() => handleSkillsClick()}
+          >Voluntary Work
+        </Button> */}
       </ButtonRow>
       <Body mode='light'>{setBody(bodyType)}
       </Body>

@@ -7,6 +7,8 @@ export const lightTheme = {
     bar: '#DFE4FB', //lilac
     innerBar: '#FF2E33', //bright red
     bubble: '#45050C', //dark red
+    diamond: '#8093F1', //purple
+    timelineShadow: '#8093F1' //purple
   }
 
 export const darkTheme = {
@@ -19,4 +21,6 @@ export const darkTheme = {
     bar: '#DFE4FB', //lilac
     innerBar: '#38023B', //dark purple
     bubble: '#FF2E33', //bright red
+    diamond: '#38023B', //lilac
+    timelineShadow: '#38023B' //darkpurple
   }
