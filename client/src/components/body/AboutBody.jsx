@@ -16,7 +16,7 @@ export default function AboutBody(props) {
             <div>{aboutContent}</div>
             <div className='social-row'>
             <SocialIcon bgColor={socialColour} url='https://www.linkedin.com/in/abby-mitchell/' target="_blank"></SocialIcon> 
-            <SocialIcon bgColor={socialColour} url='https://github.com/javabster' target="_blank"></SocialIcon> 
+            <SocialIcon data-testid='github-link' bgColor={socialColour} url='https://github.com/javabster' target="_blank"></SocialIcon> 
             <SocialIcon bgColor={socialColour} url='https://twitter.com/javabster' target="_blank"></SocialIcon>
            </div>
         </div>

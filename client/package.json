@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,6 +36,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
+    "nyc": "^15.0.1",
     "react-social-icons": "^4.1.0"
   }
 }
