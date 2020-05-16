@@ -1,7 +1,7 @@
-export const toggleMode = (mode) => {
+export const setTheme = (theme) => {
     return {
-        type: toggleMode,
-        mode: mode
+        type: setTheme,
+        theme: theme
     }
 }
 
@@ -9,6 +9,13 @@ export const setTabOpen = (tab) => {
     return {
         type: setTabOpen,
         tab: tab
+    }
+}
+
+export const setLanguage = (lang) => {
+    return {
+        type: setLanguage,
+        language: lang
     }
 }
 

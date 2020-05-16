@@ -31,16 +31,22 @@ export const defaultState = {
 
 export default function applicationReducer(state, action) {
     switch(action.type) {
-        case actions.toggleMode: {
+        case actions.setTheme: {
             return {
                 ...state,
-                mode: action.mode
+                mode: action.theme
             }
         }
         case actions.setTabOpen: {
             return {
                 ...state,
                 tabOpen: action.tab
+            }
+        }
+        case actions.setLanguage: {
+            return {
+                ...state,
+                language: action.language
             }
         }
         case actions.setAbout: {
