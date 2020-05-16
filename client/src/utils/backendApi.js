@@ -18,11 +18,11 @@ export const getAboutMe = async (lang) => {
     }
 }
 
-export const getSkills = async () => {
+export const getSkills = async (lang) => {
     try {
         const response = await axios({
             method: 'get',
-            url: `${baseURL}api/skills`,
+            url: `${baseURL}api/skills/${lang}`,
         });
         if (response.data) {
             return response.data
@@ -34,11 +34,11 @@ export const getSkills = async () => {
     }
 }
 
-export const getTitles = async (lang) => {
+export const getLegend = async (lang) => {
     try {
         const response = await axios({
             method: 'get',
-            url: `${baseURL}api/titles/${lang}`
+            url: `${baseURL}api/skills-legend/${lang}`
         });
         if(response.data) {
             return response.data
@@ -55,6 +55,22 @@ export const getEducation = async (lang) => {
         const response = await axios({
             method: 'get',
             url: `${baseURL}api/education/${lang}`
+        });
+        if(response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}
+
+export const getButtonDetails = async (lang) => {
+    try {
+        const response = await axios({
+            method: 'get',
+            url: `${baseURL}api/buttons/${lang}`
         });
         if(response.data) {
             return response.data
