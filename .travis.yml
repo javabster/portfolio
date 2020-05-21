@@ -33,15 +33,15 @@ cache:
 #   on:
 #     branch: master
 
-# stages:
-#   - Test
-#   - name: Build & Push to AWS
-#     if: (Branch = master AND type != pull_request)
+stages:
+  - Test
+  - name: Build & Push to AWS
+    if: (Branch = master AND type != pull_request)
 
-# jobs:
-#   include:
-#   - stage: Test
-#     script: npm run test
+jobs:
+  include:
+  - stage: Test
+    script: npm run test
 #   - stage: Build & Push to AWS
 #     script:
 #     - zip -r latest *
