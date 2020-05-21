@@ -41,7 +41,11 @@ stages:
 jobs:
   include:
   - stage: Test
-    script: npm run test
+    script: 
+    - cd backend
+    - npm run start
+    - cd client
+    - npm run test
 #   - stage: Build & Push to AWS
 #     script:
 #     - zip -r latest *
