@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import SkillRow from '../skills/SkillRow';
 import SkillBar from '../skills/SkillBar';
 import SkillLegendBar from '../skills/SkillLegendBar';
 import { AppContext } from '../app/App';
 
 export default function SkillsBody(props) {
-    const {state, dispatch} = useContext(AppContext);
+    const {state} = useContext(AppContext);
 
     return(
         <div style={{display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'space-between', paddingBottom: '20px'}}>

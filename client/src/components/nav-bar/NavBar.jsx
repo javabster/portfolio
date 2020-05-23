@@ -1,4 +1,4 @@
-import React, {useState, useReducer, useContext } from 'react';
+import React, { useContext } from 'react';
 import Button from '../shared/Button';
 import ButtonRow from './ButtonRow';
 

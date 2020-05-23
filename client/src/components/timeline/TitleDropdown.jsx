@@ -18,7 +18,7 @@ export default styled.button`
     border: none;
 
      transform: ${props => {
-        if (props.isClicked == false) return 'translate(0em,-0.2em)';
+        if (props.isClicked === false) return 'translate(0em,-0.2em)';
       }
     };
     

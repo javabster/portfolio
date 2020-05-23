@@ -21,18 +21,18 @@ export default function SkillLegendBar(props) {
     useEffect(() => {
         let newArray = [...bars];
         props.bubbleText.map((bubble, index) => {
-            newArray[index].bubbleText = props.bubbleText[index]
+            return newArray[index].bubbleText = props.bubbleText[index]
         })
         setBars(newArray);
         
-    }, [props.bubbleText])
+    }, [props.bubbleText, bars])
 
     const setColour = index => {
        let newArray = [...bars];
        newArray[index].showBubble = true;
        var a = index;
        for (a=index; a >= 0; a-- ) {
-           newArray[a].colour = 'fill'
+           return newArray[a].colour = 'fill'
        }
        setBars(newArray);
     }

@@ -45,7 +45,7 @@ export default function TimelineItem(props) {
                 <Diamond isClicked={isClicked}></Diamond>
                 <TitleDropdown isClicked={isClicked} onClick={() => handleClick()}>
                     {title}
-                    <img style={{height: '50%', width:'50px'}}src={arrow}></img>
+                    <img alt='arrow' style={{height: '50%', width:'50px'}} src={arrow}></img>
                 </TitleDropdown>
                 { !last && <VerticalLine isClicked={isClicked}></VerticalLine>}
                 { isClicked && <TimelineContent>{content}</TimelineContent>}

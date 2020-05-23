@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export default styled.button`
     background-color: ${props => {
-        if (props.clicked == false) return props.theme.btnMain;
-        else if (props.clicked == true) return props.theme.accent;
+        if (props.clicked === false) return props.theme.btnMain;
+        else if (props.clicked === true) return props.theme.accent;
       }
     };
     margin: 10px;
@@ -36,8 +36,8 @@ export default styled.button`
     border: none;
     font-family: 'Aldrich';
     color: ${props => {
-        if (props.clicked == false) return props.theme.accent;
-        else if (props.clicked == true) return props.theme.background;
+        if (props.clicked === false) return props.theme.accent;
+        else if (props.clicked === true) return props.theme.background;
       }
     };
     text-align: center;
@@ -45,14 +45,14 @@ export default styled.button`
     /* font-weight: bold; */
 
     box-shadow: ${props => {
-        if (props.clicked == false) return `5px 5px 0px ${props.theme.accent};`
-        else if (props.clicked == true) return `3px 3px 0px ${props.theme.btnMain}`;
+        if (props.clicked === false) return `5px 5px 0px ${props.theme.accent};`
+        else if (props.clicked === true) return `3px 3px 0px ${props.theme.btnMain}`;
       }
     };
     /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
 
     transform: ${props => {
-        if (props.clicked == false) return 'translate(0em,-0.2em)';
+        if (props.clicked === false) return 'translate(0em,-0.2em)';
       }
     };
 

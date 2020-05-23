@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext, useReducer } from 'react';
+import React, { useEffect, createContext, useReducer } from 'react';
 import Wrapper from './Wrapper';
 import NavBar from '../nav-bar/NavBar';
 import ThemeButtons from '../nav-bar/ThemeButtons';
@@ -59,6 +59,12 @@ function App() {
               </EducationBody>
       case 'skills':
         return <SkillsBody></SkillsBody>
+      default:
+        return <AboutBody 
+                isLightTheme={state.mode === 'light'} 
+                aboutTitle={state.about.body.title} 
+                aboutContent={state.about.body.content}>
+              </AboutBody>
     }
   }
 

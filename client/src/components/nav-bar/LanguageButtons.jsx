@@ -25,7 +25,7 @@ export default function LanguageButtons(props) {
                 setUkFlag(ukFlagDark);
                 setCnFlag(cnFlagLight);
             }}>
-              <img style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={ukFlag}></img>
+              <img alt='uk flag' style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={ukFlag}></img>
           </LangButton>
           <LangButton 
             clicked={state.language === 'chinese'} 
@@ -34,7 +34,7 @@ export default function LanguageButtons(props) {
                 setUkFlag(ukFlagLight);
                 setCnFlag(cnFlagDark);
             }}>
-              <img style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={cnFlag}></img>
+              <img alt='china flag' style={{boxSizing: 'border-box', width: '100%', height: '100%'}} src={cnFlag}></img>
           </LangButton>
       </ButtonColumn>
     )
