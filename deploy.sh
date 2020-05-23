@@ -50,4 +50,4 @@ aws s3 sync public/ "s3://$S3_BUCKET" --acl public-read --delete
 
 # Force-invalidate the now-outdated assets rather than waiting for them to expire
 # Make sure you have the CLOUDFRONT_DIST_ID_* env variables defined for this to work
-aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /* --profile portfolio-user
+aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /*
