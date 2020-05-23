@@ -42,7 +42,7 @@ export default function SkillLegendBar(props) {
         newArray[index].showBubble = false;
        var a = index;
        for (a=index; a >= 0; a-- ) {
-           newArray[a].colour = 'transparent'
+           return newArray[a].colour = 'transparent'
        }
        setBars(newArray);
     }

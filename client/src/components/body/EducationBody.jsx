@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TimelineItem from '../timeline/TimelineItem';
 
 export default function EducationBody(props) {
