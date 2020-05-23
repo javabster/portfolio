@@ -49,8 +49,9 @@ jobs:
   - stage: Test
     script: 
     - (cd ../backend && npm run start) & (cd ../client && npm run test)
-    
+
   - stage: Build & Push to AWS
     script:
-    - chmod +x deploy.sh
-    - "./deploy.sh"
+    - echo build and push to aws
+    # - chmod +x deploy.sh
+    # - "./deploy.sh"
