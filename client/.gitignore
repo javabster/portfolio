@@ -29,4 +29,4 @@ yarn-error.log*
 coverage
 .nyc_output
 
-credentials.csv
+aws-credentials-travis-user.csv
