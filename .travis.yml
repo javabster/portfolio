@@ -53,6 +53,7 @@ jobs:
   - stage: Build & Push to AWS
     script:
     - echo build and push to aws
+    - CI=false
     - cd ../
     - chmod +x deploy.sh
     - "./deploy.sh"
