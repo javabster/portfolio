@@ -42,7 +42,7 @@ cache:
 stages:
   - Test
   - name: Build & Push to AWS
-    if: (Branch = master AND type != pull_request)
+    if: (Branch = master)
 
 jobs:
   include:
