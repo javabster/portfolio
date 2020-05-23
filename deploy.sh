@@ -39,7 +39,12 @@ S3_BUCKET="portfolio-react-app"
 echo "Deploying to the $S3_BUCKET bucket"
 
 # Install the AWS CLI so we can publish to S3
+pip install --upgrade pip
 pip install awscli --upgrade --user
+
+aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+aws confgure set default.region eu-west-2
 
 # Sync our build folder with our S3 bucket
 # --acl public-read says deploy the files with public read access
