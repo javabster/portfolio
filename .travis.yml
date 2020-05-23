@@ -6,32 +6,32 @@ cache:
   directories:
     - node_modules
 
-# deploy:
-# - provider: s3
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_KEY
-#   local_dir: dpl_cd_upload
-#   skip_cleanup: true
-#   on:
-#     branch: master
-#     repo: javabster/portfolio
-#   # AWS S3 bucket name & region here:
-#   bucket: portfolio-bucket-am
-#   region: eu-west-2
-# - provider: codedeploy
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_KEY
-#   # AWS S3 bucket name here:
-#   bucket: portfolio-bucket-am
-#   key: latest.zip
-#   bundle_type: zip
-#   # CodeDeploy Application name here:
-#   application: 	portfolio 
-#   # CodeDeploy Deployment Group Name HERE:
-#   deployment_group: portfolio-deployment-group
-#   region: eu-west-2
-#   on:
-#     branch: master
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: dpl_cd_upload
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: javabster/portfolio
+  # AWS S3 bucket name & region here:
+  bucket: portfolio-bucket-am
+  region: eu-west-2
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  # AWS S3 bucket name here:
+  bucket: portfolio-bucket-am
+  key: latest.zip
+  bundle_type: zip
+  # CodeDeploy Application name here:
+  application: 	portfolio 
+  # CodeDeploy Deployment Group Name HERE:
+  deployment_group: portfolio-deployment-group
+  region: eu-west-2
+  on:
+    branch: master
 
 stages:
   - Test
@@ -44,10 +44,11 @@ jobs:
     script: 
     - cd backend
     - npm run start
+    - cd ../
     - cd client
     - npm run test
-  - stage: Build & Push to AWS
-    script:
-    - zip -r latest *
-    - mkdir -p dpl_cd_upload
-    - mv latest.zip dpl_cd_upload/latest.zip
+  # - stage: Build & Push to AWS
+  #   script:
+  #   - zip -r latest *
+  #   - mkdir -p dpl_cd_upload
+  #   - mv latest.zip dpl_cd_upload/latest.zip
