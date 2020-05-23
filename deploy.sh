@@ -32,7 +32,7 @@ AWS_S3_REGION="eu-west-2"
 CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_STAGING
 # the command that builds your app
 cd ./client
-npm run start
+npm run build
 
 # Build the name of the S3 bucket we want to deploy to
 S3_BUCKET="portfolio-react-app"
