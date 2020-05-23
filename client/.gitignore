@@ -22,11 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#AWS key pair file
-*.pem
-
 # test coverage
 coverage
 .nyc_output
-
-aws-credentials-travis-user.csv

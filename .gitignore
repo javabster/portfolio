@@ -1,0 +1,8 @@
+#AWS key pair file
+*.pem
+
+#AWS Travis IAM user credentials
+aws-credentials-travis-user.csv
+
+#AWS portfolio IAM user credentials
+aws-portfolio-user-credentials.csv
