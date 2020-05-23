@@ -1,4 +1,4 @@
-sudo: required
+# sudo: required
 language: node_js
 node_js:
 - '10'
@@ -48,7 +48,8 @@ jobs:
   include:
   - stage: Test
     script: 
-    - (cd ../backend && npm run start) & (cd ../client && npm run test)
+    - echo here
+    # - (cd ../backend && npm run start) & (cd ../client && npm run test)
 
   - stage: Build & Push to AWS
     script:
