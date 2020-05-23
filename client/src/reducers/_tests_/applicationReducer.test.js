@@ -1,6 +1,5 @@
 import reducer, { defaultState } from '../applicationReducer'
 import * as actions from '../../actions/applicationActions';
-import { isMainThread } from 'worker_threads';
 
 describe('applicationReducer unit tests', () => {
     it('should return the default state', () => {
