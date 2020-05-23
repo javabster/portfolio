@@ -53,6 +53,7 @@ export default function SkillLegendBar(props) {
          if (bar.showBubble) {
              return <Bubble score={bar.id}>{bar.bubbleText}</Bubble>
          }
+         return
         })}
             <LegendBar>
                 {bars.map((bar, index) => 
