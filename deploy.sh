@@ -51,7 +51,7 @@ aws configure set default.region eu-west-2
 # --delete says to delete files in the bucket that aren't present in the build folder
 #   this ensures that old assets built with webpack with hashed names get deleted
 #   when a new build of the app is made and the assets get new hash names
-aws s3 sync public/ "s3://$S3_BUCKET" --acl public-read --delete
+aws s3 sync build/ "s3://$S3_BUCKET" --acl public-read --delete
 
 # Force-invalidate the now-outdated assets rather than waiting for them to expire
 # Make sure you have the CLOUDFRONT_DIST_ID_* env variables defined for this to work
