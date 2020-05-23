@@ -1,7 +1,7 @@
 # sudo: required
 language: node_js
 node_js:
-- '10'
+ - "lts/*"
 
 install:
   - cd backend && npm install
@@ -53,6 +53,7 @@ jobs:
   - stage: Build & Push to AWS
     script:
     - echo build and push to aws
+    - npm run build
     - cd ../
     - chmod +x deploy.sh
     - "./deploy.sh"
