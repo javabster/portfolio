@@ -8,10 +8,10 @@ return(
     <div style={{padding: '30px'}}>{
         content.map((ed, index) => {
             if (index === (content.length -1)) {
-                return <TimelineItem isLightTheme={isLightTheme} title={ed.title} date={ed.date} content={ed.content} last></TimelineItem> 
+                return <TimelineItem key={index} isLightTheme={isLightTheme} title={ed.title} date={ed.date} content={ed.content} last></TimelineItem> 
             } 
             else {
-            return <TimelineItem isLightTheme={isLightTheme} title={ed.title} date={ed.date} content={ed.content}></TimelineItem> 
+            return <TimelineItem key={index} isLightTheme={isLightTheme} title={ed.title} date={ed.date} content={ed.content}></TimelineItem> 
             }
         }) }
     </div> 

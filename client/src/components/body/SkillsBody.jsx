@@ -14,10 +14,10 @@ export default function SkillsBody(props) {
             </SkillLegendBar>
             <p style={{margin: 0, textAlign: 'center'}}>{state.skillsLegend.title}</p>
             </div>
-        {state.skills.skillsList.map((skill) => {
-            return <SkillRow >
+        {state.skills.skillsList.map((skill, index) => {
+            return <SkillRow key={index} >
                     <div className='skill-name'>{skill.name}</div>
-                    <SkillBar score={skill.score}></SkillBar>
+                    <SkillBar key={index} score={skill.score}></SkillBar>
                 </SkillRow>
         })}
         </div>

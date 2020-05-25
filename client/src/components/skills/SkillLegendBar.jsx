@@ -21,18 +21,18 @@ export default function SkillLegendBar(props) {
     useEffect(() => {
         let newArray = [...bars];
         props.bubbleText.map((bubble, index) => {
-            return newArray[index].bubbleText = props.bubbleText[index]
+            newArray[index].bubbleText = props.bubbleText[index]
         })
         setBars(newArray);
         
-    }, [props.bubbleText, bars])
+    }, [props.bubbleText])
 
     const setColour = index => {
        let newArray = [...bars];
        newArray[index].showBubble = true;
        var a = index;
        for (a=index; a >= 0; a-- ) {
-           return newArray[a].colour = 'fill'
+           newArray[a].colour = 'fill'
        }
        setBars(newArray);
     }
@@ -42,7 +42,7 @@ export default function SkillLegendBar(props) {
         newArray[index].showBubble = false;
        var a = index;
        for (a=index; a >= 0; a-- ) {
-           return newArray[a].colour = 'transparent'
+           newArray[a].colour = 'transparent'
        }
        setBars(newArray);
     }
@@ -57,7 +57,7 @@ export default function SkillLegendBar(props) {
         })}
             <LegendBar>
                 {bars.map((bar, index) => 
-                    <LegendInnerBar id={bar.id}
+                    <LegendInnerBar key={index} id={bar.id}
                             barColour={bar.colour}
                             onMouseEnter={() => setColour(index)}
                             onMouseLeave={() => setTransparent(index)}
