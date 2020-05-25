@@ -7,7 +7,7 @@ const app = express();
 app.use(cors())
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/api/buttons/:lang', (req, res) => {
     var lang = req.params.lang;

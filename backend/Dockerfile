@@ -19,5 +19,6 @@ RUN cd /var/www/api && yarn
 WORKDIR /var/www/api
 
 # Expose a port and start the server (you may need to change the name here to match your server file)
+# Make sure port is the same as specified in index.js
 EXPOSE 5000
 CMD ["node", "index.js"]
