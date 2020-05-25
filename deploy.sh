@@ -1,32 +1,6 @@
 #!/bin/bash
 
-# AWS_S3_REGION="eu-west-2"
-# STAGING_BRANCH="master"
-# PRODUCTION_BRANCH="production"
-
-# Determine the environment to deploy to based on the branch
-# From that, we'll know:
-#   - the S3 bucket to sync assets with
-#   - the CloudFront distribution for which to create an invalidation
-# NODE_ENV=''
-# CLOUDFRONT_DIST_ID=''
-# if [[ $TRAVIS_BRANCH == $STAGING_BRANCH ]]; then
-#   NODE_ENV="staging"
-#   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_STAGING
-#   # TODO: Change this to the command that builds your app for staging
-#   cd ./client
-#   npm run start
-#   yarn build:staging
-# elif [[ $TRAVIS_BRANCH == $PRODUCTION_BRANCH ]]; then
-#   NODE_ENV="production"
-#   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_PRODUCTION
-#   # TODO: Change this to the command that builds your app for production
-#   yarn build:production
-# else
-#   # Don't want to deploy if it's not one of the above branches
-#   echo "Not deploying"
-#   exit
-# fi
+# DEPLOY FRONTEND TO AWS S3
 
 AWS_S3_REGION="eu-west-2"
 # CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_STAGING
@@ -56,3 +30,26 @@ aws s3 sync build/ "s3://$S3_BUCKET" --acl public-read --delete
 # Force-invalidate the now-outdated assets rather than waiting for them to expire
 # Make sure you have the CLOUDFRONT_DIST_ID_* env variables defined for this to work
 aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /*
+
+
+
+
+# DEPLOY BACKEND TO AWS ELASTIC BEANSTALK
+
+cd ../backend
+EB_APP="portfolio"
+EB_ENV="portfolio-backend-prod"
+echo "Deploying to $EB_ENV"
+
+pip install --user --upgrade awsebcli
+
+# Configure AWS credentials for Elastic Beanstalk
+mkdir -p ./.aws
+echo '[profile eb-cli]' > ./.aws/config
+echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> ./.aws/config
+echo "aws_secret_access_key = $AWS_SECRET_ACCESS_KEY" >> ./.aws/config
+eb status
+
+# Deploy application to the appropriate ElasticBeanstalk env
+eb deploy $EB_ENV -v
+rm ./.aws/config

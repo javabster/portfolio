@@ -1,0 +1,18 @@
+branch-defaults:
+  master:
+    environment: portfolio-backend-prod
+  # (optional) Other branch-specific settings 
+  # (e.g. if you want a staging environment)
+  # master:
+  #   environment: mywebapp-api-staging
+global:
+  application_name: portfolio
+  default_ec2_keyname: null
+  default_platform: arn:aws:elasticbeanstalk:eu-west-2::platform/Docker running on
+    64bit Amazon Linux/3.0.1
+  default_region: eu-west-2
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
