@@ -41,6 +41,8 @@ EB_APP="portfolio"
 EB_ENV="portfolio-backend-prod"
 echo "Deploying to $EB_ENV"
 
+pip install --upgrade pip --user
+sudo python -m easy_install --upgrade pyOpenSSL
 pip install --user --upgrade awsebcli
 
 # Configure AWS credentials for Elastic Beanstalk
