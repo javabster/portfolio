@@ -43,9 +43,11 @@ echo "Deploying to $EB_ENV"
 
 pip install --upgrade pip --user
 sudo python -m easy_install --upgrade pyOpenSSL
+pip install awscli --upgrade --user
 pip install --user --upgrade awsebcli
 
 # Configure AWS credentials for Elastic Beanstalk
+echo 'HEREEEEEEEEEEEEEEEEEEEEEEE'
 mkdir -p ./.aws
 echo '[profile eb-cli]' > ./.aws/config
 echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> ./.aws/config
