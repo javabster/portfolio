@@ -3,6 +3,7 @@ import Wrapper from './Wrapper';
 import NavBar from '../nav-bar/NavBar';
 import ThemeButtons from '../nav-bar/ThemeButtons';
 import LanguageButtons from '../nav-bar/LanguageButtons';
+import Feedback from '../feedback/Feedback';
 
 import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
@@ -76,6 +77,7 @@ function App() {
       <LanguageButtons></LanguageButtons>
       <NavBar></NavBar>
       <Body mode='light'>{setBody(state.tabOpen)}</Body>
+      <Feedback></Feedback>
     </Wrapper>
     </ThemeProvider>
     </AppContext.Provider>

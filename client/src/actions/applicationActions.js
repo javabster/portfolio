@@ -54,6 +54,13 @@ export const setButtons = (res) => {
     }
 }
 
+export const setFeedbackOpen = (isOpen) => {
+    return {
+        type: setFeedbackOpen,
+        isOpen: isOpen
+    }
+}
+
 // export const setIsClicked = (button) => {
 //     return {
 //         type: setIsClicked,

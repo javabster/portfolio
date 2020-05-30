@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 var cors = require('cors');
+var nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -8,6 +9,25 @@ app.use(cors())
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
+
+var transport = {
+    host: 'smtp.example.com', // Don’t forget to replace with the SMTP host of your provider
+    port: 587,
+    auth: {
+    // user: creds.USER,
+    // pass: creds.PASS
+  }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take messages');
+  }
+});
 
 app.get('/api/buttons/:lang', (req, res) => {
     var lang = req.params.lang;
@@ -146,6 +166,31 @@ app.get('/api/skills/:lang', (req, res) => {
     }
 
     lang == 'chinese' ? res.send(cn) : res.send(eng);
+})
+
+app.post('/api/feedback', (req, res) => {
+    var rating = req.body.score;
+    var message = req.body.comments;
+    var content = `star rating: ${rating}/5 \n comments:\n${message}`
+
+    var mail = {
+        from: 'anonymous',
+        to: 'abby.mitchell@btinternet.com',
+        subject: 'New Feedback from Portfolio',
+        text: content
+    }
+
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+          res.json({
+            status: 'fail'
+          })
+        } else {
+          res.json({
+           status: 'success'
+          })
+        }
+      })
 })
 
 // Handles any requests that don't match the ones above
