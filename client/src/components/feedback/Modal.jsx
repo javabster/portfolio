@@ -18,8 +18,8 @@ export default function(props) {
     const { state, dispatch } = useContext(AppContext);
     const [ isClosed, setIsClosed ] = useState(false);
     const [ isSubmitted, setIsSubmitted ] = useState(false);
-    const [ value, setValue ] = useState('');
-    const [ rating, setRating ] = useState('');
+    const [ value, setValue ] = useState(null);
+    const [ rating, setRating ] = useState(null);
 
     useEffect(() => {
         // setIsClosed(false);
@@ -67,9 +67,12 @@ export default function(props) {
                         onChange={(event) => {setValue(event.target.value)}} />
                     </label>
                     <ButtonRow>
-                    <Button clicked={isClosed} style={{marginLeft:'0'}} onClick={() => {
+                    <Button clicked={isClosed} style={{marginLeft:'0'}} 
+                        onClick={() => {
                         // setIsClosed(true)
-                        dispatch(actions.setFeedbackOpen(false))
+                        dispatch(actions.setFeedbackOpen(false));
+                        setValue(null);
+                        setRating(null);
                         }}>
                         Cancel
                     </Button>
