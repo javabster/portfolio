@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-const baseURL = 'http://localhost:5000/';
-// const baseURL = 'https://api.abby-mitchell.co.uk/';
+// const baseURL = 'http://localhost:5000/';
+const baseURL = 'https://api.abby-mitchell.co.uk/';
 
 export const getAboutMe = async (lang) => {
     try {

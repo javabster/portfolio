@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 var transport = {
-    host: 'smtp.gmail.com',
+    host: 'mail.btinternet.com',
     port: 587,
     auth: {
         user: process.env.EMAIL,
