@@ -1,21 +1,26 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 var cors = require('cors');
 var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(cors())
 
+// extract the entire body portion of an incoming request stream and exposes it on req. body
+app.use(bodyParser.json())
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 var transport = {
-    host: 'smtp.example.com', // Don’t forget to replace with the SMTP host of your provider
+    host: 'smtp.gmail.com',
     port: 587,
     auth: {
-    // user: creds.USER,
-    // pass: creds.PASS
+        user: process.env.EMAIL,
+        pass: process.env.PASS
   }
 }
 
@@ -28,6 +33,33 @@ transporter.verify((error, success) => {
     console.log('Server is ready to take messages');
   }
 });
+
+app.post('/api/feedback', (req, res) => {
+    console.log('REQ.BODY');
+    console.log(req.body);
+    var rating = req.body.score;
+    var message = req.body.comments;
+    var content = `star rating: ${rating}/5 \n comments:\n${message}`
+
+    var mail = {
+        from: 'anonymous',
+        to: process.env.EMAIL,
+        subject: 'New Feedback from Portfolio',
+        text: content
+    }
+
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+          res.json({
+            status: 'fail'
+          })
+        } else {
+          res.json({
+           status: 'success'
+          })
+        }
+      })
+})
 
 app.get('/api/buttons/:lang', (req, res) => {
     var lang = req.params.lang;
@@ -166,31 +198,6 @@ app.get('/api/skills/:lang', (req, res) => {
     }
 
     lang == 'chinese' ? res.send(cn) : res.send(eng);
-})
-
-app.post('/api/feedback', (req, res) => {
-    var rating = req.body.score;
-    var message = req.body.comments;
-    var content = `star rating: ${rating}/5 \n comments:\n${message}`
-
-    var mail = {
-        from: 'anonymous',
-        to: 'abby.mitchell@btinternet.com',
-        subject: 'New Feedback from Portfolio',
-        text: content
-    }
-
-    transporter.sendMail(mail, (err, data) => {
-        if (err) {
-          res.json({
-            status: 'fail'
-          })
-        } else {
-          res.json({
-           status: 'success'
-          })
-        }
-      })
 })
 
 // Handles any requests that don't match the ones above

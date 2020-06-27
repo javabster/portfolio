@@ -37,6 +37,9 @@ export default function(props) {
       })(Rating);
 
     const handleSubmit = async () => {
+        console.log('DATA')
+        console.log(rating);
+        console.log(value);
         const feedbackState = {
             score: rating,
             comments: value
@@ -81,6 +84,8 @@ export default function(props) {
                         // setIsSubmitted(true)
                         dispatch(actions.setFeedbackOpen(false))
                         handleSubmit();
+                        setValue(null);
+                        setRating(null);
                         }}>
                         Submit
                     </Button> 
