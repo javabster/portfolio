@@ -12,8 +12,8 @@ export default function AboutBody(props) {
 
     return(
         <div className='about-column'>
-            <div style={{fontSize: '50px'}}>{aboutTitle}</div>
-            <div>{aboutContent}</div>
+            <h1 style={{fontSize: '50px'}}>{aboutTitle}</h1>
+            <h2>{aboutContent}</h2>
             <div className='social-row'>
             <SocialIcon bgColor={socialColour} url='https://www.linkedin.com/in/abby-mitchell/' target="_blank"></SocialIcon> 
             <SocialIcon data-testid='github-link' bgColor={socialColour} url='https://github.com/javabster' target="_blank"></SocialIcon> 

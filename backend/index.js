@@ -1,10 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 var cors = require('cors');
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(cors())
+
+// extract the entire body portion of an incoming request stream and exposes it on req. body
+app.use(bodyParser.json())
 
 // Serve the static files from the React app
 // app.use(express.static(path.join(__dirname, '../client/build')));
@@ -12,6 +18,52 @@ app.use(cors())
 app.get('/', function(req, res) {
     console.log('default api route')
   });
+
+var transport = {
+    host: 'smtp.gmail.com',
+    port: 587,
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASS
+  }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take messages');
+  }
+});
+
+app.post('/api/feedback', (req, res) => {
+    console.log('REQ.BODY');
+    console.log(req.body);
+    var rating = req.body.score;
+    var message = req.body.comments;
+    var content = `star rating: ${rating}/5 \n comments:\n${message}`
+
+    var mail = {
+        from: 'anonymous',
+        to: process.env.EMAIL,
+        subject: 'New Feedback from Portfolio',
+        text: content
+    }
+
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+          res.json({
+            status: 'fail'
+          })
+        } else {
+          res.json({
+           status: 'success'
+          })
+        }
+      })
+})
 
 app.get('/api/buttons/:lang', (req, res) => {
     var lang = req.params.lang;

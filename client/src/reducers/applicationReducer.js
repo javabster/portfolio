@@ -4,6 +4,7 @@ export const defaultState = {
     mode: 'light',
     tabOpen: 'about',
     language: 'english',
+    modalOpen: false,
     buttons: {
         lightTitle: 'Light Mode',
         darkTitle: 'Dark Mode',
@@ -77,6 +78,12 @@ export default function applicationReducer(state, action) {
             return {
                 ...state,
                 buttons: action.data
+            }
+        }
+        case actions.setFeedbackOpen: {
+            return {
+                ...state,
+                modalOpen: action.isOpen
             }
         }
         // case actions.setIsClicked: {

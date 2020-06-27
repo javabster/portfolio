@@ -82,3 +82,20 @@ export const getButtonDetails = async (lang) => {
         console.log(err.message)
     }
 }
+
+export const sendFeedback = async (feedback) => {
+    try {
+        const response = await axios({
+            method: 'post',
+            url: `${baseURL}api/feedback`,
+            data: feedback
+        });
+        if(response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}

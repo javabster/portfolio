@@ -57,7 +57,7 @@ export default function SkillLegendBar(props) {
         })}
             <LegendBar>
                 {bars.map((bar, index) => 
-                    <LegendInnerBar id={bar.id}
+                    <LegendInnerBar key={index} id={bar.id}
                             barColour={bar.colour}
                             onMouseEnter={() => setColour(index)}
                             onMouseLeave={() => setTransparent(index)}
