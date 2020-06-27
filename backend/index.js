@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
   });
 
 var transport = {
-    host: 'smtp.gmail.com',
+    host: 'mail.btinternet.com',
     port: 587,
     auth: {
         user: process.env.EMAIL,
