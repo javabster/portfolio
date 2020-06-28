@@ -6,17 +6,8 @@ var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 
 const app = express();
-var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200,
-  }
 
-app.use(cors(corsOptions));
-
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-  });
+app.use(cors());
 
 // extract the entire body portion of an incoming request stream and exposes it on req. body
 app.use(bodyParser.json())
