@@ -11,7 +11,7 @@ export default styled.div`
     width: 90%;
 
 .skill-name {
-    width: 80px;
+    width: 100px;
     text-align:center;
     padding-bottom: 25px;
 }

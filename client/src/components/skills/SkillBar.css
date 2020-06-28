@@ -6,6 +6,14 @@
     /* display: flex; */
     /* justify-content: center; */
 }
+.outer-legend-div {
+    height: 100px;
+    width: 80%;
+    position: relative;
+    margin: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
 .p {
    /* display: inline-block; */
    margin-left: 10px;

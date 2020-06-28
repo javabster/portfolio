@@ -57,7 +57,11 @@ export default function TimelineItem(props) {
                     {title}
                     <img alt='arrow' style={{height: '10px', width:'50px'}} src={arrow}></img>
                     </TitleDropdown>
-                    { isClicked && <TimelineContent>{content}</TimelineContent>}
+                    { isClicked && <TimelineContent>
+                        <p>
+                        {content}
+                        </p>
+                    </TimelineContent>}
                 </div>
                 
             {/* </div> */}

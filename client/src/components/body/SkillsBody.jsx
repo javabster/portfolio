@@ -18,7 +18,7 @@ export default function SkillsBody(props) {
             }}>
             {/* <div style={{paddingBottom: '75px', display: 'flex', flexDirection:'column', width: '100%'}}> */}
             <SkillRow style={{width: '90%', paddingBottom:'75px', paddingTop: '75px'}}>
-            <p style={{margin: 0, textAlign: 'center', width: '80px'}}>{state.skillsLegend.title}</p>
+            <p style={{margin: 0, width: '100px'}}>{state.skillsLegend.title}</p>
             <SkillLegendBar bubbleText={state.skillsLegend.bubbleText}>
             </SkillLegendBar>
             </SkillRow>

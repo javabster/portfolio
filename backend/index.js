@@ -5,6 +5,8 @@ var cors = require('cors');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 
+const [educationList, skillsList] = require('./constants');
+
 const app = express();
 
 app.use(cors());
@@ -12,8 +14,6 @@ app.use(cors());
 // extract the entire body portion of an incoming request stream and exposes it on req. body
 app.use(bodyParser.json())
 
-// Serve the static files from the React app
-// app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('/', function(req, res) {
     console.log('default api route')
@@ -85,7 +85,7 @@ app.get('/api/aboutMe/:lang', (req,res) => {
         title: 'About Me',
         body: {
             title: "Hi, I'm Abby",
-            content: "short bio about me"
+            content: "I am an interdisciplinary individual. Im achieved a First Class Honours degree in Arts and Sciences from University College London. While studying I undertook numerous self-learning activities to develop skills in web development. Upon graduating I started working as a Full Stack Web Developer at IBM. One of my passions outside of web development include working to encourage women and girls to enter the technology industry."
         }
     };
 
@@ -102,20 +102,7 @@ app.get('/api/education/:lang', (req, res) => {
     var lang = req.params.lang;
     var eng = {
         title: 'Education',
-        body: [
-            {title: 'University College London',
-            date: 'Sept 2018 - Jun 2019',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-        },
-        {title: 'University College London',
-            date: 'Sept 2018 - Jun 2019',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-        },
-        {title: 'University College London',
-            date: 'Sept 2018 - Jun 2019',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-        },
-        ]
+        body: educationList
     }
     var cn = {
         title: '教育',
@@ -144,8 +131,8 @@ app.get('/api/skills-legend/:lang', (req, res) => {
         bubbleText: [
             '1: Hello World!',
             "2: I'm eager to learn",
-           '3: I can make problems',
-           "4: I'm confident with the basics",
+           "3: I've used it a few times",
+           "4: I'm comfortable with the basics",
            '5: I can solve problems',
            '6: People ask me to solve problems',
            '7: I can confidently teach others',
@@ -160,7 +147,7 @@ app.get('/api/skills-legend/:lang', (req, res) => {
         bubbleText: [
             '1: 你好世界!',
             "2: 我踊跃想学会",
-           '3: 我可能造成问题',
+           '3: 我用了一点',
            "4: 我有基础的知识",
            '5: 我有解决问题的能力',
            '6: 其他人问我解决问题',
@@ -178,20 +165,7 @@ app.get('/api/skills/:lang', (req, res) => {
     var lang = req.params.lang
     var eng = {
         title: 'Skills',
-        skillsList: [
-            {
-                name: 'Javascript',
-                score: 5
-            },
-            {
-                name: 'HTML',
-                score: 7
-            },
-            {
-                name: 'CSS',
-                score: 7
-            }
-        ]
+        skillsList: skillsList
     };
 
     var cn = {

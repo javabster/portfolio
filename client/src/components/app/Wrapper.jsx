@@ -6,7 +6,7 @@ export default styled.div`
     margin-top: 0;
     padding: 20px;
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 100px auto 10%;
     grid-template-rows: 20% auto 20%;
     width: 100vw;
     box-sizing: border-box;

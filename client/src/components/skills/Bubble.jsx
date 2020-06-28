@@ -4,14 +4,18 @@ export default styled.div`
     position: relative;
     background: ${props => props.theme.bubble};
     min-width: 40px;
+    max-width: 100px;
     display: inline-block;
-    max-height: 25px;
-    line-height: 25px;
-    padding: 2px 10px 2px 10px;
+    /* max-height: 25px; */
+    /* line-height:10px; */
+    /* vertical-align: middle; */
+    padding: 10px 10px 2px 10px;
     margin-left: ${props => `${props.score}0%`};
     color: white;
     text-align: center;
-    white-space: nowrap;
+    white-space: pre-wrap;
+    height: ${props => props.type === 'legend' ? '42px' : '24px'};
+    font-size: ${props => props.fontSize};
 
 &:after {
     content:'';
