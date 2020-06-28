@@ -6,13 +6,17 @@ var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 
 const app = express();
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+  }
 
-app.use(cors())
+app.use(cors(corsOptions));
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     next();
+//   });
 
 // extract the entire body portion of an incoming request stream and exposes it on req. body
 app.use(bodyParser.json())
@@ -44,8 +48,6 @@ transporter.verify((error, success) => {
 });
 
 app.post('/api/feedback', (req, res) => {
-    console.log('REQ.BODY');
-    console.log(req.body);
     var rating = req.body.score;
     var message = req.body.comments;
     var content = `star rating: ${rating}/5 \n comments:\n${message}`
