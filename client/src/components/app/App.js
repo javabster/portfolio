@@ -75,9 +75,11 @@ function App() {
     <Wrapper>
       <ThemeButtons></ThemeButtons>
       <LanguageButtons></LanguageButtons>
-      <NavBar></NavBar>
-      <Body mode='light'>{setBody(state.tabOpen)}</Body>
-      <Feedback></Feedback>
+      <div syle={{display: 'flex', flexDirection: 'column'}}>
+        <NavBar></NavBar>
+        <Body mode='light'>{setBody(state.tabOpen)}</Body>
+        <Feedback></Feedback>
+      </div>
     </Wrapper>
     </ThemeProvider>
     </AppContext.Provider>

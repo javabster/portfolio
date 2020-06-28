@@ -15,6 +15,7 @@ export default function Feedback(props) {
             gridColumnEnd: '2',
             gridRowStart: '3',
             display: 'flex',
+            justifyContent: 'center',
             margin: '0 auto',
             padding: '20px'
         }}>

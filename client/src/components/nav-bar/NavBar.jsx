@@ -9,7 +9,7 @@ export default function NavBar(props) {
     const {state, dispatch} = useContext(AppContext);
 
     return(
-        <ButtonRow>
+        <ButtonRow className='nav-bar-row'>
         <Button 
           type='nav-bar' 
           clicked={state.tabOpen === 'about'} 

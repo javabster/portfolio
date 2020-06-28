@@ -6,7 +6,7 @@ export default styled.div`
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 2;
-    padding: 20px;
+    padding: 25px;
     color: ${props => props.theme.color};
     padding-bottom: 50px;
 

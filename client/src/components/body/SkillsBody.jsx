@@ -8,12 +8,21 @@ export default function SkillsBody(props) {
     const {state} = useContext(AppContext);
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'space-between', paddingBottom: '20px'}}>
-            <div style={{paddingBottom: '75px', display: 'flex', flexDirection:'column'}}>
+        <div style={{
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems:'center', 
+            ustifyContent: 'space-between', 
+            paddingBottom: '20px',
+            width: '100%'
+            }}>
+            {/* <div style={{paddingBottom: '75px', display: 'flex', flexDirection:'column', width: '100%'}}> */}
+            <SkillRow style={{width: '90%', paddingBottom:'75px', paddingTop: '75px'}}>
+            <p style={{margin: 0, textAlign: 'center', width: '80px'}}>{state.skillsLegend.title}</p>
             <SkillLegendBar bubbleText={state.skillsLegend.bubbleText}>
             </SkillLegendBar>
-            <p style={{margin: 0, textAlign: 'center'}}>{state.skillsLegend.title}</p>
-            </div>
+            </SkillRow>
+            {/* </div> */}
         {state.skills.skillsList.map((skill, index) => {
             return <SkillRow key={index} >
                     <div className='skill-name'>{skill.name}</div>

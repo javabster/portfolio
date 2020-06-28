@@ -39,16 +39,28 @@ export default function TimelineItem(props) {
     }
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', marginBottom: '10px', height: `${itemHeight}`}}>
+        <div style={{display: 'flex', flexDirection: 'column', marginBottom: '10px', height: 'fit-content'}}>
            <TimelineGrid isClicked={isClicked}>
+            {/* <div style={{display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between'}}> */}
                 <TimelineDate>{date}</TimelineDate>
                 <Diamond isClicked={isClicked}></Diamond>
+                { !last && <VerticalLine isClicked={isClicked}></VerticalLine>}
+                <div style={{
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    height:'100%', 
+                    gridRowStart: '1', 
+                    gridRowEnd: '3',
+                    gridColumnStart: '3'
+                    }}>
                 <TitleDropdown isClicked={isClicked} onClick={() => handleClick()}>
                     {title}
-                    <img alt='arrow' style={{height: '50%', width:'50px'}} src={arrow}></img>
-                </TitleDropdown>
-                { !last && <VerticalLine isClicked={isClicked}></VerticalLine>}
-                { isClicked && <TimelineContent>{content}</TimelineContent>}
+                    <img alt='arrow' style={{height: '10px', width:'50px'}} src={arrow}></img>
+                    </TitleDropdown>
+                    { isClicked && <TimelineContent>{content}</TimelineContent>}
+                </div>
+                
+            {/* </div> */}
             </TimelineGrid>
         </div>
     )

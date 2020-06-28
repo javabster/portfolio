@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export default styled.button`
     width: 90%;
     min-height: 20px;
+    height: fit-content;
     background-color: ${props => props.isClicked ? props.theme.accent : props.theme.background};
     box-shadow: ${props => props.isClicked ? `3px 3px 0px ${props.theme.timelineShadow}` : `5px 5px 0px ${props.theme.accent};`
     };
