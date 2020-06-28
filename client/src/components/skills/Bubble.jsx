@@ -14,7 +14,7 @@ export default styled.div`
     color: white;
     text-align: center;
     white-space: pre-wrap;
-    height: ${props => props.type === 'legend' ? '42px' : '24px'};
+    height: ${props => props.type === 'legend' ? '42px' : '20px'};
     font-size: ${props => props.fontSize};
 
 &:after {
