@@ -9,6 +9,11 @@ const app = express();
 
 app.use(cors())
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 // extract the entire body portion of an incoming request stream and exposes it on req. body
 app.use(bodyParser.json())
 
