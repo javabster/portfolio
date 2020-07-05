@@ -39,7 +39,7 @@ const workList = [
         + 'platform, using \bEmber and \bTypescript, to complete tasks ranging from debugging, to re-structuring error handling to implementing flash messages on 15+ events across the platform.'
     },
     {
-        title: 'Fey.org - Intern Developer (part time)',
+        title: 'Fey.org - Intern Mobile Developer (part time)',
         date: 'Feb - Jun 2018',
         content: 'Feiy is a Shanghai based startup creating a platform to enable people to discover and support a range of local social entrepreneurship'
         + ' organisations. As an Intern I designed and built a \bWeChat mini program to help Feiy supporters. I built the mini program using \bJavascript, \bWeChat mobile features and a \bLeanCloud database.'
@@ -47,8 +47,13 @@ const workList = [
         + ' Interning in China meant I had to overcame difficulties without English documentation or support forums for Chinese software'
     },
     {
-        title: 'Write Rhythm - Intern Mobile Developer (part time)',
+        title: 'Mandala Group - Intern Mobile Developer (part time)',
         date: 'Sept - Dec 2017',
+        content: 'Mandala Group is start-up dedicated to creating software solutions to improve quality of life for hard to reach groups. I worked to help build their Mofarm App using React Native and LeanCloud database'
+    },
+    {
+        title: 'Write Rhythm - Intern Developer (part time)',
+        date: 'July - Aug 2017',
         content: 'Write Rhythm is a startup dedicated to connecting music labels with new artists. I worked with the CTO to develop my skills in \bJavascript,'
         + ' \bHTML, \bCSS, \bReact framework, \bmySQL and \bgit.'
     },
