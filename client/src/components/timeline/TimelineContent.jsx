@@ -6,6 +6,7 @@ export default styled.div`
     width: 88%;
     margin-top: 20px;
     padding: 10px;
+    margin-bottom: 20px;
     background-color: ${props => props.theme.background};
 
     /* to get \n to work */

@@ -20,6 +20,10 @@ export const defaultState = {
         title: null,
         body: [],
     },
+    workExp: {
+        title: null,
+        body: [],
+    },
     skills: {
         title: null,
         skillsList: []
@@ -60,6 +64,12 @@ export default function applicationReducer(state, action) {
             return {
                 ...state,
                 education: action.data
+            }
+        }
+        case actions.setWork: {
+            return {
+                ...state,
+                workExp: action.data
             }
         }
         case actions.setSkills: {

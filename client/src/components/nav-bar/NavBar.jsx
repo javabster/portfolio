@@ -18,6 +18,12 @@ export default function NavBar(props) {
         </Button>
         <Button 
           type='nav-bar' 
+          clicked={state.tabOpen === 'work_exp'} 
+          onClick={() => { dispatch(actions.setTabOpen('work_exp')); }}>
+            {state.workExp.title}
+        </Button>
+        <Button 
+          type='nav-bar' 
           clicked={state.tabOpen === 'education'} 
           onClick={() => { dispatch(actions.setTabOpen('education')); }}>
             {state.education.title}

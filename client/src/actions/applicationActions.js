@@ -33,6 +33,13 @@ export const setEducation = (res) => {
     }
 }
 
+export const setWork = (res) => {
+    return {
+        type: setWork,
+        data: res
+    }
+}
+
 export const setSkills = (res) => {
     return {
         type: setSkills,

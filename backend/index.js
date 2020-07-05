@@ -5,7 +5,7 @@ var cors = require('cors');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 
-const [educationList, skillsList] = require('./constants');
+const [educationList, skillsList, workList] = require('./constants');
 
 const app = express();
 
@@ -103,6 +103,32 @@ app.get('/api/education/:lang', (req, res) => {
     var eng = {
         title: 'Education',
         body: educationList
+    }
+    var cn = {
+        title: '教育',
+        body: [
+            {title: 'University College London',
+            date: 'Sept 2018 - Jun 2019',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+        },
+        {title: 'University College London',
+            date: 'Sept 2018 - Jun 2019',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+        },
+        {title: 'University College London',
+            date: 'Sept 2018 - Jun 2019',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+        },
+        ]
+    }
+    lang == 'chinese' ? res.send(cn) : res.send(eng);
+})
+
+app.get('/api/work-exp/:lang', (req, res) => {
+    var lang = req.params.lang;
+    var eng = {
+        title: 'Work Experience',
+        body: workList
     }
     var cn = {
         title: '教育',

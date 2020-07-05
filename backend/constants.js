@@ -21,6 +21,40 @@ const educationList = [
 },
 ]
 
+const workList = [
+    {
+        title: 'IBM - Application Developer',
+        date: 'Sept 2019 - ',
+        content: 'As an Application Developer at IBM CIO London Continuously iterate and develop new features as part of an Agile development team, levereging cutting edge technologies and frameworks, including \bIBM Cloud, \bReact, \bCarbon, \bTravis (Ci/CD) \bWeb \bSockets etc.'
+        + 'I also ensure applications are thoroughly tested and work towards increasing resiliency, using a combination \bTDD, \bDB2 high availability database, \bKubernetes and \bOpenShift'
+        + 'In also helped found and currently lead a local internal Women in Technology group (events every quarter, online content, review hiring processes etc.)'
+    },
+    {
+        title: 'Repositive - Intern Developer (full time)',
+        date: 'July - Sept 2018',
+        content: 'Repositive is a startup building online platforms to enable researchers to get better and more efficient access'
+        + 'to genomic data. My role as an intern was to manipulate data stored in a \bPostgreSQL database, create visualisations using'
+        + ' \bHTML and \bJavascript and integrate into dashboarding software that updates in real time. I collaborated across design, data, '
+        + 'development and senior management teams to determine reporting specifications. I also worked on various frontend tasks for the main '
+        + 'platform, using \bEmber and \bTypescript, to complete tasks ranging from debugging, to re-structuring error handling to implementing flash messages on 15+ events across the platform.'
+    },
+    {
+        title: 'Fey.org - Intern Developer (part time)',
+        date: 'Feb - Jun 2018',
+        content: 'Feiy is a Shanghai based startup creating a platform to enable people to discover and support a range of local social entrepreneurship'
+        + ' organisations. As an Intern I designed and built a \bWeChat mini program to help Feiy supporters. I built the mini program using \bJavascript, \bWeChat mobile features and a \bLeanCloud database.'
+        + ' I communicated with CEO on mini program design specification, UX/UI, as well as advised on potential improvements to the main organisation online platform.'
+        + ' Interning in China meant I had to overcame difficulties without English documentation or support forums for Chinese software'
+    },
+    {
+        title: 'Write Rhythm - Intern Mobile Developer (part time)',
+        date: 'Sept - Dec 2017',
+        content: 'Write Rhythm is a startup dedicated to connecting music labels with new artists. I worked with the CTO to develop my skills in \bJavascript,'
+        + ' \bHTML, \bCSS, \bReact framework, \bmySQL and \bgit.'
+    },
+
+    ]
+
 const skillsList = [
     {
         name: 'Javascript',
@@ -156,4 +190,4 @@ const skillsList = [
     },
 ]
 
-module.exports = [educationList, skillsList];
+module.exports = [educationList, skillsList, workList];

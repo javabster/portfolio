@@ -9,11 +9,12 @@ import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
 import AboutBody from '../body/AboutBody'
 import EducationBody from '../body/EducationBody';
+import WorkExpBody from '../body/WorkExpBody';
 
 import applicationReducer, { defaultState } from '../../reducers/applicationReducer';
 import * as actions from '../../actions/applicationActions';
 
-import { getAboutMe, getSkills, getEducation, getLegend, getButtonDetails } from '../../utils/backendApi';
+import { getAboutMe, getSkills, getEducation, getLegend, getButtonDetails, getWork } from '../../utils/backendApi';
 
 import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
@@ -29,6 +30,10 @@ function App() {
     const fetchData = async () => {
       const res = await getAboutMe(state.language);
       dispatch(actions.setAbout(res));
+
+      const workRes = await getWork(state.language);
+      console.log(workRes);
+      dispatch(actions.setWork(workRes));
 
       const edRes = await getEducation(state.language);
       dispatch(actions.setEducation(edRes));
@@ -53,6 +58,11 @@ function App() {
                 aboutTitle={state.about.body.title} 
                 aboutContent={state.about.body.content}>
               </AboutBody>
+      case 'work_exp':
+      return <WorkExpBody 
+              isLightTheme={state.mode === 'light'} 
+              content={state.workExp.body}>
+            </WorkExpBody>
       case 'education':
         return <EducationBody 
                 isLightTheme={state.mode === 'light'} 
