@@ -67,6 +67,22 @@ export const getEducation = async (lang) => {
     }
 }
 
+export const getWork = async (lang) => {
+    try {
+        const response = await axios({
+            method: 'get',
+            url: `${baseURL}api/work-exp/${lang}`
+        });
+        if(response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}
+
 export const getButtonDetails = async (lang) => {
     try {
         const response = await axios({
