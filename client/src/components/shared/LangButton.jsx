@@ -10,7 +10,7 @@ export default styled.button`
     /* background-image: url("../../images/uk-light.png"); */
     /* box-sizing: border-box; */
     margin: 10px;
-    margin-left: 90px;
+    /* margin-left: 80px; */
     min-height:30px;
     height: 10px;
     min-width: 20px;

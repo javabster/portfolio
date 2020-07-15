@@ -85,7 +85,7 @@ app.get('/api/aboutMe/:lang', (req,res) => {
         title: 'About Me',
         body: {
             title: "Hi, I'm Abby",
-            content: "I am an interdisciplinary individual. Im achieved a First Class Honours degree in Arts and Sciences from University College London. While studying I undertook numerous self-learning activities to develop skills in web development. Upon graduating I started working as a Full Stack Web Developer at IBM. One of my passions outside of web development include working to encourage women and girls to enter the technology industry."
+            content: "I am an interdisciplinary individual. I achieved a First Class Honours degree in Arts and Sciences from University College London. While studying I undertook numerous self-learning activities to develop skills in web development. Upon graduating I started working as a Full Stack Web Developer at IBM. One of my passions outside of web development include working to encourage women and girls to enter the technology industry."
         }
     };
 

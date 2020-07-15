@@ -1,5 +1,6 @@
-import React, { useEffect, createContext, useReducer } from 'react';
+import React, { useEffect, createContext, useReducer, useState } from 'react';
 import Wrapper from './Wrapper';
+import MobileWrapper from './MobileWrapper';
 import NavBar from '../nav-bar/NavBar';
 import ThemeButtons from '../nav-bar/ThemeButtons';
 import LanguageButtons from '../nav-bar/LanguageButtons';
@@ -20,11 +21,13 @@ import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
 import { lightTheme, darkTheme } from '../../styles/themes';
 import { ThemeProvider } from 'styled-components';
+import { isMobileDevice } from '../../utils/utils';
 
 const AppContext = createContext(null)
 
 function App() {
-  const [state, dispatch ] = useReducer(applicationReducer, defaultState)
+  const [state, dispatch ] = useReducer(applicationReducer, defaultState);
+  const [ isMobile, setIsMobile ] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +51,9 @@ function App() {
       dispatch(actions.setButtons(buttonRes));
     }
     fetchData();
+    const mobile = isMobileDevice();
+    console.log(mobile)
+    setIsMobile(mobile);
   }, [state.language])
 
   function setBody(type) {
@@ -82,15 +88,30 @@ function App() {
   return (
     <AppContext.Provider value={{ state, dispatch }}>
     <ThemeProvider theme={state.mode === 'light' ? lightTheme : darkTheme}>
-    <Wrapper>
-      <ThemeButtons></ThemeButtons>
-      <LanguageButtons></LanguageButtons>
-      <div syle={{display: 'flex', flexDirection: 'column'}}>
-        <NavBar></NavBar>
-        <Body mode='light'>{setBody(state.tabOpen)}</Body>
-        <Feedback></Feedback>
-      </div>
-    </Wrapper>
+    {!isMobile
+     ?
+      <Wrapper>
+        <ThemeButtons></ThemeButtons>
+        <LanguageButtons></LanguageButtons>
+        <div syle={{display: 'flex', flexDirection: 'column'}}>
+          <NavBar></NavBar>
+          <Body mode='light'>{setBody(state.tabOpen)}</Body>
+          <Feedback></Feedback>
+        </div>
+      </Wrapper>
+    : 
+      <MobileWrapper>
+        <div syle={{display: 'flex', flexDirection: 'row'}}>
+          <NavBar></NavBar>
+          <Body mode='light'>{setBody(state.tabOpen)}</Body>
+          <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
+            <ThemeButtons ></ThemeButtons>
+            <Feedback></Feedback>
+            <LanguageButtons ></LanguageButtons>
+          </div>
+        </div>
+      </MobileWrapper>
+    }
     </ThemeProvider>
     </AppContext.Provider>
   );

@@ -12,7 +12,7 @@ export default function AboutBody(props) {
 
     return(
         <div className='about-column'>
-            <h1 style={{fontSize: '50px'}}>{aboutTitle}</h1>
+            <h1 style={{fontSize: '50px', lineHeight: '55px'}}>{aboutTitle}</h1>
             <h2>{aboutContent}</h2>
             <div className='social-row'>
             <SocialIcon bgColor={socialColour} url='https://www.linkedin.com/in/abby-mitchell/' target="_blank"></SocialIcon> 
