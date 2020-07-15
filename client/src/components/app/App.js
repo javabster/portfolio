@@ -52,7 +52,6 @@ function App() {
     }
     fetchData();
     const mobile = isMobileDevice();
-    console.log(mobile)
     setIsMobile(mobile);
   }, [state.language])
 
@@ -91,24 +90,27 @@ function App() {
     {!isMobile
      ?
       <Wrapper>
-        <ThemeButtons></ThemeButtons>
-        <LanguageButtons></LanguageButtons>
-        <div syle={{display: 'flex', flexDirection: 'column'}}>
+        <div style={{gridRowStart: '1', gridColumnStart: '2'}}>
           <NavBar></NavBar>
           <Body mode='light'>{setBody(state.tabOpen)}</Body>
-          <Feedback></Feedback>
+          <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
+            <ThemeButtons></ThemeButtons>
+            <Feedback></Feedback>
+            <LanguageButtons></LanguageButtons>
+          </div>
+          
         </div>
       </Wrapper>
     : 
       <MobileWrapper>
-        <div syle={{display: 'flex', flexDirection: 'row'}}>
+        <div>
           <NavBar></NavBar>
           <Body mode='light'>{setBody(state.tabOpen)}</Body>
-          <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
+          <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px', justifyContent: 'center'}}>
             <ThemeButtons ></ThemeButtons>
-            <Feedback></Feedback>
             <LanguageButtons ></LanguageButtons>
           </div>
+          <Feedback></Feedback>
         </div>
       </MobileWrapper>
     }

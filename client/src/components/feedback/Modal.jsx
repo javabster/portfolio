@@ -50,11 +50,13 @@ export default function(props) {
 
     return(
         state.modalOpen && <Overlay>
-            <Body style={{zIndex: '10000', padding:'30px 40px', margin:'0 auto', width: '50%', height:'50%'}}>
-                <h1>Submit Feedback</h1>
+            <Body style={{zIndex: '10000', padding:'30px 40px', margin:'0 auto', width: '50%', whiteSpace: 'nowrap'}}>
+                <h1 style={{whiteSpace: 'initial'}}> Submit Feedback</h1>
+                <div style={{width: '100%', whiteSpace: 'initial'}}>
                 <h3>As a junior developer I'm always looking for ways to improve my work, if you have any thoughts please tell me!</h3>
+                </div>
                 <form>
-                    <h4 style={{marginBottom: '3px'}}>How do you like this website?</h4>
+                    <h4 style={{marginBottom: '3px', whiteSpace: 'initial'}}>How do you like this website?</h4>
                     <StyledRating 
                         name="size-large" 
                         style={{padding:'0'}}
@@ -69,8 +71,8 @@ export default function(props) {
                         value={value} 
                         onChange={(event) => {setValue(event.target.value)}} />
                     </label>
-                    <ButtonRow>
-                    <Button clicked={isClosed} style={{marginLeft:'0'}} 
+                    <ButtonRow style={{paddingTop: '0'}}>
+                    <Button clicked={isClosed} 
                         onClick={() => {
                         // setIsClosed(true)
                         dispatch(actions.setFeedbackOpen(false));
