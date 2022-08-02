@@ -10,7 +10,6 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.2",
-    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -41,6 +40,7 @@
   "proxy": "http://localhost:5000",
   "devDependencies": {
     "nyc": "^15.0.1",
-    "react-social-icons": "^4.1.0"
+    "react-social-icons": "^4.1.0",
+    "sass": "^1.54.0"
   }
 }
