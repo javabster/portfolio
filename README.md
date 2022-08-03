@@ -11,3 +11,11 @@ A place for me to put some details about myself and a side project for me to wor
 4. in other terminal cd into client and run `npm run start`
 
 Note: for Mac OSX Monterey disable Airplay Receiver in System Preference > Sharing, as it runs on port 5000 and blocks the backend node app
+
+
+## Deployment
+
+client - deployed via github pages
+- `npm run build` to create build folder before deployment
+- `npm run deploy` to push latest website version to `gh-pages` branch
+- repo setup to build gh pages from `gh-pages` branch (specified in repo settings)
