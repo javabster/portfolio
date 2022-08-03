@@ -25,12 +25,8 @@ jobs:
 
       - name: frontend installs & pre-deploy
         working-directory: ./client
-        run: |
-          npm install,
-          npm run build.
+        run: npm install && npm run build
           
-
-      # Runs a set of commands using the runners shell
       - name: deploy frontend
         working-directory: ./client
         run: npm run deploy
