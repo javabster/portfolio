@@ -29,7 +29,7 @@ jobs:
           npm install 
           npm run build
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/javabster/portfolio.git
-          npm gh-pages -d build -u "javabster ${EMAIL}"
+          gh-pages -d build -u "javabster ${EMAIL}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
