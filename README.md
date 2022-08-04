@@ -15,7 +15,16 @@ Note: for Mac OSX Monterey disable Airplay Receiver in System Preference > Shari
 
 ## Deployment
 
-client - deployed via github pages
+### client - deployed via github pages
+
+manual deploy from local machine:
 - `npm run build` to create build folder before deployment
 - `npm run deploy` to push latest website version to `gh-pages` branch
 - repo setup to build gh pages from `gh-pages` branch (specified in repo settings)
+
+automated deploy when push to `main` branch:
+- does the above steps but handled by github action `deploy frontend` step
+
+### backend - deployed via heroku
+- github actions `deploy backend` job
+- deploys to `javabster-portfolio-backend` app in heroku (app url: https://javabster-portfolio-backend.herokuapp.com/)
