@@ -34,8 +34,7 @@ jobs:
         working-directory: ./client
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/javabster/portfolio.git
-          gh-pages -d build -u "javabster ${EMAIL}"
-          npm run deploy
+          npm gh-pages -d build -u "javabster ${EMAIL}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
