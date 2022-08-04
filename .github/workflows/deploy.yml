@@ -32,4 +32,8 @@ jobs:
           
       - name: deploy frontend
         working-directory: ./client
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/javabster/portfolio.git
+          npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
