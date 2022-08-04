@@ -26,7 +26,8 @@ jobs:
       - name: deploy frontend
         working-directory: ./client
         run: |
-          npm install 
+          npm install
+          npm install gh-pages --global
           npm run build
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/javabster/portfolio.git
           gh-pages -d build -u "javabster ${EMAIL}"
