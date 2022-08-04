@@ -26,6 +26,9 @@ jobs:
       - name: frontend installs & pre-deploy
         working-directory: ./client
         run: npm install && npm run build
+        # don't treat warnings as errors
+        env:
+          CI: false
           
       - name: deploy frontend
         working-directory: ./client
