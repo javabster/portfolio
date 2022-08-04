@@ -23,18 +23,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: frontend installs & pre-deploy
-        working-directory: ./client
-        run: npm install && npm run build
-        # don't treat warnings as errors
-        env:
-          CI: false
-          
       - name: deploy frontend
         working-directory: ./client
         run: |
+          npm install 
+          npm run build
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/javabster/portfolio.git
-          npm run gh-pages -d build -u "javabster ${EMAIL}"
+          npm gh-pages -d build -u "javabster ${EMAIL}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
+          CI: false # don't treat warnings as errors
+          
