@@ -18,15 +18,15 @@ export default function NavBar(props) {
         </Button>
         <Button 
           type='nav-bar' 
-          clicked={state.tabOpen === 'education'} 
-          onClick={() => { dispatch(actions.setTabOpen('education')); }}>
-            {state.education.title}
+          clicked={state.tabOpen === 'blogs'} 
+          onClick={() => { dispatch(actions.setTabOpen('blogs')); }}>
+            {state.blogs.title}
         </Button>
         <Button 
           type='nav-bar' 
-          clicked={state.tabOpen === 'work_exp'} 
-          onClick={() => { dispatch(actions.setTabOpen('work_exp')); }}>
-            {state.workExp.title}
+          clicked={state.tabOpen === 'talks'} 
+          onClick={() => { dispatch(actions.setTabOpen('talks')); }}>
+            {state.talks.title}
         </Button>
         <Button 
           type='nav-bar' 

@@ -9,13 +9,13 @@ import Feedback from '../feedback/Feedback';
 import Body from '../body/Body';
 import SkillsBody from '../body/SkillsBody';
 import AboutBody from '../body/AboutBody'
-import EducationBody from '../body/EducationBody';
-import WorkExpBody from '../body/WorkExpBody';
+import BlogsBody from '../body/BlogsBody';
+import TalksBody from '../body/TalksBody';
 
 import applicationReducer, { defaultState } from '../../reducers/applicationReducer';
 import * as actions from '../../actions/applicationActions';
 
-import { getAboutMe, getSkills, getEducation, getLegend, getButtonDetails, getWork } from '../../utils/backendApi';
+import { getAboutMe, getSkills, getLegend, getButtonDetails, getData } from '../../utils/backendApi';
 
 import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
@@ -34,13 +34,6 @@ function App() {
       const res = await getAboutMe(state.language);
       dispatch(actions.setAbout(res));
 
-      const workRes = await getWork(state.language);
-      console.log(workRes);
-      dispatch(actions.setWork(workRes));
-
-      const edRes = await getEducation(state.language);
-      dispatch(actions.setEducation(edRes));
-
       const skillsRes = await getSkills(state.language);
       dispatch(actions.setSkills(skillsRes));
 
@@ -49,6 +42,12 @@ function App() {
 
       const buttonRes = await getButtonDetails(state.language);
       dispatch(actions.setButtons(buttonRes));
+
+      const talksRes = await getData('talks');
+      dispatch(actions.setTalks(talksRes));
+
+      const blogsRes = await getData('blogs');
+      dispatch(actions.setBlogs(blogsRes));
     }
     fetchData();
     const mobile = isMobileDevice();
@@ -63,16 +62,10 @@ function App() {
                 aboutTitle={state.about.body.title} 
                 aboutContent={state.about.body.content}>
               </AboutBody>
-      case 'work_exp':
-      return <WorkExpBody 
-              isLightTheme={state.mode === 'light'} 
-              content={state.workExp.body}>
-            </WorkExpBody>
-      case 'education':
-        return <EducationBody 
-                isLightTheme={state.mode === 'light'} 
-                content={state.education.body}>
-              </EducationBody>
+      case 'talks':
+        return <TalksBody/>
+      case 'blogs':
+        return <BlogsBody />
       case 'skills':
         return <SkillsBody></SkillsBody>
       default:
@@ -92,7 +85,7 @@ function App() {
       <Wrapper>
         <div style={{gridRowStart: '1', gridColumnStart: '2'}}>
           <NavBar></NavBar>
-          <Body mode='light'>{setBody(state.tabOpen)}</Body>
+          {setBody(state.tabOpen)}
           <div style={{display: 'flex', flexDirection: 'row', marginTop: '10px'}}>
             <ThemeButtons></ThemeButtons>
             <Feedback></Feedback>

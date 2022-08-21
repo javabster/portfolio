@@ -31,7 +31,15 @@ export const defaultState = {
     skillsLegend: {
             title: null,
             bubbleText: null,
-    }
+    },
+    talks: {
+        title: null,
+        talksList: [],
+    },
+    blogs: {
+        title: null,
+        blogsList: [],
+    },
 }
 
 export default function applicationReducer(state, action) {
@@ -96,14 +104,24 @@ export default function applicationReducer(state, action) {
                 modalOpen: action.isOpen
             }
         }
-        // case actions.setIsClicked: {
-        //     let newState = {...state};
-        //     newState.about.isClicked = false
-        //     newState.education.isClicked = false
-        //     newState.skills.isClicked = false
-        //     newState[action.button].isClicked = true
-        //     return newState;
-        // }
+        case actions.setTalks: {
+            return {
+                ...state,
+                talks: {
+                    title: 'Talks',
+                    talksList: action.data
+                }
+            }
+        }
+        case actions.setBlogs: {
+            return {
+                ...state,
+                blogs: {
+                    title: 'Articles',
+                    blogsList: action.data
+                }
+            }
+        }
         default:
             return state
     }

@@ -68,9 +68,16 @@ export const setFeedbackOpen = (isOpen) => {
     }
 }
 
-// export const setIsClicked = (button) => {
-//     return {
-//         type: setIsClicked,
-//         button: button
-//     }
-// }
+export const setTalks = (res) => {
+    return {
+        type: setTalks,
+        data: res
+    }
+}
+
+export const setBlogs = (res) => {
+    return {
+        type: setBlogs,
+        data: res
+    }
+}

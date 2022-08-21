@@ -1,11 +1,17 @@
 require('dotenv').config();
 const express = require('express');
-const path = require('path');
 var cors = require('cors');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
+const { parse } = require('rss-to-json');
+const { json } = require('body-parser');
 
+// content:
 const [educationList, skillsList, workList] = require('./constants');
+const talks = require('./content/talks')
+const extraBlogs = require('./content/extraBlogs')
+
+const rssURL = 'https://medium.com/feed/@abby-mitchell'
 
 const app = express();
 
@@ -214,10 +220,43 @@ app.get('/api/skills/:lang', (req, res) => {
     lang == 'chinese' ? res.send(cn) : res.send(eng);
 })
 
-// Handles any requests that don't match the ones above
-// app.get('*', (req,res) =>{
-//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
+app.get('/api/talks', async (req, res) => {
+    res.send(talks)
+})
+
+app.get('/api/blogs', async (req, res) => {
+    let allBlogs
+    try {
+        blogs = await parse(rssURL)
+
+        if (blogs) {
+            blogItems = blogs.items.map(obj => {
+                // fix buggy title
+                if (obj.title == '⟨∈||0⟩†|*⟩?') {
+                    return {...obj, 
+                        title: '⟨𝑎𝑟∈|𝑌|0⟩𝑈†|𝑐𝑜𝑛𝜓𝑢𝑠𝑒𝑑*⟩? — A Beginner’s Guide to Quantum Computing Literature & Notation', 
+                        type: "author"
+                    }
+                }
+                return {...obj, type: "author"}
+            })
+
+            allBlogs = [
+                ...blogItems,
+                ...extraBlogs
+            ]
+        }
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+
+    const sortedBlogs = allBlogs.sort(function(a,b){
+        return b.published - a.published;
+      });
+
+    res.send(sortedBlogs)
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port);

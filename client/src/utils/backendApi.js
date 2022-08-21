@@ -44,7 +44,7 @@ export const getLegend = async (lang) => {
             method: 'get',
             url: `${baseURL}api/skills-legend/${lang}`
         });
-        if(response.data) {
+        if (response.data) {
             return response.data
         }
         return []
@@ -60,7 +60,7 @@ export const getEducation = async (lang) => {
             method: 'get',
             url: `${baseURL}api/education/${lang}`
         });
-        if(response.data) {
+        if (response.data) {
             return response.data
         }
         return []
@@ -76,7 +76,41 @@ export const getWork = async (lang) => {
             method: 'get',
             url: `${baseURL}api/work-exp/${lang}`
         });
-        if(response.data) {
+        if (response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}
+
+export const getTalks = async () => {
+    try {
+        const response = await axios({
+            method: 'get',
+            url: `${baseURL}api/talks`
+        });
+        console.log(response)
+        if (response.data) {
+            return response.data
+        }
+        return []
+    }
+    catch (err) {
+        console.log(err.message)
+    }
+}
+
+export const getData = async (type) => {
+    try {
+        const response = await axios({
+            method: 'get',
+            url: `${baseURL}api/${type}`
+        });
+        console.log(response)
+        if (response.data) {
             return response.data
         }
         return []
@@ -92,7 +126,7 @@ export const getButtonDetails = async (lang) => {
             method: 'get',
             url: `${baseURL}api/buttons/${lang}`
         });
-        if(response.data) {
+        if (response.data) {
             return response.data
         }
         return []
@@ -109,7 +143,7 @@ export const sendFeedback = async (feedback) => {
             url: `${baseURL}api/feedback`,
             data: feedback
         });
-        if(response.data) {
+        if (response.data) {
             return response.data
         }
         return []
