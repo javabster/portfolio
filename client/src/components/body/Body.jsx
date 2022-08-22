@@ -6,7 +6,7 @@ export default styled.div`
     padding: 25px;
     color: ${props => props.theme.color};
     padding-bottom: 50px;
-    margin: 10px;
+    margin: 20px;
     background-color: ${props => props.theme.bodyMain
     };
     box-shadow: ${props => `5px 5px 0px ${props.theme.accent};

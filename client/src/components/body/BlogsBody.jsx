@@ -11,12 +11,12 @@ export default function BlogsBody(props) {
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-between',
+                justifyContent: 'space-evenly',
                 flexWrap: 'wrap'
             }}>
                 {state.blogs.blogsList.map((blog, idx) => {
                     if (blog.type == 'author') {
-                        return <Tile content={blog} idx={idx} width='25%'></Tile>
+                        return <Tile content={blog} buttonText='Read Me!' key={idx} width='25%'></Tile>
                     }
                 })}
             </div>
@@ -24,12 +24,12 @@ export default function BlogsBody(props) {
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-between',
+                justifyContent: 'space-evenly',
                 flexWrap: 'wrap'
             }}>
                 {state.blogs.blogsList.map((blog, idx) => {
                     if (blog.type != 'author') {
-                        return <Tile content={blog} idx={idx} width='25%'></Tile>
+                        return <Tile content={blog} buttonText='Read Me!' key={idx} width='25%'></Tile>
                     }
                 })}
             </div>
