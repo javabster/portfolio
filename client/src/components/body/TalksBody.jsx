@@ -9,7 +9,7 @@ export default function TalksBody(props) {
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', margin: '50px' }}>Quantum Computing Talks</h1>
+            <h1 style={{ textAlign: 'center', margin: '20px' }}>Quantum Computing Talks</h1>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',

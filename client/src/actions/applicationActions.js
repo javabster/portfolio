@@ -26,45 +26,10 @@ export const setAbout = (res) => {
     }
 }
 
-export const setEducation = (res) => {
-    return {
-        type: setEducation,
-        data: res
-    }
-}
-
-export const setWork = (res) => {
-    return {
-        type: setWork,
-        data: res
-    }
-}
-
-export const setSkills = (res) => {
-    return {
-        type: setSkills,
-        data: res
-    }
-}
-
-export const setLegend = (res) => {
-    return {
-        type: setLegend,
-        data: res
-    }
-}
-
 export const setButtons = (res) => {
     return {
         type: setButtons,
         data: res
-    }
-}
-
-export const setFeedbackOpen = (isOpen) => {
-    return {
-        type: setFeedbackOpen,
-        isOpen: isOpen
     }
 }
 

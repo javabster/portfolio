@@ -7,7 +7,7 @@ export default function BlogsBody(props) {
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', margin: '50px' }}>Articles (first author)</h1>
+            <h1 style={{ textAlign: 'center', margin: '20px' }}>Articles (first author)</h1>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',

@@ -11,26 +11,8 @@ export const defaultState = {
     },
     about: {
         title: null,
-        body: {
-            title: null,
-            content: null,
-        }
-    },
-    education: {
-        title: null,
-        body: [],
-    },
-    workExp: {
-        title: null,
-        body: [],
-    },
-    skills: {
-        title: null,
-        skillsList: []
-    },
-    skillsLegend: {
-            title: null,
-            bubbleText: null,
+        description: null,
+        heading: null,
     },
     talks: {
         title: null,
@@ -43,7 +25,7 @@ export const defaultState = {
 }
 
 export default function applicationReducer(state, action) {
-    switch(action.type) {
+    switch (action.type) {
         case actions.setTheme: {
             return {
                 ...state,
@@ -68,40 +50,10 @@ export default function applicationReducer(state, action) {
                 about: action.data
             }
         }
-        case actions.setEducation: {
-            return {
-                ...state,
-                education: action.data
-            }
-        }
-        case actions.setWork: {
-            return {
-                ...state,
-                workExp: action.data
-            }
-        }
-        case actions.setSkills: {
-            return {
-                ...state,
-                skills: action.data
-            }
-        }
-        case actions.setLegend: {
-            return {
-                ...state,
-                skillsLegend: action.data
-            }
-        }
         case actions.setButtons: {
             return {
                 ...state,
                 buttons: action.data
-            }
-        }
-        case actions.setFeedbackOpen: {
-            return {
-                ...state,
-                modalOpen: action.isOpen
             }
         }
         case actions.setTalks: {
