@@ -1,10 +1,8 @@
 import React, { useEffect, createContext, useReducer, useState } from 'react';
 import Wrapper from './Wrapper';
-import MobileWrapper from './MobileWrapper';
 import NavBar from '../nav-bar/NavBar';
 import ThemeButtons from '../nav-bar/ThemeButtons';
 
-import Body from '../body/Body';
 import AboutBody from '../body/AboutBody'
 import BlogsBody from '../body/BlogsBody';
 import TalksBody from '../body/TalksBody';
@@ -12,9 +10,8 @@ import TalksBody from '../body/TalksBody';
 import applicationReducer, { defaultState } from '../../reducers/applicationReducer';
 import * as actions from '../../actions/applicationActions';
 
-import { getButtonDetails, getData } from '../../utils/backendApi';
+import { getData } from '../../utils/backendApi';
 
-import '../../fonts/Aldrich/Aldrich-Regular.ttf'
 import './App.css';
 import { lightTheme, darkTheme } from '../../styles/themes';
 import { ThemeProvider } from 'styled-components';

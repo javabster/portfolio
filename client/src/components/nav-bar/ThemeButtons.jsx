@@ -10,14 +10,12 @@ export default function ThemeButtons(props) {
   return (
     <ButtonRow >
       <Button
-        style={{ padding: '10px' }}
         type='small'
         clicked={state.mode === 'light'}
         onClick={() => dispatch(actions.setTheme('light'))}>
         Light Mode
       </Button>
       <Button
-        style={{ padding: '10px' }}
         type='small'
         clicked={state.mode === 'dark'}
         onClick={() => dispatch(actions.setTheme('dark'))}>

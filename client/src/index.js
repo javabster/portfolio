@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { App } from './components/app/App';
 import * as serviceWorker from './serviceWorker';
-import './fonts/Aldrich/Aldrich-Regular.ttf'
 
 ReactDOM.render(
   <React.StrictMode>
