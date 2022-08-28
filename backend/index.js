@@ -73,3 +73,6 @@ const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log('App is listening on port ' + port);
+
+// Export the Express API for vercel serverless function
+module.exports = app;
