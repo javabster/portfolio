@@ -12,23 +12,16 @@ export const setTabOpen = (tab) => {
     }
 }
 
-export const setLanguage = (lang) => {
+export const setMobile = (mobile) => {
     return {
-        type: setLanguage,
-        language: lang
+        type: setMobile,
+        mobile: mobile
     }
 }
 
 export const setAbout = (res) => {
     return {
         type: setAbout,
-        data: res
-    }
-}
-
-export const setButtons = (res) => {
-    return {
-        type: setButtons,
         data: res
     }
 }

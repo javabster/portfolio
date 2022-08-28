@@ -18,7 +18,7 @@ export default function TalksBody(props) {
             }}>
                 {state.talks.talksList.map((talk, idx) => {
                     if (talk.type === 'quantum')
-                        return <Tile key={idx} content={talk} buttonText='Watch Me!' width='25%'></Tile>
+                        return <Tile key={idx} content={talk} buttonText='Watch Me!' width={state.isMobile ? '100%' : '25%'}></Tile>
                 })}
             </div>
             <Heading style={{ textAlign: 'center', margin: '50px' }}>Other Talks</Heading>
@@ -30,7 +30,7 @@ export default function TalksBody(props) {
             }}>
                 {state.talks.talksList.map((talk, idx) => {
                     if (talk.type != 'quantum')
-                        return <Tile key={idx} content={talk} buttonText='Watch Me!' width='25%'></Tile>
+                        return <Tile key={idx} content={talk} buttonText='Watch Me!' width={state.isMobile ? '100%' : '25%'}></Tile>
                 })}
             </div>
         </div>

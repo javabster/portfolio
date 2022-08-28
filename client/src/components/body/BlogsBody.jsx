@@ -17,7 +17,7 @@ export default function BlogsBody(props) {
             }}>
                 {state.blogs.blogsList.map((blog, idx) => {
                     if (blog.type == 'author') {
-                        return <Tile content={blog} buttonText='Read Me!' key={idx} width='25%'></Tile>
+                        return <Tile content={blog} buttonText='Read Me!' key={idx} width={state.isMobile ? '100%' : '25%'}></Tile>
                     }
                 })}
             </div>
@@ -30,7 +30,7 @@ export default function BlogsBody(props) {
             }}>
                 {state.blogs.blogsList.map((blog, idx) => {
                     if (blog.type != 'author') {
-                        return <Tile content={blog} buttonText='Read Me!' key={idx} width='25%'></Tile>
+                        return <Tile content={blog} buttonText='Read Me!' key={idx} width={state.isMobile ? '100%' : '25%'}></Tile>
                     }
                 })}
             </div>

@@ -23,22 +23,6 @@ app.get('/', function (req, res) {
     console.log('default api route')
 });
 
-app.get('/api/buttons/:lang', (req, res) => {
-    var lang = req.params.lang;
-
-    var eng = {
-        lightTitle: 'Light Mode',
-        darkTitle: 'Dark Mode',
-    }
-
-    var cn = {
-        lightTitle: '光模式',
-        darkTitle: '夜模式',
-    }
-
-    lang == 'chinese' ? res.send(cn) : res.send(eng);
-})
-
 app.get('/api/about', (req, res) => {
     res.send(aboutContent)
 });

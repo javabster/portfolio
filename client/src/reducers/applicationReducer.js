@@ -3,12 +3,7 @@ import * as actions from '../actions/applicationActions';
 export const defaultState = {
     mode: 'light',
     tabOpen: 'about',
-    language: 'english',
-    modalOpen: false,
-    buttons: {
-        lightTitle: 'Light Mode',
-        darkTitle: 'Dark Mode',
-    },
+    isMobile: null,
     about: {
         title: null,
         description: null,
@@ -38,22 +33,16 @@ export default function applicationReducer(state, action) {
                 tabOpen: action.tab
             }
         }
-        case actions.setLanguage: {
+        case actions.setMobile: {
             return {
                 ...state,
-                language: action.language
+                isMobile: action.mobile
             }
         }
         case actions.setAbout: {
             return {
                 ...state,
                 about: action.data
-            }
-        }
-        case actions.setButtons: {
-            return {
-                ...state,
-                buttons: action.data
             }
         }
         case actions.setTalks: {
