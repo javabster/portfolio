@@ -21,7 +21,6 @@ const AppContext = createContext(null)
 
 function App() {
   const [state, dispatch] = useReducer(applicationReducer, defaultState);
-  const [isMobile, setIsMobile] = useState();
 
   useEffect(() => {
     const fetchData = async () => {

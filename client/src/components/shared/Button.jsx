@@ -31,7 +31,7 @@ export default styled.button`
   }
   };
     border: none;
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     color: ${props => {
     if (props.type === 'tile') return 'white';
     if (props.clicked === false) return props.theme.accent;

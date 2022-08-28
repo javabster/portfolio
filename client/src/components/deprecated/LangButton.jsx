@@ -17,7 +17,7 @@ export default styled.button`
     width: 60px;
     padding: 0px;
     border: none;
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     color: ${props => {
     if (props.clicked === false) return props.theme.accent;
     else if (props.clicked === true) return props.theme.background;

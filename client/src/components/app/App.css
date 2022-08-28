@@ -24,7 +24,7 @@ ul {
   width: 100%;
   background-color: #DFE4FB;
   height: 100vh;
-  font-family: 'IBM Plex Sans';
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   max-width: 100%;
   overflow-x: hidden;
 }

@@ -4,62 +4,71 @@
         "published": 1648126800000,
         "link": "https://youtu.be/8weyl4kw5is",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "Qiskit Advocates Workshop"
     },
     {
         "title": "GitHub Tips for Qiskit Contrbiutors - Part 2",
         "published": 1651582800000,
         "link": "https://youtu.be/-eLeOeF_-5o",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "Qiskit Advocates Workshop"
     },
     {
         "title": "Introduction to Qiskit with Deutsch Josza",
         "published": 1649250000000,
         "link": "https://www.youtube.com/watch?v=OMgDaduILrI",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "QC Hack, Yale"
     },
     {
         "title": "Introduction to Open Source Quantum Computing with Qiskit",
         "published": 1638885600000,
         "link": "https://www.youtube.com/watch?v=pwknmDB3cgg",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "Open Source London Meetup"
     },
     {
         "title": "Podcast - An Introduction to Quantum Computing",
         "published": 1641823200000,
         "link": "https://www.buzzsprout.com/1634992/9954721",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "The Tech Stack Podcast"
     },
     {
         "title": "Introduction to Open Source Quantum Computing",
         "published": 1636466400000,
         "link": "https://www.youtube.com/watch?v=BlAcr_zLy_8",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "Women Who Code Meetup, London"
     },
     {
         "title": "Coding for Quantum Computers (With IBM's Qiskit SDK)",
         "published": 1620133200000,
         "link": "https://www.youtube.com/watch?v=5EUJ4RWQg-g",
         "category": [],
-        "type": "quantum"
+        "type": "quantum",
+        "org": "Ladies of Code Meetup, London"
     },
     {
         "title": "ARIA Ready to Learn About Accessibility?",
         "published": 1612447200000,
         "link": "https://www.youtube.com/watch?v=HbT5NBmMfFU",
         "category": [],
-        "type": "web-dev"
+        "type": "web-dev",
+        "org": "Async JS Meetup"
     },
     {
         "title": "What the Heck(ma) is ECMA?",
         "published": 1606399200000,
         "link": "https://www.youtube.com/watch?v=auTKfwfWrw8&list=PL8xuokhAnn4o1IwrPYJ6OHlrqC1k34MRR&index=21&t=1s",
         "category": [],
-        "type": "web-dev"
+        "type": "web-dev",
+        "org": "JS Monthly Meetup"
     }
 ]

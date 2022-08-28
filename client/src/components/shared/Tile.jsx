@@ -8,6 +8,7 @@ export default function Tile(props) {
     return (
         <Body style={{ width: width }}>
             <h2>{content.title}</h2>
+            {content.org ? <p>{content.org}</p> : <div></div>}
             <h3>{new Date(content.published).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</h3>
             <Button type='tile'
                 clicked={false}
