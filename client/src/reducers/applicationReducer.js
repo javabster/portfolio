@@ -60,7 +60,7 @@ export default function applicationReducer(state, action) {
             return {
                 ...state,
                 talks: {
-                    title: 'Talks',
+                    title: 'Speaking',
                     talksList: action.data
                 }
             }
@@ -69,7 +69,7 @@ export default function applicationReducer(state, action) {
             return {
                 ...state,
                 blogs: {
-                    title: 'Articles',
+                    title: 'Writing',
                     blogsList: action.data
                 }
             }

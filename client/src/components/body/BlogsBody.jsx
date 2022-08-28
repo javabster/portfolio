@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../app/App';
 import Tile from '../shared/Tile';
+import Heading from '../shared/Heading';
 
 export default function BlogsBody(props) {
     const { state } = useContext(AppContext);
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', margin: '20px' }}>Articles (first author)</h1>
+            <Heading style={{ textAlign: 'center', margin: '20px' }}>Articles (first author)</Heading>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -20,7 +21,7 @@ export default function BlogsBody(props) {
                     }
                 })}
             </div>
-            <h1 style={{ textAlign: 'center', margin: '50px' }}>Other Articles (co-author/editor)</h1>
+            <Heading style={{ textAlign: 'center', margin: '50px' }}>Other Articles (co-author/editor)</Heading>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',

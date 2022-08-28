@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { AppContext } from '../app/App';
 
 import Tile from '../shared/Tile'
-import Body from '../body/Body'
+import Heading from '../shared/Heading';
 
 export default function TalksBody(props) {
     const { state } = useContext(AppContext);
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center', margin: '20px' }}>Quantum Computing Talks</h1>
+            <Heading style={{ textAlign: 'center', margin: '20px' }}>Quantum Computing Talks</Heading>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -21,7 +21,7 @@ export default function TalksBody(props) {
                         return <Tile key={idx} content={talk} buttonText='Watch Me!' width='25%'></Tile>
                 })}
             </div>
-            <h1 style={{ textAlign: 'center', margin: '50px' }}>Other Talks</h1>
+            <Heading style={{ textAlign: 'center', margin: '50px' }}>Other Talks</Heading>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
