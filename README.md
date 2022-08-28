@@ -1,6 +1,6 @@
 # My Portfolio!
 
-A place for me to put some details about myself and a side project for me to work on to keep my web dev skills sharp.
+This project is a place for me to put some details about myself and a side project for me to work on to keep my web dev skills sharp.
 
 
 ## To run locally
@@ -25,6 +25,6 @@ manual deploy from local machine:
 automated deploy when push to `main` branch:
 - does the above steps but handled by github action `deploy frontend` step
 
-### backend - deployed via heroku
-- github actions `deploy backend` job
-- deploys to `javabster-portfolio-backend` app in heroku (app url: https://javabster-portfolio-backend.herokuapp.com/)
+### backend - serverless function deployed with vercel
+- `backend/vercel.json` configures the deployment
+- deployment runs on every push/merge to main
