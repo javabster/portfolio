@@ -8,6 +8,7 @@ const { parse } = require('rss-to-json');
 const talks = require('./content/talks')
 const extraBlogs = require('./content/extraBlogs')
 const aboutContent = require('./content/about.json')
+const videos = require('./content/videos.json')
 
 const rssURL = 'https://medium.com/feed/@abby-mitchell'
 
@@ -32,6 +33,13 @@ app.get('/api/talks', async (req, res) => {
         return b.published - a.published;
     });
     res.send(sortedTalks)
+})
+
+app.get('/api/videos', async (req, res) => {
+    const sortedVideos = videos.sort(function (a, b) {
+        return b.published - a.published;
+    });
+    res.send(sortedVideos)
 })
 
 app.get('/api/blogs', async (req, res) => {

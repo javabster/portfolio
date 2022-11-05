@@ -1,6 +1,23 @@
 [
     {
-        "title": "GitHub Tips for Qiskit Contrbiutors - Part 1",
+        "title": "Using Qiskit to Teach Quantum Computing",
+        "published": 1659531600000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/edusummit/Qiskit_for_Educators.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Educator Summit"
+    },
+    {
+        "title": "An Introduction to Open Source Quantum Computing with Qiskit",
+        "published": 1663837200000,
+        "link": "https://players.brightcove.net/6180409581001/lt7C9BYBJ3_default/index.html?videoId=6312698337112",
+        "category": [],
+        "type": "quantum",
+        "org": "Grace Hopper Celebration"
+    },
+    {
+        "title": "GitHub Tips for Qiskit Contributors - Part 1",
         "published": 1648126800000,
         "link": "https://youtu.be/8weyl4kw5is",
         "category": [],
@@ -8,7 +25,7 @@
         "org": "Qiskit Advocates Workshop"
     },
     {
-        "title": "GitHub Tips for Qiskit Contrbiutors - Part 2",
+        "title": "GitHub Tips for Qiskit Contributors - Part 2",
         "published": 1651582800000,
         "link": "https://youtu.be/-eLeOeF_-5o",
         "category": [],

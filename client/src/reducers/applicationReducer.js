@@ -17,6 +17,10 @@ export const defaultState = {
         title: null,
         blogsList: [],
     },
+    videos: {
+        title: null,
+        videoList: []
+    }
 }
 
 export default function applicationReducer(state, action) {
@@ -60,6 +64,15 @@ export default function applicationReducer(state, action) {
                 blogs: {
                     title: 'Writing',
                     blogsList: action.data
+                }
+            }
+        }
+        case actions.setVideos: {
+            return {
+                ...state,
+                videos: {
+                    title: 'YouTube',
+                    videoList: action.data
                 }
             }
         }

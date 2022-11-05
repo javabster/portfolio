@@ -39,3 +39,10 @@ export const setBlogs = (res) => {
         data: res
     }
 }
+
+export const setVideos = (res) => {
+    return {
+        type: setVideos,
+        data: res
+    }
+}

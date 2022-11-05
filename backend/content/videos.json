@@ -1,0 +1,47 @@
+[
+    {
+        "title": "How to open-source your quantum research code",
+        "published": 1666170000000,
+        "link": "https://www.youtube.com/watch?v=bCaSGZmYc3Q&t=12s",
+        "embedId": "bCaSGZmYc3Q",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Why you should open source your quantum code",
+        "published": 1665565200000,
+        "link": "https://www.youtube.com/watch?v=_Skul_R7eFY&t=8s",
+        "embedId": "_Skul_R7eFY",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Quantum Computing and Chemistry",
+        "published": 1665478800000,
+        "link": "https://www.youtube.com/watch?v=8VnZo8wVMm8&t=1s",
+        "embedId": "8VnZo8wVMm8",
+        "category": [],
+        "type": "quantum",
+        "org": "IBM Technology"
+    },
+    {
+        "title": "What is Quantum Safe",
+        "published": 166444200000,
+        "link": "https://www.youtube.com/watch?v=1lTA2n142Mk&t=2s",
+        "embedId": "1lTA2n142Mk",
+        "category": [],
+        "type": "quantum",
+        "org": "IBM Technology"
+    },
+    {
+        "title": "Quantum Machine Learning Explained",
+        "published": 1666170000000,
+        "link": "https://www.youtube.com/watch?v=NqHKr9CGWJ0&t=4s",
+        "embedId": "NqHKr9CGWJ0",
+        "category": [],
+        "type": "quantum",
+        "org": "IBM Technology"
+    }
+]

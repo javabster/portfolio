@@ -6,6 +6,7 @@ import ThemeButtons from '../nav-bar/ThemeButtons';
 import AboutBody from '../body/AboutBody'
 import BlogsBody from '../body/BlogsBody';
 import TalksBody from '../body/TalksBody';
+import YTBody from '../body/YTBody';
 
 import applicationReducer, { defaultState } from '../../reducers/applicationReducer';
 import * as actions from '../../actions/applicationActions';
@@ -32,6 +33,9 @@ function App() {
 
       const blogsRes = await getData('blogs');
       dispatch(actions.setBlogs(blogsRes));
+
+      const videosRes = await getData('videos');
+      dispatch(actions.setVideos(videosRes));
     }
     fetchData();
     const mobile = isMobileDevice();
@@ -46,6 +50,8 @@ function App() {
         return <TalksBody />
       case 'blogs':
         return <BlogsBody />
+      case 'videos':
+        return <YTBody />
       default:
         return <AboutBody />
     }
