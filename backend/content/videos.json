@@ -1,5 +1,23 @@
 [
     {
+        "title": "Open Source Quantum Code Best Practices and How to Join the Qiskit Ecosystem",
+        "published": 1672840800000,
+        "link": "https://www.youtube.com/watch?v=wDw3rYpYNLg",
+        "embedId": "wDw3rYpYNLg",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Qiskit Host Roundtable",
+        "published": 1670853600000,
+        "link": "https://www.youtube.com/watch?v=lgmpwKSvVf8",
+        "embedId": "lgmpwKSvVf8",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
         "title": "How to open-source your quantum research code",
         "published": 1666170000000,
         "link": "https://www.youtube.com/watch?v=bCaSGZmYc3Q&t=12s",

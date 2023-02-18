@@ -1,5 +1,12 @@
 [
     {
+        "title": "Release News: Qiskit v0.40.0 is Here!",
+        "published": 1675155600000,
+        "link": "https://medium.com/qiskit/release-news-qiskit-v0-40-is-here-cdcdc8d400d4",
+        "category": [],
+        "type": "author"
+    },
+    {
         "title": "Training Quantum Kernels for Machine Learning Using Qiskit",
         "published": 1652274000000,
         "link": "https://medium.com/qiskit/training-quantum-kernels-for-machine-learning-using-qiskit-617f6e4ed9ac",
