@@ -51,7 +51,9 @@ function App() {
       case 'blogs':
         return <BlogsBody />
       case 'videos':
-        return <YTBody />
+        return <YTBody category="video" />
+      case 'livestreams':
+        return <YTBody category="livestream" />
       default:
         return <AboutBody />
     }

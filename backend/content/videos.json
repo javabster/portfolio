@@ -1,10 +1,46 @@
 [
     {
+        "title": "Let’s Open (Source) some Qiskit presents! - Day 9 of 12 Days of Qiskit",
+        "published": 1670594400000,
+        "link": "https://www.youtube.com/watch?v=wx5BCUpaA1k&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=9",
+        "embedId": "wx5BCUpaA1k",
+        "category": "livestream",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Qiskit Tutorial Secret Santa - Part 2 - Day 8 of 12 Days of Qiskit",
+        "published": 1670508000000,
+        "link": "https://www.youtube.com/watch?v=asAloBbPvX4&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=8&t=2s",
+        "embedId": "asAloBbPvX4",
+        "category": "livestream",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Qiskit Tutorial Secret Santa - Part 1 - Day 7 of 12 Days of Qiskit",
+        "published": 1670421600000,
+        "link": "https://www.youtube.com/watch?v=EFody0J6EOU&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=7&t=2s",
+        "embedId": "EFody0J6EOU",
+        "category": "livestream",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "(Stack)Exchange some Qiskit gifts! - Day 4 of 12 Days of Qiskit",
+        "published": 1670162400000,
+        "link": "https://www.youtube.com/watch?v=-D72Prmz0_w&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=4&t=1s",
+        "embedId": "-D72Prmz0_w",
+        "category": "livestream",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
         "title": "Open Source Quantum Code Best Practices and How to Join the Qiskit Ecosystem",
         "published": 1672840800000,
         "link": "https://www.youtube.com/watch?v=wDw3rYpYNLg",
         "embedId": "wDw3rYpYNLg",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "Qiskit"
     },
@@ -13,7 +49,7 @@
         "published": 1670853600000,
         "link": "https://www.youtube.com/watch?v=lgmpwKSvVf8",
         "embedId": "lgmpwKSvVf8",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "Qiskit"
     },
@@ -22,7 +58,7 @@
         "published": 1666170000000,
         "link": "https://www.youtube.com/watch?v=bCaSGZmYc3Q&t=12s",
         "embedId": "bCaSGZmYc3Q",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "Qiskit"
     },
@@ -31,7 +67,7 @@
         "published": 1665565200000,
         "link": "https://www.youtube.com/watch?v=_Skul_R7eFY&t=8s",
         "embedId": "_Skul_R7eFY",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "Qiskit"
     },
@@ -40,7 +76,7 @@
         "published": 1665478800000,
         "link": "https://www.youtube.com/watch?v=8VnZo8wVMm8&t=1s",
         "embedId": "8VnZo8wVMm8",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "IBM Technology"
     },
@@ -49,7 +85,7 @@
         "published": 166444200000,
         "link": "https://www.youtube.com/watch?v=1lTA2n142Mk&t=2s",
         "embedId": "1lTA2n142Mk",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "IBM Technology"
     },
@@ -58,7 +94,7 @@
         "published": 1666170000000,
         "link": "https://www.youtube.com/watch?v=NqHKr9CGWJ0&t=4s",
         "embedId": "NqHKr9CGWJ0",
-        "category": [],
+        "category": "video",
         "type": "quantum",
         "org": "IBM Technology"
     }
