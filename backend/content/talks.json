@@ -1,5 +1,14 @@
 [
     {
+        "title": "Introduction to IBM Quantum & Qiskit",
+        "published": 1669125600000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/stanford-nov-22/stanford-workshop.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Stanford University"
+    },
+    {
         "title": "Using Qiskit to Teach Quantum Computing",
         "published": 1659531600000,
         "videoLink": false,
@@ -38,7 +47,7 @@
         "link": "https://www.youtube.com/watch?v=OMgDaduILrI",
         "category": [],
         "type": "quantum",
-        "org": "QC Hack, Yale"
+        "org": "QC Hack, Yale University"
     },
     {
         "title": "Introduction to Open Source Quantum Computing with Qiskit",
