@@ -1,5 +1,77 @@
 [
     {
+        "title": "The Qiskit Ecosystem & How to Contribute to Open Source",
+        "published": 1690027200000,
+        "videoLink": false,
+        "link": "https://docs.google.com/presentation/d/1uZbm0MQ9ydUykBRw3ndr8z8Ie0UKg5f4/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+        "category": [],
+        "type": "quantum",
+        "org": "IBM Quantum, Yorktown Heights NY"
+    },
+    {
+        "title": "Qiskit: Quantum Open Source Science Kit (Lightning Talk)",
+        "published": 1687435200000,
+        "videoLink": false,
+        "link": "https://docs.google.com/presentation/d/1omJDoWuJS57yMa3t8QfzhQjCdG7elHVw/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+        "category": [],
+        "type": "quantum",
+        "org": "PyData Meetup, New York"
+    },
+    {
+        "title": "Qiskit Global Summer School Lab 1",
+        "published": 1689681600000,
+        "videoLink": false,
+        "link": "https://github.com/qiskit-community/qgss-2023/blob/main/content/lab1/lab1.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Global Summer School"
+    },
+    {
+        "title": "Intro to Qiskit",
+        "published": 1691150400000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/mit_bswi_23/qiskit-in-1h.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "MIT BSWI Guest Speaker"
+    },
+    {
+        "title": "Learn Qiskit in 1 Hour",
+        "published": 1683720000000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/qiqt_23/qiskit-in-1h.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "QIQT Conference"
+    },
+    {
+        "title": "Getting Started with Qiskit",
+        "published": 1679572800000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=TUWkQskwDSA&t=1713s",
+        "category": [],
+        "type": "quantum",
+        "org": "Quantum Tokyo Meetup"
+    },
+    {
+        "title": "Effective Open Source Community Management in Quantum Computing",
+        "published": 1689163200000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=tEv7N6D2kO4&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=39",
+        "category": [],
+        "type": "quantum",
+        "org": "SciPy Conference, Austin TX"
+    },
+    {
+        "title": "'Quantum Leaps' in Effective Developer Relations for Emerging Technologies",
+        "published": 1678536000000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=0eTnovwUhs4",
+        "category": [],
+        "type": "quantum",
+        "org": "DevRelCon Yokohama"
+    },
+    {
         "title": "Introduction to IBM Quantum & Qiskit",
         "published": 1669125600000,
         "videoLink": false,
@@ -23,7 +95,7 @@
         "link": "https://players.brightcove.net/6180409581001/lt7C9BYBJ3_default/index.html?videoId=6312698337112",
         "category": [],
         "type": "quantum",
-        "org": "Grace Hopper Celebration"
+        "org": "Grace Hopper Celebration, Orlando FL"
     },
     {
         "title": "GitHub Tips for Qiskit Contributors - Part 1",

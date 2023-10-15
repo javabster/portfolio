@@ -1,5 +1,59 @@
 [
     {
+        "title": "What is a Hamiltonian? Quantum Jargon Explained",
+        "published": 1680609600000,
+        "link": "https://youtu.be/BusR0WQ_Gxo?si=AQTtnqAIADfR4IOK",
+        "embedId": "BusR0WQ_Gxo",
+        "category": "video",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "What is an Expectation Value? Quantum Jargon Explained",
+        "published": 1686744000000,
+        "link": "https://youtu.be/8VgBPEcZ_X0?si=kd3qi0-_i2o43BUJ",
+        "embedId": "8VgBPEcZ_X0",
+        "category": "video",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "What is an Ansatz? Quantum Jargon Explained",
+        "published": 1685534400000,
+        "link": "https://youtu.be/mJqVFJsXfis?si=E7K8vn4r0anpjjvp",
+        "embedId": "mJqVFJsXfis",
+        "category": "video",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "What is a Bit-Flip? Quantum Jargon Explained",
+        "published": 1689163200000,
+        "link": "https://youtu.be/QrK8D54iAdA?si=oZ8YnwuQYdfLi0UR",
+        "embedId": "QrK8D54iAdA",
+        "category": "video",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "What is Superposition? Quantum Jargon Explained",
+        "published": 1694001600000,
+        "link": "https://youtu.be/mAgnIj0UXLY?si=67jm7hFmorlyt_Xo",
+        "embedId": "mAgnIj0UXLY",
+        "category": "video",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
+        "title": "Contributing to Qiskit | Qiskit Global Summer School 2023",
+        "published": 1695816000000,
+        "link": "https://www.youtube.com/watch?v=HeoL_Z5d4pE&list=PLOFEBzvs-VvqoeIypXYLLf0PY-WOQMLR3&index=16",
+        "embedId": "HeoL_Z5d4pE",
+        "category": "livestream",
+        "type": "quantum",
+        "org": "Qiskit"
+    },
+    {
         "title": "Let’s Open (Source) some Qiskit presents! - Day 9 of 12 Days of Qiskit",
         "published": 1670594400000,
         "link": "https://www.youtube.com/watch?v=wx5BCUpaA1k&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=9",
