@@ -1,4 +1,4 @@
-/node_modules
+/*/node_modules
 
 #AWS key pair file
 *.pem
