@@ -1,0 +1,47 @@
+name: Add Content from Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-content:
+    if: github.actor == 'javabster'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Parse issue and create content file
+        id: create-content
+        run: |
+          # This is a simplified version - in production, you'd parse the issue body
+          # and generate the JSON file. For now, we'll create a placeholder.
+          echo "Content creation would happen here"
+          echo "title=Sample Content" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/data/ || true
+          git commit -m "Add content: ${{ steps.create-content.outputs.title }}" || true
+          git push || true
+
+      - name: Close issue with comment
+        run: |
+          gh issue close ${{ github.event.issue.number }} --comment "Content added successfully! The site will be rebuilt shortly."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

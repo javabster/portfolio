@@ -1,0 +1,110 @@
+name: Add Content
+description: Add new content to the portfolio
+title: "Add Content: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to add new content to the portfolio. Only @javabster can submit content via this form.
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The title of the content
+      placeholder: "My Awesome Blog Post"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Content Type
+      description: Select the type of content
+      options:
+        - blog
+        - video
+        - podcast
+        - talk
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: The URL to the content (for external links)
+      placeholder: "https://example.com/my-post"
+    validations:
+      required: true
+
+  - type: input
+    id: embedId
+    attributes:
+      label: YouTube Embed ID
+      description: For videos, the YouTube video ID (optional)
+      placeholder: "dQw4w9WgXcQ"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the content
+      placeholder: "This post covers..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: topics
+    attributes:
+      label: Topics
+      description: Select relevant topics
+      options:
+        - label: Open Source
+          value: open-source
+        - label: Python
+          value: python
+        - label: Quantum Computing
+          value: quantum-computing
+        - label: Scientific Computing
+          value: scientific-computing
+        - label: Pyrefly
+          value: pyrefly
+        - label: Web Technologies
+          value: web-technologies
+        - label: Women in Tech
+          value: women-in-tech
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Tags
+      description: Select relevant tags
+      options:
+        - label: Personal
+          value: personal
+        - label: First Author
+          value: first-author
+        - label: Ghostwriter/Editor
+          value: ghostwriter-editor
+
+  - type: input
+    id: publishDate
+    attributes:
+      label: Publish Date
+      description: Date in YYYY-MM-DD format
+      placeholder: "2024-01-15"
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      description: The organization associated with this content (optional)
+      placeholder: "IBM Quantum"
+    validations:
+      required: false

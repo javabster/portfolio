@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Make the `dark:` variant follow the same rules as our theme tokens:
+ * an explicit toggle (data-theme="dark") OR the OS preference when the
+ * user hasn't forced light. Keeps `dark:` utilities (e.g. the coloured
+ * topic chips) in sync with the theme switcher.
+ * ------------------------------------------------------------------ */
+@custom-variant dark {
+  &:where([data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:not([data-theme="light"] *)) {
+      @slot;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Brand palette — fixed in both light and dark themes.
+ * These are the vibrant accent colours, exposed as Tailwind utilities
+ * (e.g. `text-tangerine`, `bg-banana-cream/10`).
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-midnight-violet: #310a31;
+  --color-periwinkle: #d4cdf4;
+  --color-banana-cream: #ffe873;
+  --color-baltic-blue: #306998;
+  --color-tangerine: #ee8434;
+
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+}
+
+/* ------------------------------------------------------------------ *
+ * Semantic tokens — light theme (default).
+ * Components reference these so the whole site re-themes from one place.
+ * ------------------------------------------------------------------ */
+:root {
+  color-scheme: light;
+  --background: #faf8fd;
+  --surface: #ffffff;
+  --surface-2: #f4f1fb;
+  --surface-hover: #efe9fa;
+  --border: #e8e2f4;
+  --foreground: #2a092a;
+  --muted: #310a31; /* midnight violet */
+  --primary: #2d6491; /* baltic blue */
+  --primary-contrast: #ffffff;
+  --link: #2d6491; /* baltic blue */
+  --ring: rgba(238, 132, 52, 0.45);
+
+  /* Brand surface (the nav rail) — stays deep violet in both themes */
+  --brand: #310a31;
+  --brand-foreground: #ece8f8;
+  --brand-muted: rgba(212, 205, 244, 0.7);
+  --brand-active: #ffe873;
+  --brand-active-foreground: #310a31;
+  --brand-border: rgba(212, 205, 244, 0.16);
+  --brand-hover: rgba(212, 205, 244, 0.08);
+}
+
+/* ------------------------------------------------------------------ *
+ * Semantic tokens — dark theme.
+ * Applied either automatically (the OS prefers dark and the user hasn't
+ * forced light) OR explicitly via the theme toggle (data-theme="dark").
+ * Both selectors carry the same declarations.
+ * ------------------------------------------------------------------ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --background: #140713;
+    --surface: #211021;
+    --surface-2: #2b152b;
+    --surface-hover: #341a34;
+    --border: rgba(212, 205, 244, 0.12);
+    --foreground: #f1ecfa;
+    --muted: #ab9fc1;
+    --primary: #3576ac; /* lighter baltic blue */
+    --primary-contrast: #1a0a1a;
+    --link: #9cc0e6; /* lighter baltic blue for contrast */
+    --ring: rgba(244, 146, 74, 0.5);
+
+    --brand: #2a0a2a;
+    --brand-foreground: #ece8f8;
+    --brand-muted: rgba(212, 205, 244, 0.65);
+    --brand-active: #ffe873;
+    --brand-active-foreground: #310a31;
+    --brand-border: rgba(212, 205, 244, 0.1);
+    --brand-hover: rgba(212, 205, 244, 0.07);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --background: #140713;
+  --surface: #211021;
+  --surface-2: #2b152b;
+  --surface-hover: #341a34;
+  --border: rgba(212, 205, 244, 0.12);
+  --foreground: #f1ecfa;
+  --muted: #ab9fc1;
+  --primary: #3576ac; /* lighter baltic blue */
+  --primary-contrast: #1a0a1a;
+  --link: #9cc0e6;
+  --ring: rgba(244, 146, 74, 0.5);
+
+  --brand: #2a0a2a;
+  --brand-foreground: #ece8f8;
+  --brand-muted: rgba(212, 205, 244, 0.65);
+  --brand-active: #ffe873;
+  --brand-active-foreground: #310a31;
+  --brand-border: rgba(212, 205, 244, 0.1);
+  --brand-hover: rgba(212, 205, 244, 0.07);
+}
+
+/* ------------------------------------------------------------------ *
+ * Expose the semantic tokens as Tailwind colour utilities.
+ * `inline` keeps them as live var() references so utilities like
+ * `bg-surface` / `text-foreground` swap with the theme at runtime.
+ * ------------------------------------------------------------------ */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-link: var(--link);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-active: var(--brand-active);
+  --color-brand-active-foreground: var(--brand-active-foreground);
+  --color-brand-border: var(--brand-border);
+  --color-brand-hover: var(--brand-hover);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--primary-contrast);
+  }
+
+  /* Tasteful default for thin scrollbars inside filter lists */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+}

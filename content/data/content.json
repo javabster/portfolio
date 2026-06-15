@@ -1,0 +1,767 @@
+[
+  {
+    "id": "what-is-a-hamiltonian-quantum-jargon-explained",
+    "title": "What is a Hamiltonian? Quantum Jargon Explained",
+    "type": "video",
+    "url": "https://youtu.be/BusR0WQ_Gxo?si=AQTtnqAIADfR4IOK",
+    "embedId": "BusR0WQ_Gxo",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-04-04T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "what-is-an-expectation-value-quantum-jargon-explained",
+    "title": "What is an Expectation Value? Quantum Jargon Explained",
+    "type": "video",
+    "url": "https://youtu.be/8VgBPEcZ_X0?si=kd3qi0-_i2o43BUJ",
+    "embedId": "8VgBPEcZ_X0",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-06-14T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "what-is-an-ansatz-quantum-jargon-explained",
+    "title": "What is an Ansatz? Quantum Jargon Explained",
+    "type": "video",
+    "url": "https://youtu.be/mJqVFJsXfis?si=E7K8vn4r0anpjjvp",
+    "embedId": "mJqVFJsXfis",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-05-31T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "what-is-a-bit-flip-quantum-jargon-explained",
+    "title": "What is a Bit-Flip? Quantum Jargon Explained",
+    "type": "video",
+    "url": "https://youtu.be/QrK8D54iAdA?si=oZ8YnwuQYdfLi0UR",
+    "embedId": "QrK8D54iAdA",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-07-12T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "what-is-superposition-quantum-jargon-explained",
+    "title": "What is Superposition? Quantum Jargon Explained",
+    "type": "video",
+    "url": "https://youtu.be/mAgnIj0UXLY?si=67jm7hFmorlyt_Xo",
+    "embedId": "mAgnIj0UXLY",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-09-06T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "contributing-to-qiskit-qiskit-global-summer-school-2023",
+    "title": "Contributing to Qiskit | Qiskit Global Summer School 2023",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=HeoL_Z5d4pE&list=PLOFEBzvs-VvqoeIypXYLLf0PY-WOQMLR3&index=16",
+    "embedId": "HeoL_Z5d4pE",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-09-27T12:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "livestream"
+  },
+  {
+    "id": "let-s-open-source-some-qiskit-presents-day-9-of-12-days-of-qiskit",
+    "title": "Let’s Open (Source) some Qiskit presents! - Day 9 of 12 Days of Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=wx5BCUpaA1k&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=9",
+    "embedId": "wx5BCUpaA1k",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-12-09T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "livestream"
+  },
+  {
+    "id": "qiskit-tutorial-secret-santa-part-2-day-8-of-12-days-of-qiskit",
+    "title": "Qiskit Tutorial Secret Santa - Part 2 - Day 8 of 12 Days of Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=asAloBbPvX4&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=8&t=2s",
+    "embedId": "asAloBbPvX4",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-12-08T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "livestream"
+  },
+  {
+    "id": "qiskit-tutorial-secret-santa-part-1-day-7-of-12-days-of-qiskit",
+    "title": "Qiskit Tutorial Secret Santa - Part 1 - Day 7 of 12 Days of Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=EFody0J6EOU&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=7&t=2s",
+    "embedId": "EFody0J6EOU",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-12-07T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "livestream"
+  },
+  {
+    "id": "stack-exchange-some-qiskit-gifts-day-4-of-12-days-of-qiskit",
+    "title": "(Stack)Exchange some Qiskit gifts! - Day 4 of 12 Days of Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=-D72Prmz0_w&list=PLOFEBzvs-VvodTkP_rfrs3RWdeWE9aNRD&index=4&t=1s",
+    "embedId": "-D72Prmz0_w",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-12-04T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "livestream"
+  },
+  {
+    "id": "open-source-quantum-code-best-practices-and-how-to-join-the-qiskit-ecosystem",
+    "title": "Open Source Quantum Code Best Practices and How to Join the Qiskit Ecosystem",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=wDw3rYpYNLg",
+    "embedId": "wDw3rYpYNLg",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2023-01-04T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "qiskit-host-roundtable",
+    "title": "Qiskit Host Roundtable",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=lgmpwKSvVf8",
+    "embedId": "lgmpwKSvVf8",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-12-12T14:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "how-to-open-source-your-quantum-research-code",
+    "title": "How to open-source your quantum research code",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=bCaSGZmYc3Q&t=12s",
+    "embedId": "bCaSGZmYc3Q",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-10-19T09:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "why-you-should-open-source-your-quantum-code",
+    "title": "Why you should open source your quantum code",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=_Skul_R7eFY&t=8s",
+    "embedId": "_Skul_R7eFY",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-10-12T09:00:00.000Z",
+    "organization": "Qiskit",
+    "category": "video"
+  },
+  {
+    "id": "quantum-computing-and-chemistry",
+    "title": "Quantum Computing and Chemistry",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=8VnZo8wVMm8&t=1s",
+    "embedId": "8VnZo8wVMm8",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-10-11T09:00:00.000Z",
+    "organization": "IBM Technology",
+    "category": "video"
+  },
+  {
+    "id": "what-is-quantum-safe",
+    "title": "What is Quantum Safe",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=1lTA2n142Mk&t=2s",
+    "embedId": "1lTA2n142Mk",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "1975-04-11T10:30:00.000Z",
+    "organization": "IBM Technology",
+    "category": "video"
+  },
+  {
+    "id": "quantum-machine-learning-explained",
+    "title": "Quantum Machine Learning Explained",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=NqHKr9CGWJ0&t=4s",
+    "embedId": "NqHKr9CGWJ0",
+    "description": "",
+    "topics": [],
+    "tags": [
+      "personal"
+    ],
+    "publishDate": "2022-10-19T09:00:00.000Z",
+    "organization": "IBM Technology",
+    "category": "video"
+  },
+  {
+    "id": "the-qiskit-ecosystem-how-to-contribute-to-open-source",
+    "title": "The Qiskit Ecosystem & How to Contribute to Open Source",
+    "type": "talk",
+    "url": "https://docs.google.com/presentation/d/1uZbm0MQ9ydUykBRw3ndr8z8Ie0UKg5f4/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-07-22T12:00:00.000Z",
+    "organization": "IBM Quantum, Yorktown Heights NY"
+  },
+  {
+    "id": "qiskit-quantum-open-source-science-kit-lightning-talk",
+    "title": "Qiskit: Quantum Open Source Science Kit (Lightning Talk)",
+    "type": "talk",
+    "url": "https://docs.google.com/presentation/d/1omJDoWuJS57yMa3t8QfzhQjCdG7elHVw/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-06-22T12:00:00.000Z",
+    "organization": "PyData Meetup, New York"
+  },
+  {
+    "id": "qiskit-global-summer-school-lab-1",
+    "title": "Qiskit Global Summer School Lab 1",
+    "type": "talk",
+    "url": "https://github.com/qiskit-community/qgss-2023/blob/main/content/lab1/lab1.ipynb",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-07-18T12:00:00.000Z",
+    "organization": "Qiskit Global Summer School"
+  },
+  {
+    "id": "intro-to-qiskit",
+    "title": "Intro to Qiskit",
+    "type": "talk",
+    "url": "https://github.com/javabster/notebooks/blob/main/mit_bswi_23/qiskit-in-1h.ipynb",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-08-04T12:00:00.000Z",
+    "organization": "MIT BSWI Guest Speaker"
+  },
+  {
+    "id": "learn-qiskit-in-1-hour",
+    "title": "Learn Qiskit in 1 Hour",
+    "type": "talk",
+    "url": "https://github.com/javabster/notebooks/blob/main/qiqt_23/qiskit-in-1h.ipynb",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-05-10T12:00:00.000Z",
+    "organization": "QIQT Conference"
+  },
+  {
+    "id": "getting-started-with-qiskit",
+    "title": "Getting Started with Qiskit",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=TUWkQskwDSA&t=1713s",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-03-23T12:00:00.000Z",
+    "organization": "Quantum Tokyo Meetup"
+  },
+  {
+    "id": "effective-open-source-community-management-in-quantum-computing",
+    "title": "Effective Open Source Community Management in Quantum Computing",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=tEv7N6D2kO4&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=39",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-07-12T12:00:00.000Z",
+    "organization": "SciPy Conference, Austin TX"
+  },
+  {
+    "id": "quantum-leaps-in-effective-developer-relations-for-emerging-technologies",
+    "title": "'Quantum Leaps' in Effective Developer Relations for Emerging Technologies",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=0eTnovwUhs4",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-03-11T12:00:00.000Z",
+    "organization": "DevRelCon Yokohama"
+  },
+  {
+    "id": "introduction-to-ibm-quantum-qiskit",
+    "title": "Introduction to IBM Quantum & Qiskit",
+    "type": "talk",
+    "url": "https://github.com/javabster/notebooks/blob/main/stanford-nov-22/stanford-workshop.ipynb",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-11-22T14:00:00.000Z",
+    "organization": "Stanford University"
+  },
+  {
+    "id": "using-qiskit-to-teach-quantum-computing",
+    "title": "Using Qiskit to Teach Quantum Computing",
+    "type": "talk",
+    "url": "https://github.com/javabster/notebooks/blob/main/edusummit/Qiskit_for_Educators.ipynb",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-08-03T13:00:00.000Z",
+    "organization": "Qiskit Educator Summit"
+  },
+  {
+    "id": "an-introduction-to-open-source-quantum-computing-with-qiskit",
+    "title": "An Introduction to Open Source Quantum Computing with Qiskit",
+    "type": "talk",
+    "url": "https://players.brightcove.net/6180409581001/lt7C9BYBJ3_default/index.html?videoId=6312698337112",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-09-22T09:00:00.000Z",
+    "organization": "Grace Hopper Celebration, Orlando FL"
+  },
+  {
+    "id": "github-tips-for-qiskit-contributors-part-1",
+    "title": "GitHub Tips for Qiskit Contributors - Part 1",
+    "type": "talk",
+    "url": "https://youtu.be/8weyl4kw5is",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-03-24T13:00:00.000Z",
+    "organization": "Qiskit Advocates Workshop"
+  },
+  {
+    "id": "github-tips-for-qiskit-contributors-part-2",
+    "title": "GitHub Tips for Qiskit Contributors - Part 2",
+    "type": "talk",
+    "url": "https://youtu.be/-eLeOeF_-5o",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-05-03T13:00:00.000Z",
+    "organization": "Qiskit Advocates Workshop"
+  },
+  {
+    "id": "introduction-to-qiskit-with-deutsch-josza",
+    "title": "Introduction to Qiskit with Deutsch Josza",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=OMgDaduILrI",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-04-06T13:00:00.000Z",
+    "organization": "QC Hack, Yale University"
+  },
+  {
+    "id": "introduction-to-open-source-quantum-computing-with-qiskit",
+    "title": "Introduction to Open Source Quantum Computing with Qiskit",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=pwknmDB3cgg",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-12-07T14:00:00.000Z",
+    "organization": "Open Source London Meetup"
+  },
+  {
+    "id": "podcast-an-introduction-to-quantum-computing",
+    "title": "Podcast - An Introduction to Quantum Computing",
+    "type": "talk",
+    "url": "https://www.buzzsprout.com/1634992/9954721",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-01-10T14:00:00.000Z",
+    "organization": "The Tech Stack Podcast"
+  },
+  {
+    "id": "introduction-to-open-source-quantum-computing",
+    "title": "Introduction to Open Source Quantum Computing",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=BlAcr_zLy_8",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-11-09T14:00:00.000Z",
+    "organization": "Women Who Code Meetup, London"
+  },
+  {
+    "id": "coding-for-quantum-computers-with-ibm-s-qiskit-sdk",
+    "title": "Coding for Quantum Computers (With IBM's Qiskit SDK)",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=5EUJ4RWQg-g",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-05-04T13:00:00.000Z",
+    "organization": "Ladies of Code Meetup, London"
+  },
+  {
+    "id": "aria-ready-to-learn-about-accessibility",
+    "title": "ARIA Ready to Learn About Accessibility?",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=HbT5NBmMfFU",
+    "description": "",
+    "topics": [
+      "web-technologies"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-02-04T14:00:00.000Z",
+    "organization": "Async JS Meetup"
+  },
+  {
+    "id": "what-the-heck-ma-is-ecma",
+    "title": "What the Heck(ma) is ECMA?",
+    "type": "talk",
+    "url": "https://www.youtube.com/watch?v=auTKfwfWrw8&list=PL8xuokhAnn4o1IwrPYJ6OHlrqC1k34MRR&index=21&t=1s",
+    "description": "",
+    "topics": [
+      "web-technologies"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2020-11-26T14:00:00.000Z",
+    "organization": "JS Monthly Meetup"
+  },
+  {
+    "id": "visualizing-results-in-qiskit-experiments-is-now-easier-than-ever",
+    "title": "Visualizing Results in Qiskit Experiments is Now Easier Than Ever",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/visualizing-results-in-qiskit-experiments-is-now-easier-than-ever-4edd1df3a1f5",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2023-03-29T12:00:00.000Z"
+  },
+  {
+    "id": "what-are-qiskit-primitives",
+    "title": "What are Qiskit Primitives?",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/what-are-qiskit-primitives-9bf63c1eacc7",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-04-26T12:00:00.000Z"
+  },
+  {
+    "id": "farewell-opflow-and-quantum-instance",
+    "title": "Farewell, Opflow and Quantum Instance",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/farewell-opflow-and-quantum-instance-7efd9f82f43",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-06-21T12:00:00.000Z"
+  },
+  {
+    "id": "a-guide-to-the-qiskit-circuit-library",
+    "title": "A guide to the Qiskit circuit library",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/a-guide-to-the-qiskit-circuit-library-36ee0f189956",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2023-10-04T12:00:00.000Z"
+  },
+  {
+    "id": "release-news-qiskit-v0-44-0-is-here",
+    "title": "Release News: Qiskit v0.44.0 is Here!",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/release-news-qiskit-v0-44-is-here-d03e9dd06010",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-08-02T12:00:00.000Z"
+  },
+  {
+    "id": "release-news-qiskit-v0-40-0-is-here",
+    "title": "Release News: Qiskit v0.40.0 is Here!",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/release-news-qiskit-v0-40-is-here-cdcdc8d400d4",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2023-01-31T09:00:00.000Z"
+  },
+  {
+    "id": "training-quantum-kernels-for-machine-learning-using-qiskit",
+    "title": "Training Quantum Kernels for Machine Learning Using Qiskit",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/training-quantum-kernels-for-machine-learning-using-qiskit-617f6e4ed9ac",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2022-05-11T13:00:00.000Z"
+  },
+  {
+    "id": "new-we-ve-started-using-rust-in-qiskit-for-better-performance",
+    "title": "New: We’ve Started Using Rust in Qiskit for Better Performance",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/new-weve-started-using-rust-in-qiskit-for-better-performance-a3676433ca8c",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2022-04-06T13:00:00.000Z"
+  },
+  {
+    "id": "how-web-developers-can-contribute-to-quantum-computing",
+    "title": "How Web Developers Can Contribute to Quantum Computing",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/how-web-developers-can-contribute-to-quantum-computing-b658eae92a3a",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-05-04T13:00:00.000Z"
+  },
+  {
+    "id": "accelerate-quantum-computing-noise-simulation-with-dask-clusters",
+    "title": "Accelerate Quantum Computing Noise Simulation With DASK Clusters",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/accelerate-quantum-computing-noise-simulation-with-dask-clusters-26aa409c32d0",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-03-17T13:00:00.000Z"
+  },
+  {
+    "id": "speed-up-your-multi-circuit-simulations-using-qiskit-aer-with-dask-clusters",
+    "title": "Speed Up Your Multi-Circuit Simulations Using Qiskit Aer with DASK Clusters",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/improve-the-performance-of-your-multi-circuit-simulations-using-qiskit-aer-with-dask-clusters-b4e47fad6cf0",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2022-01-18T14:00:00.000Z"
+  },
+  {
+    "id": "introducing-qiskit-dynamics-a-new-qiskit-module-for-simulating-quantum-systems",
+    "title": "Introducing Qiskit Dynamics, a New Qiskit Module for Simulating Quantum Systems",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/introducing-qiskit-dynamics-a-new-qiskit-module-for-simulating-quantum-systems-afe004f5b92b",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-11-30T14:00:00.000Z"
+  },
+  {
+    "id": "learn-about-retworkx-the-graph-library-used-by-qiskit-and-how-to-contribute",
+    "title": "Learn About Retworkx — The Graph Library Used by Qiskit — And How to Contribute",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/learn-about-retworkx-the-graph-library-used-by-qiskit-and-how-to-contribute-714a4ab15923",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2021-09-21T13:00:00.000Z"
+  },
+  {
+    "id": "the-ultimate-guide-for-contributing-to-qiskit-no-matter-your-background",
+    "title": "The Ultimate Guide for Contributing to Qiskit — No Matter Your Background",
+    "type": "blog",
+    "url": "https://medium.com/qiskit/the-ultimate-guide-for-contributing-to-qiskit-no-matter-your-background-f709470b0461",
+    "description": "",
+    "topics": [
+      "quantum-computing",
+      "open-source"
+    ],
+    "tags": [
+      "first-author"
+    ],
+    "publishDate": "2021-05-25T13:00:00.000Z"
+  }
+]

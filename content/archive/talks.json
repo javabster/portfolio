@@ -1,0 +1,172 @@
+[
+    {
+        "title": "The Qiskit Ecosystem & How to Contribute to Open Source",
+        "published": 1690027200000,
+        "videoLink": false,
+        "link": "https://docs.google.com/presentation/d/1uZbm0MQ9ydUykBRw3ndr8z8Ie0UKg5f4/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+        "category": [],
+        "type": "quantum",
+        "org": "IBM Quantum, Yorktown Heights NY"
+    },
+    {
+        "title": "Qiskit: Quantum Open Source Science Kit (Lightning Talk)",
+        "published": 1687435200000,
+        "videoLink": false,
+        "link": "https://docs.google.com/presentation/d/1omJDoWuJS57yMa3t8QfzhQjCdG7elHVw/edit?usp=sharing&ouid=110232913335023084010&rtpof=true&sd=true",
+        "category": [],
+        "type": "quantum",
+        "org": "PyData Meetup, New York"
+    },
+    {
+        "title": "Qiskit Global Summer School Lab 1",
+        "published": 1689681600000,
+        "videoLink": false,
+        "link": "https://github.com/qiskit-community/qgss-2023/blob/main/content/lab1/lab1.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Global Summer School"
+    },
+    {
+        "title": "Intro to Qiskit",
+        "published": 1691150400000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/mit_bswi_23/qiskit-in-1h.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "MIT BSWI Guest Speaker"
+    },
+    {
+        "title": "Learn Qiskit in 1 Hour",
+        "published": 1683720000000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/qiqt_23/qiskit-in-1h.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "QIQT Conference"
+    },
+    {
+        "title": "Getting Started with Qiskit",
+        "published": 1679572800000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=TUWkQskwDSA&t=1713s",
+        "category": [],
+        "type": "quantum",
+        "org": "Quantum Tokyo Meetup"
+    },
+    {
+        "title": "Effective Open Source Community Management in Quantum Computing",
+        "published": 1689163200000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=tEv7N6D2kO4&list=PL1PbeFStIOoOd01KhBeba-byU5E5dJ716&index=39",
+        "category": [],
+        "type": "quantum",
+        "org": "SciPy Conference, Austin TX"
+    },
+    {
+        "title": "'Quantum Leaps' in Effective Developer Relations for Emerging Technologies",
+        "published": 1678536000000,
+        "videoLink": true,
+        "link": "https://www.youtube.com/watch?v=0eTnovwUhs4",
+        "category": [],
+        "type": "quantum",
+        "org": "DevRelCon Yokohama"
+    },
+    {
+        "title": "Introduction to IBM Quantum & Qiskit",
+        "published": 1669125600000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/stanford-nov-22/stanford-workshop.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Stanford University"
+    },
+    {
+        "title": "Using Qiskit to Teach Quantum Computing",
+        "published": 1659531600000,
+        "videoLink": false,
+        "link": "https://github.com/javabster/notebooks/blob/main/edusummit/Qiskit_for_Educators.ipynb",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Educator Summit"
+    },
+    {
+        "title": "An Introduction to Open Source Quantum Computing with Qiskit",
+        "published": 1663837200000,
+        "link": "https://players.brightcove.net/6180409581001/lt7C9BYBJ3_default/index.html?videoId=6312698337112",
+        "category": [],
+        "type": "quantum",
+        "org": "Grace Hopper Celebration, Orlando FL"
+    },
+    {
+        "title": "GitHub Tips for Qiskit Contributors - Part 1",
+        "published": 1648126800000,
+        "link": "https://youtu.be/8weyl4kw5is",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Advocates Workshop"
+    },
+    {
+        "title": "GitHub Tips for Qiskit Contributors - Part 2",
+        "published": 1651582800000,
+        "link": "https://youtu.be/-eLeOeF_-5o",
+        "category": [],
+        "type": "quantum",
+        "org": "Qiskit Advocates Workshop"
+    },
+    {
+        "title": "Introduction to Qiskit with Deutsch Josza",
+        "published": 1649250000000,
+        "link": "https://www.youtube.com/watch?v=OMgDaduILrI",
+        "category": [],
+        "type": "quantum",
+        "org": "QC Hack, Yale University"
+    },
+    {
+        "title": "Introduction to Open Source Quantum Computing with Qiskit",
+        "published": 1638885600000,
+        "link": "https://www.youtube.com/watch?v=pwknmDB3cgg",
+        "category": [],
+        "type": "quantum",
+        "org": "Open Source London Meetup"
+    },
+    {
+        "title": "Podcast - An Introduction to Quantum Computing",
+        "published": 1641823200000,
+        "link": "https://www.buzzsprout.com/1634992/9954721",
+        "category": [],
+        "type": "quantum",
+        "org": "The Tech Stack Podcast"
+    },
+    {
+        "title": "Introduction to Open Source Quantum Computing",
+        "published": 1636466400000,
+        "link": "https://www.youtube.com/watch?v=BlAcr_zLy_8",
+        "category": [],
+        "type": "quantum",
+        "org": "Women Who Code Meetup, London"
+    },
+    {
+        "title": "Coding for Quantum Computers (With IBM's Qiskit SDK)",
+        "published": 1620133200000,
+        "link": "https://www.youtube.com/watch?v=5EUJ4RWQg-g",
+        "category": [],
+        "type": "quantum",
+        "org": "Ladies of Code Meetup, London"
+    },
+    {
+        "title": "ARIA Ready to Learn About Accessibility?",
+        "published": 1612447200000,
+        "link": "https://www.youtube.com/watch?v=HbT5NBmMfFU",
+        "category": [],
+        "type": "web-dev",
+        "org": "Async JS Meetup"
+    },
+    {
+        "title": "What the Heck(ma) is ECMA?",
+        "published": 1606399200000,
+        "link": "https://www.youtube.com/watch?v=auTKfwfWrw8&list=PL8xuokhAnn4o1IwrPYJ6OHlrqC1k34MRR&index=21&t=1s",
+        "category": [],
+        "type": "web-dev",
+        "org": "JS Monthly Meetup"
+    }
+]
