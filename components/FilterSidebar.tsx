@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FilterState, emptyFilters, hasActiveFilters } from '@/lib/filters';
 import {
   getTopicClass,
@@ -28,6 +28,29 @@ export default function FilterSidebar({
 }: FilterSidebarProps) {
   // Which tag's description is currently shown (hovered or keyboard-focused).
   const [hoveredTag, setHoveredTag] = useState<string | null>(null);
+  // Whether the mobile filter drawer is open (no effect at/above lg).
+  const [open, setOpen] = useState(false);
+
+  // Lock body scroll and allow Escape to dismiss while the drawer is open.
+  useEffect(() => {
+    if (!open) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  const activeCount =
+    filters.topics.length +
+    filters.tags.length +
+    (filters.type ? 1 : 0) +
+    (filters.search ? 1 : 0);
 
   const handleTypeChange = (type: string | undefined) => {
     onChange({ ...filters, type });
@@ -65,25 +88,18 @@ export default function FilterSidebar({
   const chipOff =
     'border-border bg-surface text-muted hover:border-primary/50 hover:text-foreground';
 
-  return (
-    <aside className="hidden w-72 shrink-0 lg:block">
-      {/* Share the left rail's brand tint so both sidebars read as a matched
-          pair; the 70% alpha keeps it a touch lighter than the solid left rail. */}
-      <div className="sticky top-0 h-screen overflow-y-auto border-l border-brand-border bg-brand/70 px-6 py-10">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-muted">
-            Filter
-          </h2>
-          {hasActiveFilters(filters) && (
-            <button
-              onClick={() => onChange(emptyFilters)}
-              className="text-xs font-medium text-primary transition-opacity hover:opacity-80"
-            >
-              Clear all
-            </button>
-          )}
-        </div>
+  const clearAll = hasActiveFilters(filters) ? (
+    <button
+      onClick={() => onChange(emptyFilters)}
+      className="text-xs font-medium text-primary transition-opacity hover:opacity-80"
+    >
+      Clear all
+    </button>
+  ) : null;
 
+  // The filter controls, shared by the desktop rail and the mobile drawer.
+  const body = (
+    <>
         <div className="mt-6">
           <input
             type="text"
@@ -189,7 +205,111 @@ export default function FilterSidebar({
             </div>
           </div>
         )}
-      </div>
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Desktop filter rail. */}
+      <aside className="hidden w-72 shrink-0 lg:block">
+        {/* Share the left rail's brand tint so both sidebars read as a matched
+            pair; the 70% alpha keeps it a touch lighter than the solid left rail. */}
+        <div className="sticky top-0 h-screen overflow-y-auto border-l border-brand-border bg-brand/70 px-6 py-10">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-muted">
+              Filter
+            </h2>
+            {clearAll}
+          </div>
+          {body}
+        </div>
+      </aside>
+
+      {/* Mobile trigger — floats opposite the theme toggle so the two don't collide. */}
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-haspopup="dialog"
+        aria-expanded={open}
+        className="lg:hidden fixed bottom-5 left-5 z-40 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2.5 text-sm font-medium text-foreground shadow-lg shadow-black/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+      >
+        <FilterIcon />
+        Filters
+        {activeCount > 0 && (
+          <span className="ml-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] font-semibold text-primary-contrast">
+            {activeCount}
+          </span>
+        )}
+      </button>
+
+      {/* Mobile slide-in filter drawer. */}
+      {open && (
+        <div
+          className="lg:hidden fixed inset-0 z-50"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Filters"
+        >
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setOpen(false)}
+            aria-hidden
+          />
+          <div className="absolute inset-y-0 right-0 flex w-80 max-w-[85%] flex-col bg-brand shadow-xl">
+            <div className="flex items-center justify-between border-b border-brand-border px-6 py-4">
+              <h2 className="text-xs font-bold uppercase tracking-widest text-muted">
+                Filter
+              </h2>
+              <div className="flex items-center gap-4">
+                {clearAll}
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close filters"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-foreground transition-colors hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  <CloseIcon />
+                </button>
+              </div>
+            </div>
+            <div className="flex-1 overflow-y-auto px-6 pb-8">{body}</div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+function FilterIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+      aria-hidden
+    >
+      <path d="M3 5h18M6 12h12M10 19h4" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden
+    >
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
   );
 }
