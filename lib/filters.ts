@@ -36,7 +36,7 @@ export function filterContent(
     // Filter by topics (OR logic - item matches if it has ANY selected topic)
     if (filters.topics.length > 0) {
       const hasTopic = filters.topics.some(topic =>
-        item.topics.includes(topic as any)
+        (item.topics as string[]).includes(topic)
       );
       if (!hasTopic) return false;
     }
@@ -44,7 +44,7 @@ export function filterContent(
     // Filter by tags (OR logic)
     if (filters.tags.length > 0) {
       const hasTag = filters.tags.some(tag =>
-        item.tags.includes(tag as any)
+        (item.tags as string[]).includes(tag)
       );
       if (!hasTag) return false;
     }

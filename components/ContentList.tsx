@@ -1,6 +1,6 @@
 import { ContentItem } from '@/types/content';
 import { formatEuropeanDate } from '@/lib/dates';
-import { getItemHref, getTopicClass, topicLabel } from '@/lib/contentMeta';
+import { getItemHref, getTopicClass, topicLabel, tagLabel } from '@/lib/contentMeta';
 import ExternalLinkIcon from './ExternalLinkIcon';
 import Link from 'next/link';
 
@@ -51,7 +51,7 @@ export default function ContentList({
           <Link
             href={href}
             {...externalProps}
-            className="block px-5 py-4 transition-colors hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
+            className="block px-5 py-4 transition-colors hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-ring"
           >
             <div className="flex items-baseline justify-between gap-4">
               <h2 className="font-medium text-foreground transition-colors group-hover:text-primary">
@@ -85,7 +85,7 @@ export default function ContentList({
                     key={tag}
                     className="rounded-full border border-border bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted"
                   >
-                    {tag}
+                    {tagLabel(tag)}
                   </span>
                 ))}
               </div>

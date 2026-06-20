@@ -6,11 +6,11 @@ import { usePathname } from 'next/navigation';
 import ExternalLinkIcon from './ExternalLinkIcon';
 
 const navigation = [
-  { name: 'About', href: '/' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Talks / Workshops', href: '/talks' },
-  { name: 'Videos', href: '/videos' },
-  { name: 'Podcasts', href: '/podcasts' },
+  { name: '👩🏼‍💻 About', href: '/' },
+  { name: '📝 Blog', href: '/blog' },
+  { name: '🎬 Videos', href: '/videos' },
+  { name: '📣 Talks / Workshops', href: '/talks' },
+  { name: '🎙️ Podcasts', href: '/podcasts' },
 ];
 
 const social = [
@@ -28,18 +28,18 @@ export default function Sidebar() {
     <aside className="flex w-64 flex-col sticky top-0 h-screen shrink-0 bg-brand border-r border-brand-border">
       <div className="p-8">
         <Image
-          src="/profile.svg"
+          src="/profile.jpg"
           alt="Abby Mitchell"
           width={80}
           height={80}
           priority
-          className="mb-4 h-20 w-20 rounded-full object-cover ring-2 ring-brand-active ring-offset-2 ring-offset-brand"
+          className="mb-4 h-20 w-20 rounded-full object-cover ring-2 ring-brand-accent ring-offset-2 ring-offset-brand"
         />
-        <h1 className="text-2xl font-bold tracking-tight text-brand-active">
+        <h1 className="text-2xl font-bold tracking-tight text-brand-accent">
           Abby Mitchell
         </h1>
         <p className="mt-1 text-sm text-brand-muted">
-          Developer Advocate @ IBM Quantum
+          Developer Advocate @ Meta
         </p>
       </div>
 
@@ -74,7 +74,7 @@ export default function Sidebar() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 text-brand-muted transition-colors hover:text-brand-active"
+                className="group inline-flex items-center gap-1.5 text-brand-muted transition-colors hover:text-brand-accent"
               >
                 {link.name}
                 <ExternalLinkIcon className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />

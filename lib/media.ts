@@ -44,5 +44,8 @@ export function getResourceCtaLabel(url: string): string {
   if (u.includes('brightcove') || u.includes('vimeo')) {
     return 'Watch the talk';
   }
+  if (u.includes('youtube.com') || u.includes('youtu.be')) {
+    return 'Watch on YouTube';
+  }
   return 'See the slides / notebook';
 }

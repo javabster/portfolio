@@ -1,14 +1,16 @@
 # Portfolio Website
 
-A modern portfolio website built with Next.js 14+, TypeScript, and Tailwind CSS. Features automated content management via GitHub Issues and deploys to GitHub Pages.
+A modern portfolio website built with Next.js 16, TypeScript, and Tailwind CSS. Features automated content management via GitHub Issues and deploys to GitHub Pages (custom domain: [www.abbymitchell.dev](https://www.abbymitchell.dev)).
 
 ## Features
 
-- **Modern Stack**: Next.js 14+ with App Router, TypeScript, and Tailwind CSS
-- **Static Site Generation**: Optimized for GitHub Pages deployment
+- **Modern Stack**: Next.js 16 with App Router, TypeScript, and Tailwind CSS v4
+- **Static Site Generation**: Static export (`output: 'export'`) for GitHub Pages
 - **Content Management**: Automated via GitHub Issues (for @javabster)
 - **Three-Column Layout**: Sidebar navigation, main content feed, and filter sidebar
-- **Advanced Filtering**: By content type, topics, tags, and search
+- **Infinite Scroll**: The homepage feed pages in all content as you scroll
+- **Advanced Filtering**: By content type, topics, tags, and search (synced to the URL)
+- **Light & Dark Mode**: Theme toggle with system-preference default
 - **MDX Support**: For personal blog posts with rich formatting
 - **Responsive Design**: Works on mobile, tablet, and desktop
 
@@ -17,26 +19,26 @@ A modern portfolio website built with Next.js 14+, TypeScript, and Tailwind CSS.
 ### Prerequisites
 
 - Node.js 20+
-- npm or yarn
+- Yarn (this project uses Yarn — see [CONTRIBUTING.md](CONTRIBUTING.md#development); don't use npm)
 
 ### Installation
 
 ```bash
-npm install
+yarn install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Open [http://localhost:3100](http://localhost:3100) to view the site. (The dev server runs on port 3100 — set via `next dev -p 3100` — to avoid colliding with other local apps such as Docusaurus, which defaults to 3000.)
 
 ### Build
 
 ```bash
-npm run build
+yarn build
 ```
 
 The static site will be generated in the `out/` directory.
@@ -47,23 +49,33 @@ The static site will be generated in the `out/` directory.
 portfolio/
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx         # Root layout with sidebar
-│   ├── page.tsx           # Homepage (About Me)
-│   ├── blog/              # Blog listing and posts
-│   ├── videos/            # Videos listing
+│   ├── page.tsx           # Homepage (About Me + content feed)
+│   ├── globals.css        # Tailwind v4 theme tokens (light/dark)
+│   ├── icon.svg           # Favicon source (AM monogram + gradient)
+│   ├── blog/              # Blog listing and in-site MDX posts
+│   ├── videos/            # Videos listing + detail pages
 │   ├── podcasts/          # Podcasts listing
-│   └── talks/             # Talks/Workshops listing
+│   └── talks/             # Talks/Workshops listing + detail pages
 ├── components/            # React components
 │   ├── Sidebar.tsx        # Left navigation sidebar
 │   ├── FilterSidebar.tsx  # Right filter sidebar
-│   ├── ContentFeed.tsx    # Main content feed
-│   └── ContentCard.tsx    # Individual content item
+│   ├── FilterableContent.tsx # Homepage feed + filters
+│   ├── ContentFeed.tsx    # Card grid
+│   ├── ContentCard.tsx    # Individual content item
+│   ├── ContentList.tsx    # Compact list rows (type pages)
+│   ├── useInfiniteScroll.ts  # Infinite-scroll hook
+│   └── useContentFilters.ts  # Filter state + URL sync
 ├── content/               # Content files
 │   ├── archive/           # Archived legacy JSON files
-│   ├── data/              # New unified content JSON
-│   └── blogs/             # MDX blog posts
+│   ├── data/              # Unified content JSON (content.json)
+│   └── blogs/             # MDX blog posts (in-site)
 ├── lib/                   # Utilities
 │   ├── content.ts         # Content loading functions
-│   └── filters.ts         # Filter logic
+│   ├── blog.ts            # MDX blog loading
+│   ├── contentMeta.ts     # Type/topic/tag colours, labels, descriptions
+│   ├── filters.ts         # Filter logic
+│   ├── media.ts           # YouTube embed / CTA helpers
+│   └── dates.ts           # Date formatting
 ├── types/                 # TypeScript types
 │   └── content.ts         # Content type definitions
 ├── .github/               # GitHub Actions and templates
@@ -73,7 +85,8 @@ portfolio/
 │   └── ISSUE_TEMPLATE/
 │       └── add_content.yml # Content addition form
 └── scripts/               # Utility scripts
-    └── migrate-content.ts # Migration from legacy format
+    ├── migrate-content.ts # Migration from legacy format
+    └── generate-favicon.mjs # Regenerate favicon.ico/apple-icon.png from icon.svg
 ```
 
 ## Content Management
@@ -99,7 +112,7 @@ Add JSON files to `content/data/` following the `ContentItem` interface:
   "embedId": "youtube-id", // optional, for videos
   "description": "Content description",
   "topics": ["open-source", "python"],
-  "tags": ["personal", "first-author"],
+  "tags": ["personal"], // first authorship is the default and carries no tag
   "publishDate": "2024-01-15T00:00:00.000Z",
   "organization": "IBM Quantum" // optional
 }
@@ -137,24 +150,28 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 
 ### Manual Deployment
 
-1. Build the site: `npm run build`
+1. Build the site: `yarn build`
 2. The `out/` directory contains the static site
 3. Deploy the contents of `out/` to your hosting provider
 
 ### GitHub Pages Configuration
 
-The site is configured for GitHub Pages with:
-- `basePath: '/portfolio'` in `next.config.ts`
-- Static export enabled
+The site is served from a custom domain and configured with:
+- Static export (`output: 'export'`) in `next.config.ts` (no `basePath` — it's served from the domain root)
+- `images: { unoptimized: true }` (required for static export)
+- Custom domain via `public/CNAME` (`www.abbymitchell.dev`)
 - `.nojekyll` file in `public/` directory
 
 ## Color Scheme
 
-- **Midnight Violet** (#310A31) - Primary background
-- **Periwinkle** (#D4CDF4) - Light accent
-- **Banana Cream** (#FFE873) - Primary highlight
-- **Baltic Blue** (#306998) - Secondary
-- **Tangerine** (#EE8434) - Accent
+The brand palette (defined in `app/globals.css`) is consistent across themes; the
+semantic surface/text tokens re-map per theme (light vs. dark):
+
+- **Midnight Violet** (#310A31) — dark-mode backgrounds / light-mode ink
+- **Periwinkle** (#D4CDF4) — light-mode sidebar rails & accents
+- **Banana Cream** (#FFE873) — active-highlight accent
+- **Baltic Blue** (#306998) — primary / links
+- **Tangerine** (#EE8434) — accent
 
 ## License
 

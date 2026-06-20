@@ -1,7 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import { FilterState, emptyFilters, hasActiveFilters } from '@/lib/filters';
-import { getTopicClass, getTopicActiveClass, topicLabel } from '@/lib/contentMeta';
+import {
+  getTopicClass,
+  getTopicActiveClass,
+  topicLabel,
+  tagLabel,
+  tagDescription,
+} from '@/lib/contentMeta';
 
 interface FilterSidebarProps {
   filters: FilterState;
@@ -19,6 +26,9 @@ export default function FilterSidebar({
   tags,
   showType = true,
 }: FilterSidebarProps) {
+  // Which tag's description is currently shown (hovered or keyboard-focused).
+  const [hoveredTag, setHoveredTag] = useState<string | null>(null);
+
   const handleTypeChange = (type: string | undefined) => {
     onChange({ ...filters, type });
   };
@@ -57,7 +67,9 @@ export default function FilterSidebar({
 
   return (
     <aside className="hidden w-72 shrink-0 lg:block">
-      <div className="sticky top-0 h-screen overflow-y-auto border-l border-border bg-surface-2/60 px-6 py-10">
+      {/* Share the left rail's brand tint so both sidebars read as a matched
+          pair; the 70% alpha keeps it a touch lighter than the solid left rail. */}
+      <div className="sticky top-0 h-screen overflow-y-auto border-l border-brand-border bg-brand/70 px-6 py-10">
         <div className="flex items-center justify-between">
           <h2 className="text-xs font-bold uppercase tracking-widest text-muted">
             Filter
@@ -78,7 +90,7 @@ export default function FilterSidebar({
             value={filters.search}
             onChange={(e) => handleSearchChange(e.target.value)}
             placeholder="Search…"
-            className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-muted/70 transition-shadow focus:outline-none focus:ring-2 focus:ring-ring"
+            className="w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-muted/70 transition-shadow focus:outline-none focus:ring-1 focus:ring-ring dark:focus:ring-banana-cream"
           />
         </div>
 
@@ -121,7 +133,7 @@ export default function FilterSidebar({
                     className={`${chipBase} ${
                       active
                         ? `${getTopicActiveClass(topic)} shadow-sm`
-                        : `${getTopicClass(topic)} opacity-60 hover:opacity-100`
+                        : `${getTopicClass(topic)} opacity-60 hover:opacity-100 dark:opacity-100`
                     }`}
                   >
                     {topicLabel(topic)}
@@ -137,20 +149,43 @@ export default function FilterSidebar({
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
               Tags
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="relative flex flex-wrap gap-2">
               {tags.map((tag) => {
                 const active = filters.tags.includes(tag);
+                const hasDescription = Boolean(tagDescription(tag));
                 return (
                   <button
                     key={tag}
                     onClick={() => handleTagToggle(tag)}
+                    onMouseEnter={() => setHoveredTag(tag)}
+                    onMouseLeave={() =>
+                      setHoveredTag((current) => (current === tag ? null : current))
+                    }
+                    onFocus={() => setHoveredTag(tag)}
+                    onBlur={() =>
+                      setHoveredTag((current) => (current === tag ? null : current))
+                    }
                     aria-pressed={active}
+                    aria-describedby={
+                      hasDescription ? `tag-desc-${tag}` : undefined
+                    }
                     className={`${chipBase} ${active ? chipOn : chipOff}`}
                   >
-                    {tag}
+                    {tagLabel(tag)}
                   </button>
                 );
               })}
+              {/* One shared tooltip spanning the list width so it never overflows
+                  the (horizontally-clipped) sidebar, wherever a chip wraps. */}
+              {hoveredTag && tagDescription(hoveredTag) && (
+                <div
+                  id={`tag-desc-${hoveredTag}`}
+                  role="tooltip"
+                  className="absolute left-0 right-0 top-full z-10 mt-2 rounded-md border border-border bg-surface px-3 py-2 text-xs font-normal leading-snug text-muted shadow-md"
+                >
+                  {tagDescription(hoveredTag)}
+                </div>
+              )}
             </div>
           </div>
         )}

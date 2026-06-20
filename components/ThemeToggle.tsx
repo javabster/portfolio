@@ -50,7 +50,7 @@ export default function ThemeToggle() {
             aria-label={label}
             aria-pressed={active}
             title={label}
-            className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+            className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${
               active
                 ? 'bg-primary text-primary-contrast'
                 : 'text-muted hover:bg-surface-hover hover:text-foreground'

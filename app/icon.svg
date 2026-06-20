@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Brand gradient: periwinkle (#d4cdf4) -> midnight-violet (#310a31). -->
+    <linearGradient id="am-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d4cdf4" />
+      <stop offset="1" stop-color="#310a31" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#am-bg)" />
+
+  <!-- "AM" monogram drawn as paths so it needs no font to render. A subtle
+       midnight-violet halo keeps the white strokes legible over the lighter
+       periwinkle corner of the gradient. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#310a31" stroke-opacity="0.45" stroke-width="10">
+      <path d="M9 46 L19.5 18 L30 46 M12 38 L27 38" />
+      <path d="M34 46 L34 18 L44.5 33 L55 18 L55 46" />
+    </g>
+    <g stroke="#ffffff" stroke-width="6">
+      <path d="M9 46 L19.5 18 L30 46 M12 38 L27 38" />
+      <path d="M34 46 L34 18 L44.5 33 L55 18 L55 46" />
+    </g>
+  </g>
+</svg>

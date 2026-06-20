@@ -8,7 +8,7 @@ export default function BlogPage() {
     <div className="flex">
       <FilterableList
         allContent={blogContent}
-        title="Blog"
+        title="📝 Blog"
         description="Blog posts and articles"
         dateOptions={{ year: 'numeric', month: 'long', day: 'numeric' }}
         emptyMessage="No posts match your filters."

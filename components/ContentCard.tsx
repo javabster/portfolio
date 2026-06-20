@@ -1,5 +1,5 @@
 import { ContentItem } from '@/types/content';
-import { typeMeta, getItemHref, getTopicClass, topicLabel } from '@/lib/contentMeta';
+import { typeMeta, getItemHref, getTopicClass, topicLabel, tagLabel } from '@/lib/contentMeta';
 import { formatEuropeanDate } from '@/lib/dates';
 import ExternalLinkIcon from './ExternalLinkIcon';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ export default function ContentCard({ item }: ContentCardProps) {
       <Link
         href={href}
         {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="absolute inset-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="absolute inset-0 rounded-xl focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
         aria-label={item.title}
       />
 
@@ -67,7 +67,7 @@ export default function ContentCard({ item }: ContentCardProps) {
               key={tag}
               className="rounded-full border border-border bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted"
             >
-              {tag}
+              {tagLabel(tag)}
             </span>
           ))}
         </div>

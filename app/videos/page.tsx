@@ -8,7 +8,7 @@ export default function VideosPage() {
     <div className="flex">
       <FilterableList
         allContent={videoContent}
-        title="Videos"
+        title="🎬 Videos"
         description="Talks, tutorials, and explainers"
         dateOptions={{ year: 'numeric', month: 'long', day: 'numeric' }}
         emptyMessage="No videos match your filters."

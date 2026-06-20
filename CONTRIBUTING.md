@@ -69,12 +69,17 @@ You can also submit content via pull request:
 - `pyrefly`
 - `web-technologies`
 - `women-in-tech`
+- `ml-ai`
 
 ### Available Tags
 
 - `personal`
-- `first-author`
 - `ghostwriter-editor`
+- `popular`
+
+> **First authorship is the default** and is intentionally *not* tagged — tags
+> only mark exceptions (e.g. a ghostwritten/edited piece). So a first-authored
+> item simply has no authorship tag.
 
 ## Managing Topics & Tags
 
@@ -89,7 +94,7 @@ slugs:
 
 ```json
 "topics": ["quantum-computing", "open-source"],
-"tags": ["first-author"]
+"tags": ["ghostwriter-editor"]
 ```
 
 The Topics/Tags **filters update automatically** — they're derived from whatever
@@ -141,9 +146,30 @@ appears in your content, so you don't configure them anywhere.
 1. Add the slug to the `Tag` union in `types/content.ts`.
 2. **(Issue form only)** add a matching checkbox under `tags` in
    `.github/ISSUE_TEMPLATE/add_content.yml`.
+3. **(Optional) Set a display name** — by default the slug is shown with hyphens
+   replaced by spaces (`my-new-tag` → "my new tag"). For proper nouns or
+   custom casing, add an entry to `tagLabels` in `lib/contentMeta.ts`:
 
-Tags use a single neutral chip style (no per-tag colour), so there's nothing to
-configure in `lib/contentMeta.ts`.
+   ```ts
+   const tagLabels: Record<string, string> = {
+     // ...
+     'my-new-tag': 'My New Tag',
+   };
+   ```
+
+4. **(Optional) Add a hover description** — tags show a short tooltip on
+   hover/focus in the filter sidebar. Add an entry to `tagDescriptions` in
+   `lib/contentMeta.ts` (tags with no entry simply show no tooltip):
+
+   ```ts
+   const tagDescriptions: Record<string, string> = {
+     // ...
+     'my-new-tag': 'What this tag means, in one line.',
+   };
+   ```
+
+Tags use a single neutral chip style (no per-tag colour), so there's no colour
+to configure — only the optional label and description above.
 
 ### Changing a topic's colour or label
 
@@ -170,7 +196,7 @@ title: "My Blog Post"
 publishDate: "2024-01-15"
 description: "A brief description"
 topics: ["web-technologies", "open-source"]
-tags: ["personal", "first-author"]
+tags: ["personal"]
 ---
 
 # My Blog Post

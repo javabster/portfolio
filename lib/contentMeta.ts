@@ -46,26 +46,30 @@ const topicColors: Record<string, BrandColor> = {
 const DEFAULT_COLOR: BrandColor = 'baltic-blue';
 
 const colorStyles: Record<BrandColor, { tint: string; solid: string }> = {
+  // The light tint borders use a darker shade of each hue so they read against
+  // the light page/cards and the periwinkle sidebar rail (the pale yellows and
+  // lavenders are near-invisible at the brand hue). `dark:` restores the original
+  // bright borders, which already pop on the dark background.
   'baltic-blue': {
-    tint: 'border-baltic-blue/50 bg-baltic-blue/15 text-midnight-violet dark:text-periwinkle',
+    tint: 'border-baltic-blue bg-baltic-blue/15 text-midnight-violet dark:border-baltic-blue/50 dark:text-periwinkle',
     solid: 'border-baltic-blue bg-baltic-blue text-white',
   },
   'tangerine': {
-    tint: 'border-tangerine/50 bg-tangerine/15 text-midnight-violet dark:text-periwinkle',
+    tint: 'border-[#c25e12] bg-tangerine/15 text-midnight-violet dark:border-tangerine/50 dark:text-periwinkle',
     solid: 'border-tangerine bg-tangerine text-midnight-violet',
   },
   'banana-cream': {
-    tint: 'border-banana-cream/70 bg-banana-cream/25 text-midnight-violet dark:text-periwinkle',
+    tint: 'border-[#a87b00] bg-banana-cream/25 text-midnight-violet dark:border-banana-cream/70 dark:text-periwinkle',
     solid: 'border-banana-cream bg-banana-cream text-midnight-violet',
   },
   'periwinkle': {
-    tint: 'border-periwinkle/70 bg-periwinkle/30 text-midnight-violet dark:text-periwinkle',
+    tint: 'border-[#6b5fc4] bg-periwinkle/30 text-midnight-violet dark:border-periwinkle/70 dark:text-periwinkle',
     solid: 'border-periwinkle bg-periwinkle text-midnight-violet',
   },
   'midnight-violet': {
     // In dark mode the brand violet is ~the page background, so it would be
     // invisible — switch to a lighter violet (Tailwind's violet scale) there.
-    tint: 'border-midnight-violet/40 bg-midnight-violet/15 text-midnight-violet dark:border-violet-400/40 dark:bg-violet-400/20 dark:text-violet-200',
+    tint: 'border-midnight-violet/70 bg-midnight-violet/15 text-midnight-violet dark:border-violet-400/40 dark:bg-violet-400/20 dark:text-violet-200',
     solid: 'border-midnight-violet bg-midnight-violet text-periwinkle dark:border-violet-500 dark:bg-violet-500 dark:text-white',
   },
 };
@@ -82,11 +86,44 @@ const topicLabels: Record<string, string> = {
   'women-in-tech': 'women in tech',
   'python': 'Python',
   'pyrefly': 'Pyrefly',
+  'ml-ai': 'ML/AI',
 };
 
 /** Display label for a topic slug (e.g. "quantum-computing" → "quantum computing"). */
 export function topicLabel(topic: string): string {
   return topicLabels[topic] ?? topic.replace(/-/g, ' ');
+}
+
+/**
+ * Human-readable display names for tag slugs. Defaults to replacing hyphens with
+ * spaces; override here for proper casing / special phrasing. Note first
+ * authorship is the implicit default and intentionally has no tag.
+ */
+const tagLabels: Record<string, string> = {
+  'personal': 'Personal',
+  'ghostwriter-editor': 'Ghostwriter / Editor',
+  'popular': '⭐️ Popular'
+};
+
+/** Display label for a tag slug (e.g. "ghostwriter-editor" → "Ghostwriter / Editor"). */
+export function tagLabel(tag: string): string {
+  return tagLabels[tag] ?? tag.replace(/-/g, ' ');
+}
+
+/**
+ * Short explanations of what each tag means, surfaced on hover/focus in the
+ * filter sidebar. Tags without an entry simply show no description.
+ */
+const tagDescriptions: Record<string, string> = {
+  'personal': 'Personal projects and content I create outside of my day-to-day work, not affiliated with my employer.',
+  'ghostwriter-editor':
+    'Pieces I ghostwrote or edited for someone else, rather than authored under my own name.',
+  'popular': 'Content with high views and engagement.',
+};
+
+/** One-line description of a tag, or undefined if none is defined. */
+export function tagDescription(tag: string): string | undefined {
+  return tagDescriptions[tag];
 }
 
 function colorFor(topic: string): BrandColor {

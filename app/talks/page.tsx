@@ -8,7 +8,7 @@ export default function TalksPage() {
     <div className="flex">
       <FilterableList
         allContent={talkContent}
-        title="Talks / Workshops"
+        title="📣 Talks / Workshops"
         description="Conference talks, workshops, and presentations"
         dateOptions={{ year: 'numeric', month: 'long', day: 'numeric' }}
         emptyMessage="No talks match your filters."

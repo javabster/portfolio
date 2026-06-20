@@ -77,6 +77,8 @@ body:
           value: web-technologies
         - label: Women in Tech
           value: women-in-tech
+        - label: ML / AI
+          value: ml-ai
 
   - type: checkboxes
     id: tags
@@ -86,8 +88,8 @@ body:
       options:
         - label: Personal
           value: personal
-        - label: First Author
-          value: first-author
+        - label: Popular
+          value: popular
         - label: Ghostwriter/Editor
           value: ghostwriter-editor
 
@@ -105,6 +107,6 @@ body:
     attributes:
       label: Organization
       description: The organization associated with this content (optional)
-      placeholder: "IBM Quantum"
+      placeholder: "Qiskit Blog"
     validations:
       required: false

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Abby Mitchell - Developer Advocate",
-  description: "Portfolio of Abby Mitchell, Developer Advocate at IBM Quantum. Blogs, videos, talks, and podcasts about quantum computing, open source, and web technologies.",
+  description: "Portfolio of Abby Mitchell, Developer Advocate @ Meta. Blogs, videos, talks, and podcasts about quantum computing, open source, and web technologies.",
 };
 
 export default function RootLayout({

@@ -17,9 +17,10 @@ function mapVideoCategoryToTopics(category: string): Topic[] {
 }
 
 function mapVideoTypeToTags(type: string): Tag[] {
+  // First authorship is the default and carries no tag; talks fall through to it.
   const tagMap: Record<string, Tag[]> = {
     'tutorial': ['personal'],
-    'talk': ['first-author'],
+    'talk': [],
     'demo': ['personal'],
   };
   return tagMap[type.toLowerCase()] || ['personal'];
@@ -97,7 +98,7 @@ async function migrateContent() {
         url: talk.link,
         description: talk.description || '',
         topics: topics,
-        tags: ['first-author'],
+        tags: [],
         publishDate: convertTimestampToISO(talk.published),
         organization: talk.org,
       });
@@ -109,10 +110,10 @@ async function migrateContent() {
   if (fs.existsSync(blogsPath)) {
     const blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
     blogs.forEach((blog: any) => {
+      // First authorship (author / co-author) is the default and gets no tag;
+      // only ghostwritten/edited pieces are tagged.
       const tags: Tag[] = [];
-      if (blog.type === 'author') tags.push('first-author');
-      else if (blog.type === 'editor') tags.push('ghostwriter-editor');
-      else if (blog.type === 'co-author') tags.push('first-author');
+      if (blog.type === 'editor') tags.push('ghostwriter-editor');
 
       allContent.push({
         id: slugify(blog.title),

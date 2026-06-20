@@ -8,7 +8,7 @@ export default function PodcastsPage() {
     <div className="flex">
       <FilterableList
         allContent={podcastContent}
-        title="Podcasts"
+        title="🎙️ Podcasts"
         description="Conversations and guest appearances"
         dateOptions={{ year: 'numeric', month: 'long', day: 'numeric' }}
         emptyMessage="No podcasts yet."

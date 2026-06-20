@@ -1,6 +1,7 @@
 export type ContentType = 'blog' | 'video' | 'podcast' | 'talk';
 
-export type Tag = 'personal' | 'first-author' | 'ghostwriter-editor';
+// First authorship is the default; tags only mark exceptions to that.
+export type Tag = 'personal' | 'ghostwriter-editor' | 'popular';
 
 export type Topic =
   | 'open-source'
@@ -9,7 +10,8 @@ export type Topic =
   | 'scientific-computing'
   | 'pyrefly'
   | 'web-technologies'
-  | 'women-in-tech';
+  | 'women-in-tech'
+  | 'ml-ai';
 
 export interface ContentItem {
   id: string;

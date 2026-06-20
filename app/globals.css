@@ -53,14 +53,18 @@
   --link: #2d6491; /* baltic blue */
   --ring: rgba(238, 132, 52, 0.45);
 
-  /* Brand surface (the nav rail) — stays deep violet in both themes */
-  --brand: #310a31;
-  --brand-foreground: #ece8f8;
-  --brand-muted: rgba(212, 205, 244, 0.7);
-  --brand-active: #ffe873;
-  --brand-active-foreground: #310a31;
-  --brand-border: rgba(212, 205, 244, 0.16);
-  --brand-hover: rgba(212, 205, 244, 0.08);
+  /* Brand surface (the nav rail) — light theme: soft periwinkle panel with
+     deep-violet text, a banana-cream active highlight, and a baltic-blue accent
+     for the standalone text bits (name, avatar ring, link hover) that sit on
+     the light rail where banana-cream would be illegible. */
+  --brand: #d4cdf4; /* periwinkle */
+  --brand-foreground: #2a092a; /* deep violet */
+  --brand-muted: rgba(42, 9, 42, 0.62);
+  --brand-active: #ffe873; /* banana cream highlight pill */
+  --brand-active-foreground: #310a31; /* deep violet text on the pill */
+  --brand-accent: #285a82; /* baltic blue (AA on periwinkle) */
+  --brand-border: rgba(42, 9, 42, 0.14);
+  --brand-hover: rgba(42, 9, 42, 0.07);
 }
 
 /* ------------------------------------------------------------------ *
@@ -80,7 +84,7 @@
     --foreground: #f1ecfa;
     --muted: #ab9fc1;
     --primary: #3576ac; /* lighter baltic blue */
-    --primary-contrast: #1a0a1a;
+    --primary-contrast: #ffffff; /* white reads on the lighter dark-mode baltic blue */
     --link: #9cc0e6; /* lighter baltic blue for contrast */
     --ring: rgba(244, 146, 74, 0.5);
 
@@ -89,6 +93,7 @@
     --brand-muted: rgba(212, 205, 244, 0.65);
     --brand-active: #ffe873;
     --brand-active-foreground: #310a31;
+    --brand-accent: #ffe873;
     --brand-border: rgba(212, 205, 244, 0.1);
     --brand-hover: rgba(212, 205, 244, 0.07);
   }
@@ -104,7 +109,7 @@
   --foreground: #f1ecfa;
   --muted: #ab9fc1;
   --primary: #3576ac; /* lighter baltic blue */
-  --primary-contrast: #1a0a1a;
+  --primary-contrast: #ffffff; /* white reads on the lighter dark-mode baltic blue */
   --link: #9cc0e6;
   --ring: rgba(244, 146, 74, 0.5);
 
@@ -113,6 +118,7 @@
   --brand-muted: rgba(212, 205, 244, 0.65);
   --brand-active: #ffe873;
   --brand-active-foreground: #310a31;
+  --brand-accent: #ffe873;
   --brand-border: rgba(212, 205, 244, 0.1);
   --brand-hover: rgba(212, 205, 244, 0.07);
 }
@@ -140,6 +146,7 @@
   --color-brand-muted: var(--brand-muted);
   --color-brand-active: var(--brand-active);
   --color-brand-active-foreground: var(--brand-active-foreground);
+  --color-brand-accent: var(--brand-accent);
   --color-brand-border: var(--brand-border);
   --color-brand-hover: var(--brand-hover);
 }

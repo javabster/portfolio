@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { PersonalBlog, stripLeadingH1 } from '@/lib/blog';
 import { formatEuropeanDate } from '@/lib/dates';
-import { getTopicClass, topicLabel } from '@/lib/contentMeta';
+import { getTopicClass, topicLabel, tagLabel } from '@/lib/contentMeta';
 import { mdxComponents } from './mdx-components';
 
 export default function BlogPost({ post }: { post: PersonalBlog }) {
@@ -43,7 +43,7 @@ export default function BlogPost({ post }: { post: PersonalBlog }) {
                 key={tag}
                 className="rounded-full border border-border bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted"
               >
-                {tag}
+                {tagLabel(tag)}
               </span>
             ))}
           </div>

@@ -75,16 +75,16 @@ export default function ContentDetail({ item, backHref, backLabel }: ContentDeta
               Watch on YouTube <ExternalLinkIcon />
             </a>
           </>
-        ) : (
+        ) : item.url ? (
           <a
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-contrast shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-contrast shadow-sm transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             {getResourceCtaLabel(item.url)} <ExternalLinkIcon className="h-4 w-4" />
           </a>
-        )}
+        ) : null}
       </div>
     </div>
   );
