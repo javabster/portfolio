@@ -64,21 +64,13 @@ body:
       description: Select relevant topics
       options:
         - label: Open Source
-          value: open-source
         - label: Python
-          value: python
         - label: Quantum Computing
-          value: quantum-computing
         - label: Scientific Computing
-          value: scientific-computing
         - label: Pyrefly
-          value: pyrefly
         - label: Web Technologies
-          value: web-technologies
         - label: Women in Tech
-          value: women-in-tech
         - label: ML / AI
-          value: ml-ai
 
   - type: checkboxes
     id: tags
@@ -87,11 +79,8 @@ body:
       description: Select relevant tags
       options:
         - label: Personal
-          value: personal
         - label: Popular
-          value: popular
         - label: Ghostwriter/Editor
-          value: ghostwriter-editor
 
   - type: input
     id: publishDate
