@@ -6,11 +6,13 @@ on:
 
 jobs:
   add-content:
-    if: github.actor == 'javabster'
+    # Only run for content issues opened by the repo owner.
+    if: github.actor == 'javabster' && contains(github.event.issue.labels.*.name, 'content')
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
+      actions: write # needed to dispatch the deploy workflow
 
     steps:
       - name: Checkout repository
@@ -23,25 +25,47 @@ jobs:
 
       - name: Parse issue and create content file
         id: create-content
-        run: |
-          # This is a simplified version - in production, you'd parse the issue body
-          # and generate the JSON file. For now, we'll create a placeholder.
-          echo "Content creation would happen here"
-          echo "title=Sample Content" >> $GITHUB_OUTPUT
+        run: node scripts/add-content-from-issue.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/data/ || true
-          git commit -m "Add content: ${{ steps.create-content.outputs.title }}" || true
-          git push || true
+          git add content/data/content.json
+          if git diff --cached --quiet; then
+            echo "No content changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Add content: ${{ steps.create-content.outputs.title }} (#${{ github.event.issue.number }})"
+            git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Close issue with comment
-        run: |
-          gh issue close ${{ github.event.issue.number }} --comment "Content added successfully! The site will be rebuilt shortly."
+      # A push made with the default GITHUB_TOKEN does NOT trigger other
+      # workflows, so the deploy workflow must be dispatched explicitly.
+      - name: Trigger deploy
+        if: steps.commit.outputs.committed == 'true'
+        run: gh workflow run deploy.yml --ref main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Close issue with success comment
+        if: success() && steps.commit.outputs.committed == 'true'
+        run: |
+          gh issue close "${{ github.event.issue.number }}" \
+            --comment "✅ Content added successfully (\`${{ steps.create-content.outputs.id }}\`). A deploy has been triggered and the site will update shortly."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Leave the issue OPEN on failure (or when nothing changed) and report why,
+      # so submissions are never silently lost.
+      - name: Report failure on issue
+        if: failure()
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" \
+            --body "❌ Content could not be added automatically. Please check the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details and verify the form fields, then edit and reopen or resubmit."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
