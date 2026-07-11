@@ -251,7 +251,9 @@
     "topics": [
       "quantum-computing"
     ],
-    "tags": [ "popular"],
+    "tags": [
+      "popular"
+    ],
     "publishDate": "2022-10-19T09:00:00.000Z",
     "organization": "IBM Technology YouTube Channel",
     "category": "video"
@@ -741,7 +743,9 @@
       "python",
       "pyrefly"
     ],
-    "tags": [ "popular"],
+    "tags": [
+      "popular"
+    ],
     "publishDate": "2026-05-15T12:00:00.000Z",
     "organization": "Meta Open Source YouTube Channel",
     "category": "video"
@@ -757,7 +761,9 @@
       "python",
       "pyrefly"
     ],
-    "tags": [ "popular"],
+    "tags": [
+      "popular"
+    ],
     "publishDate": "2025-11-15T12:00:00.000Z",
     "organization": "Meta Open Source YouTube Channel",
     "category": "video"
@@ -903,7 +909,9 @@
     "topics": [
       "quantum-computing"
     ],
-    "tags": [ "popular"],
+    "tags": [
+      "popular"
+    ],
     "publishDate": "2024-07-15T12:00:00.000Z",
     "organization": "Qiskit Global Summer School"
   },
@@ -926,7 +934,9 @@
     "type": "talk",
     "url": "https://docs.google.com/presentation/d/16CeobA6tfPh6lRfD5EEL1YUGnvyQIdIbwOGFYBJQtmc/edit?usp=sharing",
     "description": "",
-    "topics": ["ml-ai"],
+    "topics": [
+      "ml-ai"
+    ],
     "tags": [],
     "publishDate": "2025-08-15T12:00:00.000Z",
     "organization": "Oxera Consultancy Tech Talk"
@@ -982,7 +992,9 @@
       "python",
       "pyrefly"
     ],
-    "tags": [ "popular" ],
+    "tags": [
+      "popular"
+    ],
     "publishDate": "2025-08-15T12:00:00.000Z",
     "organization": "Pyrefly Blog"
   },
@@ -1205,5 +1217,20 @@
     "tags": [],
     "publishDate": "2024-04-15T12:00:00.000Z",
     "organization": "Developer Marketing Summit - Boston, MA"
+  },
+  {
+    "id": "10-years-of-meta-s-commitment-to-python",
+    "title": "10 Years of Meta's Commitment to Python",
+    "type": "blog",
+    "url": "https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/",
+    "description": "This year marks Meta’s 10th consecutive year as a sponsor of the [Python Software Foundation (PSF)](https://www.python.org/psf-landing/), the charitable organization dedicated to advancing, supporting, and protecting the open-source Python programming language and the community that sustains it.",
+    "topics": [
+      "open-source",
+      "python"
+    ],
+    "tags": [],
+    "publishDate": "2026-06-30T12:00:00.000Z",
+    "organization": "Meta Engineering Blog",
+    "category": "blog"
   }
 ]
