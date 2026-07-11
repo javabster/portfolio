@@ -52,10 +52,10 @@ body:
     id: description
     attributes:
       label: Description
-      description: A brief description of the content
+      description: A brief description of the content (optional)
       placeholder: "This post covers..."
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: topics
@@ -106,18 +106,18 @@ body:
       label: Publish Month
       description: Month the content was published
       options:
-        - "01"
-        - "02"
-        - "03"
-        - "04"
-        - "05"
-        - "06"
-        - "07"
-        - "08"
-        - "09"
-        - "10"
-        - "11"
-        - "12"
+        - January
+        - February
+        - March
+        - April
+        - May
+        - June
+        - July
+        - August
+        - September
+        - October
+        - November
+        - December
     validations:
       required: true
 

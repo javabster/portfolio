@@ -1223,7 +1223,7 @@
     "title": "10 Years of Meta's Commitment to Python",
     "type": "blog",
     "url": "https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/",
-    "description": "This year marks Meta’s 10th consecutive year as a sponsor of the [Python Software Foundation (PSF)](https://www.python.org/psf-landing/), the charitable organization dedicated to advancing, supporting, and protecting the open-source Python programming language and the community that sustains it.",
+    "description": "",
     "topics": [
       "open-source",
       "python"
@@ -1231,6 +1231,124 @@
     "tags": [],
     "publishDate": "2026-06-30T12:00:00.000Z",
     "organization": "Meta Engineering Blog",
+    "category": "blog"
+  },
+    {
+    "id": "simplifying-quantum-tools",
+    "title": "A year of simplifying quantum software development tools with Qiskit",
+    "type": "blog",
+    "url": "https://www.ibm.com/quantum/blog/dev-tools",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2025-01-15T12:00:00.000Z",
+    "organization": "IBM Quantum Blog",
+    "category": "blog"
+  },
+      {
+    "id": "qiskit-1-best-practices",
+    "title": "Best practices for transitioning to Qiskit SDK v1.0",
+    "type": "blog",
+    "url": "https://www.ibm.com/quantum/blog/transition-to-1",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2024-03-26T12:00:00.000Z",
+    "organization": "IBM Quantum Blog",
+    "category": "blog"
+  },
+        {
+    "id": "qiskit-1-release",
+    "title": "Qiskit 1.0 release summary",
+    "type": "blog",
+    "url": "https://www.ibm.com/quantum/blog/qiskit-1-0-release-summary",
+    "description": "",
+    "topics": [
+      "quantum-computing"
+    ],
+    "tags": ["ghostwriter-editor", "popular"],
+    "publishDate": "2024-03-06T12:00:00.000Z",
+    "organization": "IBM Quantum Blog",
+    "category": "blog"
+  },
+  {
+    "id": "pyrefly-beta",
+    "title": "Pyrefly Beta is here!",
+    "type": "blog",
+    "url": "https://pyrefly.org/blog/pyrefly-beta/",
+    "description": "",
+    "topics": [
+      "pyrefly",
+      "open-source"
+    ],
+    "tags": ["ghostwriter-editor"],
+    "publishDate": "2025-11-17T12:00:00.000Z",
+    "organization": "Pyrefly Blog",
+    "category": "blog"
+  },
+    {
+    "id": "pyrefly-pydantic",
+    "title": "Fly Through Data Validation with Pyrefly’s new Pydantic Integration",
+    "type": "blog",
+    "url": "https://pyrefly.org/blog/pyrefly-pydantic/",
+    "description": "",
+    "topics": [
+      "pyrefly",
+      "open-source"
+    ],
+    "tags": [],
+    "publishDate": "2025-12-03T12:00:00.000Z",
+    "organization": "Pyrefly Blog",
+    "category": "blog"
+  },
+      {
+    "id": "pyrefly-v1",
+    "title": "Pyrefly v1.0 is here!",
+    "type": "blog",
+    "url": "https://pyrefly.org/blog/v1.0/",
+    "description": "",
+    "topics": [
+      "pyrefly",
+      "open-source"
+    ],
+    "tags": ["popular", "ghostwriter-editor"],
+    "publishDate": "2026-05-12T12:00:00.000Z",
+    "organization": "Pyrefly Blog",
+    "category": "blog"
+  },
+      {
+    "id": "pyrefly-pytorch",
+    "title": "Pyrefly Now Typechecks Pytorch",
+    "type": "blog",
+    "url": "https://pytorch.org/blog/pyrefly-now-type-checks-pytorch/",
+    "description": "",
+    "topics": [
+      "pyrefly",
+      "open-source",
+      "ml-ai"
+    ],
+    "tags": ["ghostwriter-editor"],
+    "publishDate": "2026-02-12T12:00:00.000Z",
+    "organization": "PyTorch Blog",
+    "category": "blog"
+  },
+      {
+    "id": "pyrefly-v1.1",
+    "title": "Pyrefly v1.1 is here!",
+    "type": "blog",
+    "url": "https://pyrefly.org/blog/v1.1/",
+    "description": "",
+    "topics": [
+      "pyrefly",
+      "open-source"
+    ],
+    "tags": ["ghostwriter-editor"],
+    "publishDate": "2026-06-17T12:00:00.000Z",
+    "organization": "Pyrefly Blog",
     "category": "blog"
   }
 ]

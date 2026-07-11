@@ -31,6 +31,22 @@ const TAG_MAP = {
 
 const VALID_TYPES = ['blog', 'video', 'podcast', 'talk'];
 
+// Publish Month dropdown label -> two-digit month number.
+const MONTH_MAP = {
+  January: '01',
+  February: '02',
+  March: '03',
+  April: '04',
+  May: '05',
+  June: '06',
+  July: '07',
+  August: '08',
+  September: '09',
+  October: '10',
+  November: '11',
+  December: '12',
+};
+
 function slugify(text) {
   return text
     .toLowerCase()
@@ -77,11 +93,12 @@ function parseChecked(value, labelMap) {
 // Publish Month / Publish Day). Combine them into a YYYY-MM-DD string.
 function buildDate(sections) {
   const year = cleanValue(sections['Publish Year']);
-  const month = cleanValue(sections['Publish Month']);
+  const monthName = cleanValue(sections['Publish Month']);
   const day = cleanValue(sections['Publish Day']);
+  const month = MONTH_MAP[monthName];
   if (!year || !month || !day) {
     throw new Error(
-      `Missing publish date field(s): year="${year}", month="${month}", day="${day}"`
+      `Missing/invalid publish date field(s): year="${year}", month="${monthName}", day="${day}"`
     );
   }
   return `${year}-${month}-${day}`;
@@ -130,8 +147,8 @@ function main() {
   const url = cleanValue(s['URL']);
   if (!url) throw new Error('Missing required field: URL');
 
+  // Description is optional (blogs often have none); default to empty string.
   const description = cleanValue(s['Description']);
-  if (!description) throw new Error('Missing required field: Description');
 
   const publishDate = toISODate(buildDate(s));
   const embedId = cleanValue(s['YouTube Embed ID']);
