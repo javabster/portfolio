@@ -82,12 +82,82 @@ body:
         - label: Popular
         - label: Ghostwriter/Editor
 
-  - type: input
-    id: publishDate
+  - type: dropdown
+    id: publishYear
     attributes:
-      label: Publish Date
-      description: Date in YYYY-MM-DD format
-      placeholder: "2024-01-15"
+      label: Publish Year
+      description: Year the content was published
+      options:
+        - "2026"
+        - "2025"
+        - "2024"
+        - "2023"
+        - "2022"
+        - "2021"
+        - "2020"
+        - "2019"
+        - "2018"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: publishMonth
+    attributes:
+      label: Publish Month
+      description: Month the content was published
+      options:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: publishDay
+    attributes:
+      label: Publish Day
+      description: Day of the month the content was published
+      options:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        - "30"
+        - "31"
     validations:
       required: true
 

@@ -73,11 +73,37 @@ function parseChecked(value, labelMap) {
   return result;
 }
 
+// The form now collects the publish date via three dropdowns (Publish Year /
+// Publish Month / Publish Day). Combine them into a YYYY-MM-DD string.
+function buildDate(sections) {
+  const year = cleanValue(sections['Publish Year']);
+  const month = cleanValue(sections['Publish Month']);
+  const day = cleanValue(sections['Publish Day']);
+  if (!year || !month || !day) {
+    throw new Error(
+      `Missing publish date field(s): year="${year}", month="${month}", day="${day}"`
+    );
+  }
+  return `${year}-${month}-${day}`;
+}
+
 function toISODate(dateStr) {
   const clean = cleanValue(dateStr);
+  const match = clean.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) {
+    throw new Error(`Invalid publish date: "${clean}" (expected YYYY-MM-DD)`);
+  }
+  const [, year, month, day] = match;
   // Match the noon-UTC convention used by existing entries in content.json.
   const parsed = new Date(`${clean}T12:00:00.000Z`);
-  if (Number.isNaN(parsed.getTime())) {
+  // Reject impossible dates (e.g. 2026-02-31): JS silently rolls these over,
+  // so verify the parsed components round-trip back to the input.
+  if (
+    Number.isNaN(parsed.getTime()) ||
+    parsed.getUTCFullYear() !== Number(year) ||
+    parsed.getUTCMonth() + 1 !== Number(month) ||
+    parsed.getUTCDate() !== Number(day)
+  ) {
     throw new Error(`Invalid publish date: "${clean}" (expected YYYY-MM-DD)`);
   }
   return parsed.toISOString();
@@ -107,7 +133,7 @@ function main() {
   const description = cleanValue(s['Description']);
   if (!description) throw new Error('Missing required field: Description');
 
-  const publishDate = toISODate(s['Publish Date']);
+  const publishDate = toISODate(buildDate(s));
   const embedId = cleanValue(s['YouTube Embed ID']);
   const organization = cleanValue(s['Organization']);
   const topics = parseChecked(s['Topics'], TOPIC_MAP);
