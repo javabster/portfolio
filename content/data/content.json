@@ -1377,5 +1377,20 @@
     "publishDate": "2023-03-29T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "working-with-others-on-github",
+    "title": "Working with others on GitHub",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=E-tq4gl-vmA",
+    "embedId": "E-tq4gl-vmA",
+    "description": "This video covers the basics of opening a Pull Request, an important process needed to work with other collaborators on GitHub",
+    "topics": [
+      "open-source"
+    ],
+    "tags": [],
+    "publishDate": "2023-03-30T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
