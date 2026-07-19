@@ -1233,7 +1233,7 @@
     "organization": "Meta Engineering Blog",
     "category": "blog"
   },
-    {
+  {
     "id": "simplifying-quantum-tools",
     "title": "A year of simplifying quantum software development tools with Qiskit",
     "type": "blog",
@@ -1247,7 +1247,7 @@
     "organization": "IBM Quantum Blog",
     "category": "blog"
   },
-      {
+  {
     "id": "qiskit-1-best-practices",
     "title": "Best practices for transitioning to Qiskit SDK v1.0",
     "type": "blog",
@@ -1261,7 +1261,7 @@
     "organization": "IBM Quantum Blog",
     "category": "blog"
   },
-        {
+  {
     "id": "qiskit-1-release",
     "title": "Qiskit 1.0 release summary",
     "type": "blog",
@@ -1270,7 +1270,10 @@
     "topics": [
       "quantum-computing"
     ],
-    "tags": ["ghostwriter-editor", "popular"],
+    "tags": [
+      "ghostwriter-editor",
+      "popular"
+    ],
     "publishDate": "2024-03-06T12:00:00.000Z",
     "organization": "IBM Quantum Blog",
     "category": "blog"
@@ -1285,12 +1288,14 @@
       "pyrefly",
       "open-source"
     ],
-    "tags": ["ghostwriter-editor"],
+    "tags": [
+      "ghostwriter-editor"
+    ],
     "publishDate": "2025-11-17T12:00:00.000Z",
     "organization": "Pyrefly Blog",
     "category": "blog"
   },
-    {
+  {
     "id": "pyrefly-pydantic",
     "title": "Fly Through Data Validation with Pyrefly’s new Pydantic Integration",
     "type": "blog",
@@ -1305,7 +1310,7 @@
     "organization": "Pyrefly Blog",
     "category": "blog"
   },
-      {
+  {
     "id": "pyrefly-v1",
     "title": "Pyrefly v1.0 is here!",
     "type": "blog",
@@ -1315,12 +1320,15 @@
       "pyrefly",
       "open-source"
     ],
-    "tags": ["popular", "ghostwriter-editor"],
+    "tags": [
+      "popular",
+      "ghostwriter-editor"
+    ],
     "publishDate": "2026-05-12T12:00:00.000Z",
     "organization": "Pyrefly Blog",
     "category": "blog"
   },
-      {
+  {
     "id": "pyrefly-pytorch",
     "title": "Pyrefly Now Typechecks Pytorch",
     "type": "blog",
@@ -1331,12 +1339,14 @@
       "open-source",
       "ml-ai"
     ],
-    "tags": ["ghostwriter-editor"],
+    "tags": [
+      "ghostwriter-editor"
+    ],
     "publishDate": "2026-02-12T12:00:00.000Z",
     "organization": "PyTorch Blog",
     "category": "blog"
   },
-      {
+  {
     "id": "pyrefly-v1.1",
     "title": "Pyrefly v1.1 is here!",
     "type": "blog",
@@ -1346,9 +1356,26 @@
       "pyrefly",
       "open-source"
     ],
-    "tags": ["ghostwriter-editor"],
+    "tags": [
+      "ghostwriter-editor"
+    ],
     "publishDate": "2026-06-17T12:00:00.000Z",
     "organization": "Pyrefly Blog",
     "category": "blog"
+  },
+  {
+    "id": "github-101",
+    "title": "GitHub 101",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=jj63uai3Qso",
+    "embedId": "jj63uai3Qso",
+    "description": "This video is the first of our GitHub 101 series, covering the foundational concepts of git and GitHub.",
+    "topics": [
+      "open-source"
+    ],
+    "tags": [],
+    "publishDate": "2023-03-29T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
