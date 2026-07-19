@@ -1440,5 +1440,21 @@
     "publishDate": "2023-04-02T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "pull-requests-and-ci-in-qiskit",
+    "title": "Pull Requests and CI in Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=V2GY5ZvYMyg",
+    "embedId": "V2GY5ZvYMyg",
+    "description": "Learn how to make a great pull request to Qiskit!",
+    "topics": [
+      "open-source",
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2023-04-05T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
