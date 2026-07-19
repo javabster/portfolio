@@ -1392,5 +1392,21 @@
     "publishDate": "2023-03-30T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "everything-you-need-to-know-before-you-commit-to-qiskit",
+    "title": "Everything you need to know before you commit to Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=mETgusQICOA",
+    "embedId": "mETgusQICOA",
+    "description": "This video covers what you need to know BEFORE making your first contribution to Qiskit, including how to choose what contributions to make and where to get support",
+    "topics": [
+      "open-source",
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2023-03-31T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
