@@ -1456,5 +1456,23 @@
     "publishDate": "2023-04-05T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "how-to-get-your-agent-to-use-pyrefly-for-type-checking",
+    "title": "How to get your agent to use Pyrefly for type checking",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=YHJ6tUPnKhY",
+    "embedId": "YHJ6tUPnKhY",
+    "description": "Coding agents are writing more Python than ever, but in large projects, generated code is prone to type errors. In this video, we walk through a few tips for getting your agent to use Pyrefly so that every piece of generated code gets type checked automatically.",
+    "topics": [
+      "open-source",
+      "python",
+      "pyrefly",
+      "ml-ai"
+    ],
+    "tags": [],
+    "publishDate": "2026-06-10T12:00:00.000Z",
+    "organization": "Meta Open Source YouTube Channel",
+    "category": "video"
   }
 ]
