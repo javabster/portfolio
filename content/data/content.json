@@ -1424,5 +1424,21 @@
     "publishDate": "2023-04-01T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "testing-linting-and-documentation-in-qiskit",
+    "title": "Testing, linting and documentation in Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=LGjErNJUig0",
+    "embedId": "LGjErNJUig0",
+    "description": "Contributing to Qiskit involves more than just writing code! Learn the basics of testing, linting and documentation requirements for Qiskit.",
+    "topics": [
+      "open-source",
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2023-04-02T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
