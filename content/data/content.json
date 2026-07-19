@@ -1408,5 +1408,21 @@
     "publishDate": "2023-03-31T12:00:00.000Z",
     "organization": "Qiskit YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "making-your-first-commit-to-qiskit",
+    "title": "Making your first commit to Qiskit",
+    "type": "video",
+    "url": "https://www.youtube.com/watch?v=7hWAtW53LTk",
+    "embedId": "7hWAtW53LTk",
+    "description": "This video covers the basics of setting up your GitHub repo and local development environment for contributing to Qiskit.",
+    "topics": [
+      "open-source",
+      "quantum-computing"
+    ],
+    "tags": [],
+    "publishDate": "2023-04-01T12:00:00.000Z",
+    "organization": "Qiskit YouTube Channel",
+    "category": "video"
   }
 ]
