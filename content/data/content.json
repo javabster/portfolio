@@ -1474,5 +1474,20 @@
     "publishDate": "2026-06-10T12:00:00.000Z",
     "organization": "Meta Open Source YouTube Channel",
     "category": "video"
+  },
+  {
+    "id": "typed-python-from-zero-to-hero",
+    "title": "Typed Python: From Zero to Hero",
+    "type": "talk",
+    "url": "https://github.com/javabster/typed-python-zero-to-hero",
+    "description": "Workshop hosted at PyCon AU 2026, including demos and hands-on exercises focused around typing and type checking.",
+    "topics": [
+      "python",
+      "pyrefly"
+    ],
+    "tags": [],
+    "publishDate": "2026-08-26T12:00:00.000Z",
+    "organization": "PyCon AU",
+    "category": "talk"
   }
 ]
