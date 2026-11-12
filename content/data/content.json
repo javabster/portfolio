@@ -1489,5 +1489,21 @@
     "publishDate": "2026-08-26T12:00:00.000Z",
     "organization": "PyCon AU",
     "category": "talk"
+  },
+  {
+    "id": "pyrefly-pylance-integration-in-vscode",
+    "title": "Pyrefly + Pylance Integration in VSCode",
+    "type": "blog",
+    "url": "https://pyrefly.org/blog/pyrefly-pylance/",
+    "description": "",
+    "topics": [
+      "pyrefly"
+    ],
+    "tags": [
+      "ghostwriter-editor"
+    ],
+    "publishDate": "2026-10-21T12:00:00.000Z",
+    "organization": "Pyrefly Blog",
+    "category": "blog"
   }
 ]
